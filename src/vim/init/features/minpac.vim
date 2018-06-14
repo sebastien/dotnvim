@@ -25,6 +25,10 @@
 "
 " }}}
 
+" -----------------------------------------------------------------------------
+" BOOTSTRAPPING
+" -----------------------------------------------------------------------------
+
 " We try to load minpac.
 silent! packadd minpac
 
@@ -34,6 +38,10 @@ if !exists('*minpac#init')
 	!git clone https://github.com/k-takata/minpac.git $(dirname $MYVIMRC)/pack/minpac/opt/minpac
 	silent! packadd minpac
 endif
+
+" -----------------------------------------------------------------------------
+" LOADING THE PLUGINS
+" -----------------------------------------------------------------------------
 
 " We try to see if it's available now
 if exists('*minpac#init')
@@ -62,9 +70,19 @@ if exists('*minpac#init')
 		echo "minpac: Updating plugins"
 		call minpac#update()
 		call writefile([today], plugins_updated_path)
-	end
-	" Load the plugins right now. (optional)
+	endif
+
+	" Load the plugins right now
 	packloadall
+
+	" And configures them configuration variables
+	for plugin in keys(minpac#getpluglist())
+		let plugin_path = g:vim_config_path . "/init/plugins/" . plugin . ".vim"
+		if filereadable(plugin_path)
+			execute 'source ' . fnameescape(plugin_path)
+		endif
+	endfor
+
 endif
 
 " -----------------------------------------------------------------------------

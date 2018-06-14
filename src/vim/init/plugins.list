@@ -1,16 +1,16 @@
-# == Neovim plugins
-# The list of plugins to be loaded
-# Feature: Fast fuzzy search in files, buffers and tags
+# @plugin fuzzy search in files, buffers and tags
 junegunn/fzf
 junegunn/fzf.vim
-# Feature: Automatic completion on insertion
+# @plugin completion on insertion
 maralla/completor.vim
-# Feature: File explorer side bar
+# @plugin File explorer side bar
 scrooloose/nerdtree
-# Feature: Automatic linting
+# @plugin Automatic linting
 w0rp/ale
-# Feature: Spelling and grammar checking
+# @plugin Spelling and grammar checking
 rhysd/vim-grammarous
-# Feature: Syntax highlighting for many languages
+# @plugin Syntax highlighting for many languages
 sheerun/vim-polyglot
+# @plugin Canned code snippets
+SirVer/ultisnips
 # EOF - vim: syntax=shell
