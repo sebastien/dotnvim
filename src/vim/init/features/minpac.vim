@@ -41,11 +41,11 @@ if exists('*minpac#init')
 	call minpac#init()
 	call minpac#add('k-takata/minpac', {'type': 'opt'})
 	" We load the list of plugins
-	let plugins_config_path  = g:vim_config_path . "/init.plugins.list" 
-	let plugins_updated_path = g:vim_config_path . "/init.plugins.updated" 
+	let plugins_config_path  = g:vim_config_path . "/init/plugins.list" 
+	let plugins_updated_path = g:vim_config_path . "/init/.plugins.updated" 
 	if !filereadable(plugins_config_path)
 		" If it's not there, we edit it
-		echo "init.minpac.vim: Edit the '" . plugins_config_path . "' file with a list of plugins to load"
+		echo "minpac: Edit the '" . plugins_config_path . "' file with a list of plugins to load"
 		execute 'edit ' . fnameescape(plugins_config_path)
 	endif
 	if filereadable(plugins_config_path)
@@ -59,7 +59,7 @@ if exists('*minpac#init')
 	" does not already have the plugin.
 	let today = strftime('%Y%m%d')
 	if !filereadable(plugins_updated_path) || readfile(plugins_updated_path)[0] != today
-		echo "init.features.minpac: Updating plugins"
+		echo "minpac: Updating plugins"
 		call minpac#update()
 		call writefile([today], plugins_updated_path)
 	end

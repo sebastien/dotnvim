@@ -4,6 +4,9 @@ SOURCES_PLUGINS_LIST=init.plugins.list
 BUILD_FEATURE_MD=$(SOURCES_FEATURES:%.vim=%.md)
 
 
+install:
+	ln -sfr src/vim ~/.config/nvim
+
 all:
 	@echo $(BUILD_FEATURE_MD)
 

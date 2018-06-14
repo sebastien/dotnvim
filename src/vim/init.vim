@@ -22,13 +22,13 @@
 " - Learning VimScript the hard way <http://learnvimscriptthehardway.stevelosh.com/>
 "
 let g:vim_config_path=fnamemodify($MYVIMRC,':h')
-let vim_init_features_path = g:vim_config_path . "/init.features.list" 
+let vim_init_features_path = g:vim_config_path . "/init/features.list" 
 if !filereadable(vim_init_features_path)
 	echo "init.vim: Edit the '" . vim_init_features_path . "' file with a list of features to load"
 else
 	let features_list = filter(readfile(vim_init_features_path), 'v:val !~ "#"')
 	for feature in features_list
-		let feature_path = g:vim_config_path . '/init.features.' . feature . '.vim'
+		let feature_path = g:vim_config_path . '/init/features/' . feature . '.vim'
 		if !filereadable(feature_path)
 			echo "init.vim: Cannot find feature '" . feature . "' init script: " . fnameescape(feature_path)
 		else
