@@ -1,3 +1,4 @@
 # The list of init features to be loaded
 minpac
+keymap
 # EOF - vim: syntax=text

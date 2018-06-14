@@ -25,31 +25,63 @@
 "
 " }}}
 
-" Try to load minpac.
+" We try to load minpac.
 silent! packadd minpac
 
+" If minpac is not available, we get it from Github and make it ready
 if !exists('*minpac#init')
-	" minpac is not available.
-	" Settings for plugin-less environment.
 	!mkdir $(dirname $MYVIMRC)/pack/minpac/opt ; true
-	!git clone https://github.com/k-takata/minpac.git ~/.config/nvim/pack/minpac/opt/minpac
-else
-	" minpac is available.
+	!git clone https://github.com/k-takata/minpac.git $(dirname $MYVIMRC)/pack/minpac/opt/minpac
+	silent! packadd minpac
+endif
+
+" We try to see if it's available now
+if exists('*minpac#init')
+	" We initialize minpac
 	call minpac#init()
 	call minpac#add('k-takata/minpac', {'type': 'opt'})
-	let plugins_config_path = g:vim_config_path . "/init.plugins.list" 
+	" We load the list of plugins
+	let plugins_config_path  = g:vim_config_path . "/init.plugins.list" 
+	let plugins_updated_path = g:vim_config_path . "/init.plugins.updated" 
 	if !filereadable(plugins_config_path)
+		" If it's not there, we edit it
 		echo "init.minpac.vim: Edit the '" . plugins_config_path . "' file with a list of plugins to load"
 		execute 'edit ' . fnameescape(plugins_config_path)
 	endif
 	if filereadable(plugins_config_path)
+		" We have a list of plugins, we get them and add them
 		let plugins_list = filter(readfile(plugins_config_path), 'v:val !~ "#"')
 		for plugin in plugins_list
 			call minpac#add(plugin)
 		endfor
 	endif
+	" TODO: Should not have to call that all the time, only if minpac
+	" does not already have the plugin.
+	let today = strftime('%Y%m%d')
+	if !filereadable(plugins_updated_path) || readfile(plugins_updated_path)[0] != today
+		echo "init.features.minpac: Updating plugins"
+		call minpac#update()
+		call writefile([today], plugins_updated_path)
+	end
 	" Load the plugins right now. (optional)
 	packloadall
 endif
+
+" -----------------------------------------------------------------------------
+" CUSTOM COMMANDS
+" -----------------------------------------------------------------------------
+
+" Define user commands for updating/cleaning the plugins.
+" Each of them loads minpac, reloads .vimrc to register the
+" information of plugins, then performs the task.
+
+" @command Updates all registered packages
+command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
+
+" @command Cleans all installed packages
+command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
+
+" @command Lists the installed packages
+command! PackList  packadd minpac | call minpac#list()
 
 " EOF

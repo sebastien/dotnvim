@@ -36,28 +36,5 @@ else
 		end
 	endfor
 endif
-"
-" -----------------------------------------------------------------------------
-" KEYMAP
-" -----------------------------------------------------------------------------
 
-" NOTE: I was using Ctrl-P and am now using Command-T
-" @keymap Fuzzy-finder popup with opened buffers
-" nmap     <C-P>               :Buffers<CR>
-" " @keymap Fuzz-finder popup with project files
-" nmap     <C-Space>           :FZF<CR>
-" " @keymap Fuzz-finder popup with tags
-" nmap     <C-T>               :FZFTags<CR>
-
-" -----------------------------------------------------------------------------
-" CUSTOM COMMANDS
-" -----------------------------------------------------------------------------
-
-" Define user commands for updating/cleaning the plugins.
-" Each of them loads minpac, reloads .vimrc to register the
-" information of plugins, then performs the task.
-" @command Updates all registered packages
-" command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
-" " @command Cleans all installed packages
-" command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
 " EOF
