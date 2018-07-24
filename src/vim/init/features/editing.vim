@@ -38,6 +38,8 @@ set hlsearch
 set incsearch
 " @feature Search: Searces are case-insensitive by default
 set noignorecase
+" @feature Search: Live search and replace
+set inccommand=nosplit
 
 " =============================================================================
 " TERMINAL
@@ -47,11 +49,28 @@ set noignorecase
 set mouse=a
 " @feature Terminal: visual bell instead of beep
 set visualbell
+" @feature Terminal: 256 coor support
+set t_Co=256
+
+" =============================================================================
+" GUI
+" =============================================================================
+
+if exists('g:GtkGuiLoaded')
+	" @feature GUI: Native clipboard integration (neovim-gtk)
+	let g:GuiInternalClipboard = 1
+endif
+
+" =============================================================================
+" GUI
+" =============================================================================
 
 " =============================================================================
 " EDITOR
 " =============================================================================
 
+" @feature Editor: Enables syntax plugins
+syntax enable
 " @feature Editor: Enables file type plugins and identation
 filetype plugin indent on
 " @feature Editor: Folding is based on indentation

@@ -3,7 +3,6 @@ SOURCES_FEATURE_LIST=init.features.list
 SOURCES_PLUGINS_LIST=init.plugins.list
 BUILD_FEATURE_MD=$(SOURCES_FEATURES:%.vim=%.md)
 
-
 install:
 	ln -sfr src/vim ~/.config/nvim
 

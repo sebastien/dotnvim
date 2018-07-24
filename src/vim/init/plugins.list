@@ -1,16 +1,24 @@
-# @plugin fuzzy search in files, buffers and tags
+# =============================================================================
+# EDITOR
+# =============================================================================
+# @plugin Editor: fuzzy search in files, buffers and tags
 junegunn/fzf
 junegunn/fzf.vim
-# @plugin completion on insertion
-maralla/completor.vim
-# @plugin File explorer side bar
+# @plugin Editor: File explorer side bar
 scrooloose/nerdtree
-# @plugin Automatic linting
-w0rp/ale
-# @plugin Spelling and grammar checking
-rhysd/vim-grammarous
-# @plugin Syntax highlighting for many languages
+# @plugin Editor: Syntax highlighting for many languages
 sheerun/vim-polyglot
-# @plugin Canned code snippets
+# @plugin Editor: Support for 256-colors terminals
+vim-scripts/CSApprox
+# =============================================================================
+# EDITING
+# =============================================================================
+# @plugin Editing: completion on insertion
+maralla/completor.vim
+# @plugin Editing: Automatic linting
+w0rp/ale
+# @plugin Editing: Spelling and grammar checking using LanguageTool
+rhysd/vim-grammarous
+# @plugin Editing: Canned code snippets
 SirVer/ultisnips
 # EOF - vim: syntax=shell
