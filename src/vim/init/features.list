@@ -4,4 +4,5 @@ keymap
 editing
 status
 style
+follow-symlinks
 # EOF - vim: syntax=text

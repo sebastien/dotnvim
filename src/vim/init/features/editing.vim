@@ -52,18 +52,17 @@ set visualbell
 " @feature Terminal: 256 coor support
 set t_Co=256
 
-" =============================================================================
-" GUI
-" =============================================================================
-
-if exists('g:GtkGuiLoaded')
-	" @feature GUI: Native clipboard integration (neovim-gtk)
-	let g:GuiInternalClipboard = 1
-endif
 
 " =============================================================================
 " GUI
 " =============================================================================
+
+" NOTE: This seems to be problematic
+" if exists('g:GtkGuiLoaded')
+" 	" @feature GUI: Native clipboard integration (neovim-gtk)
+" 	let g:GuiInternalClipboard = 1
+" endif
+
 
 " =============================================================================
 " EDITOR

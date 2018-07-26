@@ -29,6 +29,7 @@ if !filereadable(vim_init_features_path)
 else
 	let features_list = filter(readfile(vim_init_features_path), 'v:val !~ "#"')
 	for feature in features_list
+		" TODO: Should register the feature globally so that it can be queried.
 		let feature_path = g:vim_config_path . '/init/features/' . feature . '.vim'
 		if !filereadable(feature_path)
 			echo "init.vim: Cannot find feature '" . feature . "' init script: " . fnameescape(feature_path)
