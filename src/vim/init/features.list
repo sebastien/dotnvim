@@ -1,8 +1,9 @@
 # The list of init features to be loaded
-minpac
+plugins
 keymap
 editing
 status
 style
 follow-symlinks
+fixes
 # EOF - vim: syntax=text

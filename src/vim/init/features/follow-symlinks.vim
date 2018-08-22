@@ -35,13 +35,17 @@ function! SymlinksFollow(...)
 endfunction
 
 function! SymlinksToggle()
+	" FIXME: Not sure this is the right way to do it.
 	let w:no_follow_symlinks = !get(w:, 'no_follow_symlinks', 0) | echo "w:no_follow_symlinks =>" w:no_follow_symlinks
 endfunction
 
 " @autocommand Automatically resolves and follows symlinks on file read
 au BufReadPost * call SymlinksFollow(expand('<afile>'))
 
+" @command Expands and follows the symlink for the currnet file
+command! FollowSymlinks call SymlinksFollow()
+
 " @command Enables or disables the following of symlinks
-command!	ToggleFollowSymlinks call SymlinksToggle()
+command! ToggleFollowSymlinks call SymlinksToggle()
 
 " EOF

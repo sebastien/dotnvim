@@ -1,7 +1,7 @@
 # =============================================================================
 # EDITOR
 # =============================================================================
-# @plugin Editor: fuzzy search in files, buffers and tags
+# @plugin Editor: search in files, buffers and tags
 junegunn/fzf
 junegunn/fzf.vim
 # @plugin Editor: File explorer side bar
@@ -10,6 +10,8 @@ scrooloose/nerdtree
 sheerun/vim-polyglot
 # @plugin Editor: Support for 256-colors terminals
 vim-scripts/CSApprox
+# @plugin Editor: Support for nvim-qt
+equalsraf/neovim-gui-shim
 # =============================================================================
 # EDITING
 # =============================================================================

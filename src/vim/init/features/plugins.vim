@@ -75,7 +75,7 @@ if exists('*minpac#init')
 	" Load the plugins right now
 	packloadall
 
-	" And configures them configuration variables
+	" And configures them using the configuration variables
 	for plugin in keys(minpac#getpluglist())
 		let plugin_path = g:vim_config_path . "/init/plugins/" . plugin . ".vim"
 		if filereadable(plugin_path)
