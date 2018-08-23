@@ -56,13 +56,7 @@ if exists('*minpac#init')
 		echo "minpac: Edit the '" . plugins_config_path . "' file with a list of plugins to load"
 		execute 'edit ' . fnameescape(plugins_config_path)
 	endif
-	if filereadable(plugins_config_path)
-		" We have a list of plugins, we get them and add them
-		let plugins_list = filter(readfile(plugins_config_path), 'v:val !~ "#"')
-		for plugin in plugins_list
-			call minpac#add(plugin)
-		endfor
-	endif
+
 	" TODO: Should not have to call that all the time, only if minpac
 	" does not already have the plugin.
 	let today = strftime('%Y%m%d')
@@ -70,6 +64,14 @@ if exists('*minpac#init')
 		echo "minpac: Updating plugins"
 		call minpac#update()
 		call writefile([today], plugins_updated_path)
+	endif
+
+	if filereadable(plugins_config_path)
+		" We have a list of plugins, we get them and add them
+		let plugins_list = filter(readfile(plugins_config_path), 'v:val !~ "#"')
+		for plugin in plugins_list
+			call minpac#add(plugin)
+		endfor
 	endif
 
 	" Load the plugins right now
@@ -83,6 +85,8 @@ if exists('*minpac#init')
 		endif
 	endfor
 
+	call init#features_load()
+
 endif
 
 " -----------------------------------------------------------------------------
@@ -94,12 +98,12 @@ endif
 " information of plugins, then performs the task.
 
 " @command Updates all registered packages
-command! PackUpdate packadd minpac | source $MYVIMRC | call minpac#update()
+command! PluginsUpdate packadd minpac | source $MYVIMRC | call minpac#update()
 
 " @command Cleans all installed packages
-command! PackClean  packadd minpac | source $MYVIMRC | call minpac#clean()
+command! PluginsClean  packadd minpac | source $MYVIMRC | call minpac#clean()
 
 " @command Lists the installed packages
-command! PackList  packadd minpac | call minpac#list()
+command! PluginsList  packadd minpac | call minpac#list()
 
 " EOF

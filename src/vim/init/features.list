@@ -1,9 +1,9 @@
 # The list of init features to be loaded
-plugins
 keymap
 editing
 status
 style
 follow-symlinks
+fonts
 fixes
 # EOF - vim: syntax=text
