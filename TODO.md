@@ -7,3 +7,8 @@ Plugins
 [ ] PCSS
 [ ] Polyblocks
 
+Problems
+=========
+
+[ ] Keymapping should be loaded last, but vimrc is loaded first
+

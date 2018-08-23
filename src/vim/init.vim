@@ -26,6 +26,9 @@ let g:vim_config_path      = fnamemodify($MYVIMRC,':h')
 let g:dotvim_features_loaded = 0
 let vim_init_plugins_path  = g:vim_config_path . "/init/features/plugins.vim" 
 
+" TODO: Move this to a plugin configuration
+let g:UltiSnipsExpandTrigger='<C->'
+
 function init#features_load()
 	let vim_init_features_path = g:vim_config_path . "/init/features.list" 
 	if g:dotvim_features_loaded == 0

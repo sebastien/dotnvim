@@ -22,5 +22,5 @@ w0rp/ale
 # @plugin Editing: Spelling and grammar checkniting using LanguageTool
 rhysd/vim-grammarous
 # @plugin Editing: Canned code snippets
-# SirVer/ultisnips
+SirVer/ultisnips
 # EOF - vim: syntax=shell
