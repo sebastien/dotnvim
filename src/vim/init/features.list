@@ -1,6 +1,7 @@
 # The list of init features to be loaded
 keymap
 editing
+whitespace
 status
 style
 follow-symlinks
