@@ -34,7 +34,7 @@ silent! packadd minpac
 
 " If minpac is not available, we get it from Github and make it ready
 if !exists('*minpac#init')
-	!mkdir $(dirname $MYVIMRC)/pack/minpac/opt ; true
+	!mkdir -p $(dirname $MYVIMRC)/pack/minpac/opt ; true
 	!git clone https://github.com/k-takata/minpac.git $(dirname $MYVIMRC)/pack/minpac/opt/minpac
 	silent! packadd minpac
 endif
