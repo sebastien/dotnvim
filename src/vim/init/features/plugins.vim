@@ -32,10 +32,13 @@
 " We try to load minpac.
 silent! packadd minpac
 
+let $MINPAC_ROOT=g:vim_config_path . '/pack/minpac/opt'
 " If minpac is not available, we get it from Github and make it ready
 if !exists('*minpac#init')
-	!mkdir -p $(dirname $MYVIMRC)/pack/minpac/opt ; true
-	!git clone https://github.com/k-takata/minpac.git $(dirname $MYVIMRC)/pack/minpac/opt/minpac
+	if !isdirectory($MINPAC_ROOT)
+		call mkdir($MINPAC_ROOT, "p")
+		!git clone https://github.com/k-takata/minpac.git $MINPAC_ROOT/minpac
+	endif
 	silent! packadd minpac
 endif
 

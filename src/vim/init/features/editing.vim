@@ -39,7 +39,7 @@ set incsearch
 " @feature Search: Searces are case-insensitive by default
 set noignorecase
 " @feature Search: Live search and replace
-set inccommand=nosplit
+" set inccommand=nosplit
 
 " =============================================================================
 " TERMINAL

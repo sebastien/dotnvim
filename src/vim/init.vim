@@ -22,7 +22,7 @@
 " - A VimL tutorial <https://gist.github.com/averagehat/37f54eab2ce0810e4d63>
 " - Learning VimScript the hard way <http://learnvimscriptthehardway.stevelosh.com/>
 "
-let g:vim_config_path      = fnamemodify($MYVIMRC,':h')
+let g:vim_config_path      = get(g:, 'vim_config_path', fnamemodify($MYVIMRC,':h'))
 let g:dotvim_features_loaded = 0
 let vim_init_plugins_path  = g:vim_config_path . "/init/features/plugins.vim" 
 

@@ -2,17 +2,17 @@
 " KEYMAP
 " -----------------------------------------------------------------------------
 
-" TODO: Should test for FZF feature
 "
 " @group FZF (Fuzzy finder)
 " =========================
+" TODO: Should test for FZF feature
 "
 " @keymap Fuzzy-finder popup with opened buffers
 nmap     <C-P>               :Buffers<CR>
+" @keymap Fuzz-finder popup with tags
+nmap     <C-T>               :Tags<CR>
 " @keymap Fuzzy-finder popup with project files
 nmap     <C-Space>           :FZF<CR>
-" @keymap Fuzz-finder popup with tags
-nmap     <C-T>               :FZFTags<CR>
 
 " @group Tab indentation
 " ======================
@@ -21,6 +21,19 @@ nmap     <C-T>               :FZFTags<CR>
 vnoremap <Tab> >
 " @keymap Dedent on shift-tab
 vnoremap <S-Tab> <LT>
+
+" @group Folding
+" ==============================
+
+" @keymap Fold
+nnoremap <C-Up>        zC
+" @keymap Unfold
+nnoremap <C-Down>      zO
+
+" @keymap Increase fold level
+nnoremap <C-Right>     zr
+" @keymap Decrease fold level
+nnoremap <C-Left>      zm
 
 " @group Common editor shortcuts
 " ==============================
