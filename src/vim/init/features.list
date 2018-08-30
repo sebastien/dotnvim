@@ -6,5 +6,6 @@ status
 style
 follow-symlinks
 fonts
+fzf
 fixes
 # EOF - vim: syntax=text
