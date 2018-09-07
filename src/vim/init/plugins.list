@@ -9,7 +9,7 @@ scrooloose/nerdtree
 # @plugin Editor: Syntax highlighting for many languages
 sheerun/vim-polyglot
 # @plugin Editor: Support for 256-colors terminals
-vim-scripts/CSApprox
+# vim-scripts/CSApprox
 # @plugin Editor: Support for nvim-qt
 equalsraf/neovim-gui-shim
 # =============================================================================

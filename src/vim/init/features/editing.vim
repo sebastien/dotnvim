@@ -27,6 +27,8 @@ set smarttab
 set list listchars=tab:»-,trail:·,eol:¬,extends:¬,precedes:¬
 " @feature Editing: Backspace works over indent and newlines
 set backspace=indent,eol,start
+" @feature Editing: Persistent undo (between sessions)
+set undofile
 
 " =============================================================================
 " SEARCHING
