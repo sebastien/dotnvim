@@ -13,7 +13,7 @@ sheerun/vim-polyglot
 # @plugin Editor: Support for nvim-qt
 equalsraf/neovim-gui-shim
 # =============================================================================
-# EDITING
+# EDITING (AUTOMATIC)
 # =============================================================================
 # @plugin Editing: completion on insertion
 maralla/completor.vim
@@ -23,4 +23,20 @@ w0rp/ale
 rhysd/vim-grammarous
 # @plugin Editing: Canned code snippets
 SirVer/ultisnips
+# @plugin Editing: Using .editorconfig files
+editorconfig/editorconfig-vim
+# @plugin Editing: Show VCS changes in the gutter
+mhinz/vim-signify
+# =============================================================================
+# EDITING (MANUAL)
+# =============================================================================
+# @plugin Editing: vertical alignment of text elements
+junegunn/vim-easy-align
+# =============================================================================
+# IDE
+# =============================================================================
+# @plugin IDE/Lisp: SLIME-like REPL
+jpalardy/vim-slime
+# @plugin IDE/Lisp: Parinfer formats Lisp code automagically
+eraserhd/parinfer-rust
 # EOF - vim: syntax=shell

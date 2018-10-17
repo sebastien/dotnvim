@@ -5,7 +5,7 @@ whitespace
 status
 style
 follow-symlinks
-fonts
+font
 fzf
 fixes
 # EOF - vim: syntax=text

@@ -25,6 +25,10 @@
 "
 " }}}
 
+" TODO: Support for PackageInstall
+" TODO: Autodetect a change in the package file and install
+" TODO: Make sure to cleanup any unwanted plugin
+
 " -----------------------------------------------------------------------------
 " BOOTSTRAPPING
 " -----------------------------------------------------------------------------

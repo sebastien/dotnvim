@@ -35,18 +35,29 @@ nnoremap <C-Right>     zr
 " @keymap Decrease fold level
 nnoremap <C-Left>      zm
 
+" @group Font zoom
+" ================
+
+" @keymap Font zoom in
+nnoremap <C-+> :call font#increase()<CR>
+
+" @keymap Font zoom out
+nnoremap <C--> :call font#decrease()<CR>
+
 " @group Common editor shortcuts
 " ==============================
 "
-" @keymap Common save shortcut
+" @keymap Save
 nnoremap <C-S> :w<CR>
-" @keymap Common quit shortcut
+" @keymap Quit
 nnoremap <C-Q> :qa<CR>
-" @keymap Common copy shortcut
+" @keymap Select all
+nnoremap <C-a> ggvG$
+" @keymap Copy to cplyboard
 vmap     <C-c> "+yi
-" @keymap Common cut shortcut
+" @keymap Cut to clipboard
 vmap     <C-x> "+c
-" @keymap Common paste shortcut
+" @keymap Paste
 vmap     <C-v> c<ESC>"+p
 imap     <C-v> <C-r><C-o>+
 
