@@ -53,6 +53,8 @@ nnoremap <C-S> :w<CR>
 nnoremap <C-Q> :qa<CR>
 " @keymap Select all
 nnoremap <C-a> ggvG$
+" @keymap Select line
+nnoremap <C-l> 0v$
 " @keymap Copy to cplyboard
 vmap     <C-c> "+yi
 " @keymap Cut to clipboard
