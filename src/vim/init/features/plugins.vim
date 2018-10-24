@@ -26,7 +26,6 @@
 " }}}
 
 " TODO: Support for PackageInstall
-" TODO: Autodetect a change in the package file and install
 " TODO: Make sure to cleanup any unwanted plugin
 
 " -----------------------------------------------------------------------------
@@ -37,6 +36,7 @@
 silent! packadd minpac
 
 let $MINPAC_ROOT=g:vim_config_path . '/pack/minpac/opt'
+
 " If minpac is not available, we get it from Github and make it ready
 if !exists('*minpac#init')
 	if !isdirectory($MINPAC_ROOT)
@@ -46,55 +46,71 @@ if !exists('*minpac#init')
 	silent! packadd minpac
 endif
 
-" -----------------------------------------------------------------------------
-" LOADING THE PLUGINS
-" -----------------------------------------------------------------------------
 
-" We try to see if it's available now
-if exists('*minpac#init')
-	" We initialize minpac
-	call minpac#init()
-	call minpac#add('k-takata/minpac', {'type': 'opt'})
-	" We load the list of plugins
+" @function Automatically updates the added plugins if the list of plugins has
+" changed or if it's been more than a week.
+function plugins#autoupdate()
 	let plugins_config_path  = g:vim_config_path . "/init/plugins.list" 
 	let plugins_updated_path = g:vim_config_path . "/init/.plugins.updated" 
-	if !filereadable(plugins_config_path)
-		" If it's not there, we edit it
-		echo "minpac: Edit the '" . plugins_config_path . "' file with a list of plugins to load"
-		execute 'edit ' . fnameescape(plugins_config_path)
-	endif
-
-	" TODO: Should not have to call that all the time, only if minpac
-	" does not already have the plugin.
-	let today = strftime('%Y%m%d')
-	if !filereadable(plugins_updated_path) || readfile(plugins_updated_path)[0] != today
+	let timestamp_now        = str2nr(strftime('%s')) / 3600
+	let timestamp_conf       = str2nr(system( "stat --printf '%Y' " . plugins_config_path)) / 3600
+	let timestamp_updated    = str2nr(system( "stat --printf '%Y' " . plugins_updated_path)) / 3600
+	let timestamp_delta      = timestamp_now - timestamp_updated
+	if timestamp_updated < timestamp_conf || timestamp_delta > 7
 		echo "minpac: Updating plugins"
 		call minpac#update()
+		call minpac#clean()
 		call writefile([today], plugins_updated_path)
 	endif
+endfunction
 
+" @function Regsiters all the plugins declared in `plugins.list`
+function plugins#register()
+	let plugins_config_path = g:vim_config_path . "/init/plugins.list" 
 	if filereadable(plugins_config_path)
 		" We have a list of plugins, we get them and add them
 		let plugins_list = filter(readfile(plugins_config_path), 'v:val !~ "#"')
 		for plugin in plugins_list
 			call minpac#add(plugin)
 		endfor
+	else
+		echo "minpac: Edit the '" . plugins_config_path . "' file with a list of plugins to load"
+		execute 'edit ' . fnameescape(plugins_config_path)
 	endif
+endfunction
 
-	" Load the plugins right now
+" @function Loads all the plugins registered in minpack and loads their
+" conifugration file if available.
+function plugins#load()
 	packloadall
-
-	" And configures them using the configuration variables
 	for plugin in keys(minpac#getpluglist())
-		let plugin_path = g:vim_config_path . "/init/plugins/" . plugin . ".vim"
+		let plugin_path = g:vim_config_path . "/init/plugins/" . plugin . ".conf.vim"
 		if filereadable(plugin_path)
 			execute 'source ' . fnameescape(plugin_path)
 		endif
 	endfor
+endfunction
 
-	call init#features_load()
+" -----------------------------------------------------------------------------
+" LOADING THE PLUGINS
+" -----------------------------------------------------------------------------
+
+" We try to see if it's available now
+if exists('*minpac#init')
+
+	" We initialize minpac
+	call minpac#init()
+	call minpac#add('k-takata/minpac', {'type': 'opt'})
+
+	" Start by loading the list of plugins
+	call plugins#register()
+	" Now we update/cleanup the plugins
+	call plugins#autoupdate()
+	" We ask minpac to load all the plugins
+	call plugins#load()
 
 endif
+
 
 " -----------------------------------------------------------------------------
 " CUSTOM COMMANDS
