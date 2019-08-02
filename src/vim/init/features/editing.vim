@@ -54,6 +54,7 @@ set visualbell
 " @feature Terminal: 256 coor support
 set t_Co=256
 
+
 " =============================================================================
 " GUI
 " =============================================================================
@@ -81,6 +82,7 @@ set foldlevel=4
 set cursorline
 " @feature Editor: We never want anything concealed on the current line
 set concealcursor=""
+
 " @feature Editor: Universal clipboard
 set clipboard+=unnamed
 
