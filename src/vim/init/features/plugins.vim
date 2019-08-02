@@ -36,7 +36,6 @@
 silent! packadd minpac
 
 let $MINPAC_ROOT=g:vim_config_path . '/pack/minpac/opt'
-
 " If minpac is not available, we get it from Github and make it ready
 if !exists('*minpac#init')
 	if !isdirectory($MINPAC_ROOT)
@@ -46,21 +45,26 @@ if !exists('*minpac#init')
 	silent! packadd minpac
 endif
 
+" -----------------------------------------------------------------------------
+" FUNCTIONS
+" -----------------------------------------------------------------------------
 
 " @function Automatically updates the added plugins if the list of plugins has
 " changed or if it's been more than a week.
 function plugins#autoupdate()
-	let plugins_config_path  = g:vim_config_path . "/init/plugins.list" 
-	let plugins_updated_path = g:vim_config_path . "/init/.plugins.updated" 
-	let timestamp_now        = str2nr(strftime('%s')) / 3600
-	let timestamp_conf       = str2nr(system( "stat --printf '%Y' " . plugins_config_path)) / 3600
-	let timestamp_updated    = str2nr(system( "stat --printf '%Y' " . plugins_updated_path)) / 3600
-	let timestamp_delta      = timestamp_now - timestamp_updated
-	if timestamp_updated < timestamp_conf || timestamp_delta > 7
+	" NOTE: We need to read the links otherwise the mtime will be that of the
+	" link.
+	let plugins_config_path  = system("readlink -f \"" . g:vim_config_path . "/init/plugins.list\"")
+	let plugins_updated_path = g:vim_config_path . "/init/.plugins.updated"
+	let timestamp_now        = str2nr(strftime('%s'))
+	let timestamp_conf       = str2nr(system( "stat --printf '%Y' " . plugins_config_path))
+	let timestamp_updated    = str2nr(system( "stat --printf '%Y' " . plugins_updated_path))
+	let timestamp_elapsed    = timestamp_now - timestamp_updated
+	if timestamp_updated < timestamp_conf || timestamp_elapsed > 7 * 3600
 		echo "minpac: Updating plugins"
 		call minpac#update()
 		call minpac#clean()
-		call writefile([today], plugins_updated_path)
+		call writefile([timestamp_now], plugins_updated_path)
 	endif
 endfunction
 
@@ -71,7 +75,7 @@ function plugins#register()
 		" We have a list of plugins, we get them and add them
 		let plugins_list = filter(readfile(plugins_config_path), 'v:val !~ "#"')
 		for plugin in plugins_list
-			call minpac#add(plugin)
+			call minpac#add(plugin, {'type':'opt'})
 		endfor
 	else
 		echo "minpac: Edit the '" . plugins_config_path . "' file with a list of plugins to load"
@@ -82,7 +86,12 @@ endfunction
 " @function Loads all the plugins registered in minpack and loads their
 " conifugration file if available.
 function plugins#load()
-	packloadall
+	for plugin in keys(minpac#getpluglist())
+		execute 'packadd ' . plugin
+	endfor
+endfunction
+
+function plugins#configure()
 	for plugin in keys(minpac#getpluglist())
 		let plugin_path = g:vim_config_path . "/init/plugins/" . plugin . ".conf.vim"
 		if filereadable(plugin_path)
@@ -91,8 +100,19 @@ function plugins#load()
 	endfor
 endfunction
 
+function plugins#init()
+	" Start by loading the list of plugins
+	call plugins#register()
+	" Now we update/cleanup the plugins
+	call plugins#autoupdate()
+	" We ask minpac to load all the plugins
+	call plugins#load()
+	" " We configure the plugins
+	call plugins#configure()
+endfunction
+
 " -----------------------------------------------------------------------------
-" LOADING THE PLUGINS
+" INIT
 " -----------------------------------------------------------------------------
 
 " We try to see if it's available now
@@ -101,13 +121,7 @@ if exists('*minpac#init')
 	" We initialize minpac
 	call minpac#init()
 	call minpac#add('k-takata/minpac', {'type': 'opt'})
-
-	" Start by loading the list of plugins
-	call plugins#register()
-	" Now we update/cleanup the plugins
-	call plugins#autoupdate()
-	" We ask minpac to load all the plugins
-	call plugins#load()
+	call plugins#init()
 
 endif
 
@@ -121,10 +135,10 @@ endif
 " information of plugins, then performs the task.
 
 " @command Updates all registered packages
-command! PluginsUpdate packadd minpac | source $MYVIMRC | call minpac#update()
+command! PluginsUpdate packadd minpac | call plugins#init()
 
 " @command Cleans all installed packages
-command! PluginsClean  packadd minpac | source $MYVIMRC | call minpac#clean()
+command! PluginsClean  packadd minpac | call minpac#clean()
 
 " @command Lists the installed packages
 command! PluginsList  packadd minpac | call minpac#list()

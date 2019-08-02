@@ -54,7 +54,6 @@ set visualbell
 " @feature Terminal: 256 coor support
 set t_Co=256
 
-
 " =============================================================================
 " GUI
 " =============================================================================
@@ -80,6 +79,10 @@ set foldmethod=indent
 set foldlevel=4
 " @feature Editor: Shows the current cursor line
 set cursorline
+" @feature Editor: We never want anything concealed on the current line
+set concealcursor=""
+" @feature Editor: Universal clipboard
+set clipboard+=unnamed
 
 if has("gui_running") || has("nvim")
 	" @feature Editor: Show line numbers (Graphical only)

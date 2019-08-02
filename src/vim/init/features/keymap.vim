@@ -63,4 +63,13 @@ vmap     <C-x> "+c
 vmap     <C-v> c<ESC>"+p
 imap     <C-v> <C-r><C-o>+
 
+" @group Editor shortcuts
+" =======================
+
+" @remap Insert closing bracket/element
+" inoremap "" "<Left>
+" inoremap () ()<Left>
+" inoremap {} {}<Left>
+" inoremap [] []<Left>
+
 " EOF

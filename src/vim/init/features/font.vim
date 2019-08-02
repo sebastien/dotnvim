@@ -4,6 +4,7 @@ if exists('g:GtkGuiLoaded')
 	call rpcnotify(1, 'Gui', 'FontFeatures', 'PURS, cv17')
 endif
 
+"let g:font_family = 'M+ 1m'
 let g:font_family = 'Iosevka Term'
 let g:font_size   = 10
 

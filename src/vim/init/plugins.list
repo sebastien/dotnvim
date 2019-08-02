@@ -6,6 +6,8 @@ junegunn/fzf
 junegunn/fzf.vim
 # @plugin Editor: File explorer side bar
 scrooloose/nerdtree
+# @plugin Editor: Tag bar
+majutsushi/tagbar
 # @plugin Editor: Syntax highlighting for many languages
 sheerun/vim-polyglot
 # @plugin Editor: Support for 256-colors terminals
@@ -22,21 +24,37 @@ w0rp/ale
 # @plugin Editing: Spelling and grammar checkniting using LanguageTool
 rhysd/vim-grammarous
 # @plugin Editing: Canned code snippets
-SirVer/ultisnips
+# NOTE: Ultisnips is hellish to configure and hijacks the tab key
+# SirVer/ultisnips
+maralla/completor-neosnippet
+Shougo/neosnippet.vim
+Shougo/neosnippet-snippets
 # @plugin Editing: Using .editorconfig files
 editorconfig/editorconfig-vim
 # @plugin Editing: Show VCS changes in the gutter
 mhinz/vim-signify
+# @plugin Editing: Pencil mode to automatically reflow text
+reedes/vim-pencil
 # =============================================================================
 # EDITING (MANUAL)
 # =============================================================================
 # @plugin Editing: vertical alignment of text elements
-junegunn/vim-easy-align
+godlygeek/tabular
+# @plugin Edition: jump between locations in a file
+justinmk/vim-sneak
 # =============================================================================
 # IDE
 # =============================================================================
 # @plugin IDE/Lisp: SLIME-like REPL
 jpalardy/vim-slime
 # @plugin IDE/Lisp: Parinfer formats Lisp code automagically
-eraserhd/parinfer-rust
+# eraserhd/parinfer-rust
+# @plugin IDE/Mercurial: Mercurial support
+phleet/vim-mercenary
+# =============================================================================
+# SYNTAX & LANGUAGE SUPPORT
+# =============================================================================
+tikhomirov/vim-glsl
+hjson/vim-hjson
+# zxqfl/tabnine-vim
 # EOF - vim: syntax=shell
