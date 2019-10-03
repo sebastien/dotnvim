@@ -56,5 +56,6 @@ phleet/vim-mercenary
 # =============================================================================
 tikhomirov/vim-glsl
 hjson/vim-hjson
+nathangrigg/vim-beancount
 # zxqfl/tabnine-vim
 # EOF - vim: syntax=shell
