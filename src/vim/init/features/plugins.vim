@@ -141,6 +141,6 @@ command! PluginsUpdate packadd minpac | call plugins#init()
 command! PluginsClean  packadd minpac | call minpac#clean()
 
 " @command Lists the installed packages
-command! PluginsList  packadd minpac | call minpac#list()
+command! PluginsList  packadd minpac | call minpac#getpluglist()
 
 " EOF

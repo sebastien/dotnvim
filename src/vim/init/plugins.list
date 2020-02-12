@@ -6,6 +6,8 @@ junegunn/fzf
 junegunn/fzf.vim
 # @plugin Editor: File explorer side bar
 scrooloose/nerdtree
+# @plugin Editor: Integration with NNN
+mcchrish/nnn.vim
 # @plugin Editor: Tag bar
 majutsushi/tagbar
 # @plugin Editor: Syntax highlighting for many languages

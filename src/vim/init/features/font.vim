@@ -6,7 +6,7 @@ endif
 
 "let g:font_family = 'M+ 1m'
 let g:font_family = 'Iosevka Term'
-let g:font_size   = 10
+let g:font_size   = 12
 
 function font#zoom(delta)
 	let g:font_size = max([6,g:font_size + a:delta])
@@ -24,6 +24,8 @@ endfunction
 function font#set(family, size)
 	if exists('g:GtkGuiLoaded')
 		call rpcnotify(1, 'Gui', 'Font', a:family . " " . a:size)
+	else
+		exec 'Guifont ' . a:family . ':h' . a:size
 	endif
 endfunction
 
