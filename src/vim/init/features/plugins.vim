@@ -35,14 +35,21 @@
 " We try to load minpac.
 silent! packadd minpac
 
-let $MINPAC_ROOT=g:vim_config_path . '/pack/minpac/opt'
+let g:minpac_root=g:vim_config_path . '/pack/minpac/opt'
+
+function plugins#minpac()
+	call mkdir(g:minpac_root, "p")
+	" NOTE: We construct the command instead of using env vars, as that would not 
+	" work in Windows.
+	execute '!git clone https://github.com/k-takata/minpac.git ' . g:minpac_root . '/minpac'
+	silent! packadd minpac
+endfunction
+
 " If minpac is not available, we get it from Github and make it ready
 if !exists('*minpac#init')
-	if !isdirectory($MINPAC_ROOT)
-		call mkdir($MINPAC_ROOT, "p")
-		!git clone https://github.com/k-takata/minpac.git $MINPAC_ROOT/minpac
+	if !isdirectory(g:minpac_root)
+		call plugins#minpac()
 	endif
-	silent! packadd minpac
 endif
 
 " -----------------------------------------------------------------------------
@@ -54,11 +61,11 @@ endif
 function plugins#autoupdate()
 	" NOTE: We need to read the links otherwise the mtime will be that of the
 	" link.
-	let plugins_config_path  = system("readlink -f \"" . g:vim_config_path . "/init/plugins.list\"")
+	let plugins_config_path  = resolve(expand(g:vim_config_path . '/init/plugins.list'))
 	let plugins_updated_path = g:vim_config_path . "/init/.plugins.updated"
-	let timestamp_now        = str2nr(strftime('%s'))
-	let timestamp_conf       = str2nr(system( "stat --printf '%Y' " . plugins_config_path))
-	let timestamp_updated    = str2nr(system( "stat --printf '%Y' " . plugins_updated_path))
+	let timestamp_now        = str2nr(localtime())
+	let timestamp_conf       = str2nr(getftime(plugins_config_path))
+	let timestamp_updated    = str2nr(getftime(plugins_updated_path))
 	let timestamp_elapsed    = timestamp_now - timestamp_updated
 	if timestamp_updated < timestamp_conf || timestamp_elapsed > 7 * 3600
 		echo "minpac: Updating plugins"
@@ -117,12 +124,10 @@ endfunction
 
 " We try to see if it's available now
 if exists('*minpac#init')
-
 	" We initialize minpac
 	call minpac#init()
 	call minpac#add('k-takata/minpac', {'type': 'opt'})
 	call plugins#init()
-
 endif
 
 

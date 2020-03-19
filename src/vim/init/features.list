@@ -1,11 +1,10 @@
 # The list of init features to be loaded
 keymap
+fixes
 editing
 whitespace
 status
 style
 follow-symlinks
 font
-fzf
-fixes
 # EOF - vim: syntax=text

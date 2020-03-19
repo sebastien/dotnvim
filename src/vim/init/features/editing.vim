@@ -54,7 +54,6 @@ set visualbell
 " @feature Terminal: 256 coor support
 set t_Co=256
 
-
 " =============================================================================
 " GUI
 " =============================================================================
@@ -64,7 +63,6 @@ set t_Co=256
 " 	" @feature GUI: Native clipboard integration (neovim-gtk)
 " 	let g:GuiInternalClipboard = 1
 " endif
-
 
 " =============================================================================
 " EDITOR
