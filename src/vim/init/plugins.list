@@ -4,7 +4,7 @@
 # @plugin Editor: search in files, buffers and tags
 junegunn/fzf
 junegunn/fzf.vim
-dominickng/fzf-session
+# dominickng/fzf-session
 # @plugin Editor: File explorer side bar
 scrooloose/nerdtree
 # @plugin Editor: Integration with NNN
