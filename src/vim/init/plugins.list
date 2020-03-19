@@ -54,6 +54,12 @@ jpalardy/vim-slime
 # @plugin IDE/Mercurial: Mercurial support
 phleet/vim-mercenary
 # =============================================================================
+# VISUAL ENHANCEMENTS
+# =============================================================================
+# NOTE: Interesting but does not work
+# @plugin Visual: illuminates the other occurences of the current word
+# RRethy/vim-illuminate
+# =============================================================================
 # SYNTAX & LANGUAGE SUPPORT
 # =============================================================================
 tikhomirov/vim-glsl
