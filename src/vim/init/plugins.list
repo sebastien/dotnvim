@@ -23,16 +23,19 @@ ap/vim-buftabline
 # EDITING (AUTOMATIC)
 # =============================================================================
 # @plugin Editing: completion on insertion
-maralla/completor.vim
+Shougo/deoplete.nvim
+# maralla/completor-neosnippet
+# maralla/completor.vim
 # lifepillar/vim-mucomplete
 # @plugin Editing: Automatic linting
 dense-analysis/ale
+# @plugin Editing: Automatic formatting
+Chiel92/vim-autoformat
 # @plugin Editing: Spelling and grammar checkniting using LanguageTool
 rhysd/vim-grammarous
 # @plugin Editing: Canned code snippets
 # NOTE: Ultisnips is hellish to configure and hijacks the tab key
 # SirVer/ultisnips
-maralla/completor-neosnippet
 Shougo/neosnippet.vim
 Shougo/neosnippet-snippets
 # @plugin Editing: Using .editorconfig files

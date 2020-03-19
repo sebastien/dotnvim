@@ -7,4 +7,5 @@ status
 style
 follow-symlinks
 font
+completion
 # EOF - vim: syntax=text
