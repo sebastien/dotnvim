@@ -23,10 +23,10 @@ ap/vim-buftabline
 # EDITING (AUTOMATIC)
 # =============================================================================
 # @plugin Editing: completion on insertion
-Shougo/deoplete.nvim
-# maralla/completor-neosnippet
-# maralla/completor.vim
+# Shougo/deoplete.nvim
 # lifepillar/vim-mucomplete
+maralla/completor-neosnippet
+maralla/completor.vim
 # @plugin Editing: Automatic linting
 dense-analysis/ale
 # @plugin Editing: Automatic formatting
