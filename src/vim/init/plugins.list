@@ -19,6 +19,8 @@ sheerun/vim-polyglot
 equalsraf/neovim-gui-shim
 # @plugin Editor: Buffers displayed as tabline
 ap/vim-buftabline
+# @plugin Editor: LSP Support
+neovim/nvim-lspconfig
 # =============================================================================
 # EDITING (AUTOMATIC)
 # =============================================================================
@@ -28,7 +30,8 @@ ap/vim-buftabline
 maralla/completor-neosnippet
 maralla/completor.vim
 # @plugin Editing: Automatic linting
-dense-analysis/ale
+# dense-analysis/ale
+vim-syntastic/syntastic
 # @plugin Editing: Automatic formatting
 Chiel92/vim-autoformat
 # @plugin Editing: Spelling and grammar checkniting using LanguageTool
@@ -74,6 +77,9 @@ hjson/vim-hjson
 nathangrigg/vim-beancount
 # @language Go
 fatih/vim-go
+# @language Futhark
+BeneCollyridam/futhark-vim
+vmchale/futhark-syntastic-vim
 # zxqfl/tabnine-vim
 # =============================================================================
 # GRAVEYARD (TRIED BUT DOESN'T WORK)

@@ -4,8 +4,6 @@
 
 " @feature Files: UTF-8 encoding by default
 set encoding=utf-8
-" @feature Files: UNIX line ending by default
-set fileformat=unix
 
 " =============================================================================
 " EDITING
@@ -21,7 +19,7 @@ set shiftwidth=4
 set wrap
 " @feature Editing: Show matching bracket
 set showmatch
-" @feature Editing: Hitting tab inserts spaces or tabs based on the configuration 
+" @feature Editing: Hitting tab inserts spaces or tabs based on the configuration
 set smarttab
 " @feature Editing: Whitespace characters are visible
 set list listchars=tab:»-,trail:·,eol:¬,extends:¬,precedes:¬

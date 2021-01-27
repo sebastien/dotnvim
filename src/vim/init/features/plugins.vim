@@ -42,13 +42,16 @@ function plugins#minpac()
 	" NOTE: We construct the command instead of using env vars, as that would not 
 	" work in Windows.
 	execute '!git clone https://github.com/k-takata/minpac.git ' . g:minpac_root . '/minpac'
-	silent! packadd minpac
+	silent! packadd g:minpac_root . '/minpac'
 endfunction
 
 " If minpac is not available, we get it from Github and make it ready
 if !exists('*minpac#init')
 	if !isdirectory(g:minpac_root)
 		call plugins#minpac()
+	else
+		packadd minpac
+		call minpac#init()
 	endif
 endif
 

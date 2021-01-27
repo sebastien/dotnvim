@@ -1,11 +1,15 @@
 # The list of init features to be loaded
-keymap
-fixes
+completion
 editing
-whitespace
-status
-style
+fixes
 follow-symlinks
 font
-completion
+fzf
+keymap
+leader
+# plugins
+status
+style
+whitespace
+spellcheck
 # EOF - vim: syntax=text
