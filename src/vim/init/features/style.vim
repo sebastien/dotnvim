@@ -3,3 +3,6 @@ command! SyntaxSample so $VIMRUNTIME/syntax/hitest.vim
 
 " The color scheme
 colorscheme gold
+
+" Full color in terminal
+set termguicolors
