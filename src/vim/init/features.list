@@ -2,14 +2,15 @@
 completion
 editing
 fixes
+fixes
 follow-symlinks
 font
 fzf
 keymap
 leader
-# plugins
+plugins
+spellcheck
 status
 style
 whitespace
-spellcheck
 # EOF - vim: syntax=text

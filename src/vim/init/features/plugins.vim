@@ -4,7 +4,7 @@
 " We're using `minpack` as recommended by Modern Vim ― there's a little bit
 " of extra boilerplate but it leverages Vim8+ new features.
 " SEE: <https://github.com/k-takata/minpac>
-" 
+"
 " {{{
 "
 " Minpac Package Manager
@@ -21,7 +21,7 @@
 " junegunn/fzf.vim
 " maralla/completor.vim
 " # EOF - vim: syntax=text
-" ``` 
+" ```
 "
 " }}}
 
@@ -36,22 +36,16 @@
 silent! packadd minpac
 
 let g:minpac_root=g:vim_config_path . '/pack/minpac/opt'
-
-function plugins#minpac()
-	call mkdir(g:minpac_root, "p")
-	" NOTE: We construct the command instead of using env vars, as that would not 
-	" work in Windows.
-	execute '!git clone https://github.com/k-takata/minpac.git ' . g:minpac_root . '/minpac'
-	silent! packadd g:minpac_root . '/minpac'
-endfunction
+let g:plugins_initialized = 0
 
 " If minpac is not available, we get it from Github and make it ready
 if !exists('*minpac#init')
 	if !isdirectory(g:minpac_root)
-		call plugins#minpac()
-	else
-		packadd minpac
-		call minpac#init()
+		call mkdir(g:minpac_root, "p")
+		" NOTE: We construct the command instead of using env vars, as that would not
+		" work in Windows.
+		execute '!git clone https://github.com/k-takata/minpac.git "' . g:minpac_root . '/minpac"'
+		silent! packadd minpac
 	endif
 endif
 
@@ -78,9 +72,9 @@ function plugins#autoupdate()
 	endif
 endfunction
 
-" @function Regsiters all the plugins declared in `plugins.list`
+" @function Registers all the plugins declared in `plugins.list`
 function plugins#register()
-	let plugins_config_path = g:vim_config_path . "/init/plugins.list" 
+	let plugins_config_path = g:vim_config_path . "/init/plugins.list"
 	if filereadable(plugins_config_path)
 		" We have a list of plugins, we get them and add them
 		let plugins_list = filter(readfile(plugins_config_path), 'v:val !~ "#"')
@@ -126,13 +120,13 @@ endfunction
 " -----------------------------------------------------------------------------
 
 " We try to see if it's available now
-if exists('*minpac#init')
+if g:plugins_initialized==0
 	" We initialize minpac
 	call minpac#init()
 	call minpac#add('k-takata/minpac', {'type': 'opt'})
 	call plugins#init()
+	let g:plugins_initialized=1
 endif
-
 
 " -----------------------------------------------------------------------------
 " CUSTOM COMMANDS
