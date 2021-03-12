@@ -93,4 +93,6 @@ vmchale/futhark-syntastic-vim
 # @plugin IDE/Lisp: SLIME-like REPL
 # problem: Does kind of work but the Ctrl-C binding clashes with other bindings
 # jpalardy/vim-slime
+# problem: Doing LspInstallServer <name> does not work
+# mattn/vim-lsp-settings
 # EOF - vim: syntax=shell
