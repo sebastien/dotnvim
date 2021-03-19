@@ -1,4 +1,5 @@
 # The list of init features to be loaded
+clipboard
 completion
 editing
 fixes
