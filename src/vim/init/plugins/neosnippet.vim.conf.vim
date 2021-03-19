@@ -8,8 +8,6 @@
 " smap <C-f>     <Plug>(neosnippet_expand_or_jump)
 " xmap <C-f>     <Plug>(neosnippet_expand_target)
 
-
-
 " Enabling this makes Neosnippet load snippets from ~/.snippets automatically
 "
 let g:neosnippet#enable_snipmate_compatibility = 1
@@ -21,5 +19,5 @@ imap <expr><Tab>
 
 " For conceal markers.
 if has('conceal')
-  set conceallevel=2 concealcursor=niv
+  set conceallevel=2
 endif

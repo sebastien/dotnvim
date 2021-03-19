@@ -29,11 +29,8 @@ neovim/nvim-lspconfig
 # lifepillar/vim-mucomplete
 maralla/completor-neosnippet
 maralla/completor.vim
-# @plugin Editing: Automatic linting
-# dense-analysis/ale
-vim-syntastic/syntastic
-# @plugin Editing: Automatic formatting
-Chiel92/vim-autoformat
+# @plugin Editing: Automatic linting & formatting
+dense-analysis/ale
 # @plugin Editing: Spelling and grammar checkniting using LanguageTool
 rhysd/vim-grammarous
 # @plugin Editing: Canned code snippets
@@ -79,8 +76,6 @@ nathangrigg/vim-beancount
 fatih/vim-go
 # @language Futhark
 BeneCollyridam/futhark-vim
-vmchale/futhark-syntastic-vim
-# zxqfl/tabnine-vim
 # =============================================================================
 # GRAVEYARD (TRIED BUT DOESN'T WORK)
 # =============================================================================
@@ -95,4 +90,9 @@ vmchale/futhark-syntastic-vim
 # jpalardy/vim-slime
 # problem: Doing LspInstallServer <name> does not work
 # mattn/vim-lsp-settings
+# reason: ALE does that
+# Chiel92/vim-autoformat
+# vim-syntastic/syntastic
+# vmchale/futhark-syntastic-vim
+# zxqfl/tabnine-vim
 # EOF - vim: syntax=shell

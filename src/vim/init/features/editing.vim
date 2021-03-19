@@ -77,7 +77,7 @@ set foldlevel=4
 " @feature Editor: Shows the current cursor line
 set cursorline
 " @feature Editor: We never want anything concealed on the current line
-set concealcursor=""
+set concealcursor=
 
 " @feature Editor: Universal clipboard
 set clipboard+=unnamed

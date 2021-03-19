@@ -1,10 +1,17 @@
-" We disable most pesky linters for Python
-let g:ale_pattern_options = {'\.paml$':{'ale_enabled':0}}
-let g:ale_linters = {
-\   'python': ['mypy'],
-\   'javascript': ['eslint'],
-\}
-let g:ale_fixers = {
-\   'javascript': ['eslint'],
-\}
+" SEE: https://github.com/dense-analysis/ale
 let g:ale_fix_on_save = 1
+let g:ale_fixers = {
+\   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'javascript': ['prettier', 'eslint'],
+\   'scss': ['prettier', 'stylelint'],
+\   'python': ['autopep8', 'autoimport'],
+\}
+
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\   'python': ['mypy'],
+\   'scss': ['sccslint', 'stylelint'],
+\}
+
+" FROM: https://github.com/dense-analysis/ale/issues/1353
+command! ALEToggleFixer execute "let g:ale_fix_on_save = get(g:, 'ale_fix_on_save', 0) ? 0 : 1"

@@ -13,6 +13,7 @@ nmap     <C-P>               :Buffers<CR>
 nmap     <C-T>               :Tags<CR>
 " @keymap Fuzzy-finder popup with project files
 nmap     <C-Space>           :FZF<CR>
+nmap     <C-O>               :FZF<CR>
 
 " @group Tab indentation
 " ======================
