@@ -63,6 +63,8 @@ axvr/zepl.vim
 # eraserhd/parinfer-rust
 # @plugin IDE/Mercurial: Mercurial support
 phleet/vim-mercenary
+# @plugin IDE/Git: Git support
+tpope/vim-fugitive
 # =============================================================================
 # SYNTAX & LANGUAGE SUPPORT
 # =============================================================================
