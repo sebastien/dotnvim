@@ -21,6 +21,8 @@ equalsraf/neovim-gui-shim
 ap/vim-buftabline
 # @plugin Editor: LSP Support
 neovim/nvim-lspconfig
+# @plugin Editor: Cursor line
+yamatsum/nvim-cursorline
 # =============================================================================
 # EDITING (AUTOMATIC)
 # =============================================================================
