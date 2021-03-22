@@ -21,6 +21,8 @@ equalsraf/neovim-gui-shim
 ap/vim-buftabline
 # @plugin Editor: LSP Support
 neovim/nvim-lspconfig
+# @plugin Editor: Cursor line
+yamatsum/nvim-cursorline
 # =============================================================================
 # EDITING (AUTOMATIC)
 # =============================================================================
@@ -63,6 +65,8 @@ axvr/zepl.vim
 # eraserhd/parinfer-rust
 # @plugin IDE/Mercurial: Mercurial support
 phleet/vim-mercenary
+# @plugin IDE/Git: Git support
+tpope/vim-fugitive
 # =============================================================================
 # MISC
 # =============================================================================
@@ -93,6 +97,8 @@ BeneCollyridam/futhark-vim
 # @plugin IDE/Lisp: SLIME-like REPL
 # problem: Does kind of work but the Ctrl-C binding clashes with other bindings
 # jpalardy/vim-slime
+# problem: Doing LspInstallServer <name> does not work
+# mattn/vim-lsp-settings
 # reason: ALE does that
 # Chiel92/vim-autoformat
 # vim-syntastic/syntastic
