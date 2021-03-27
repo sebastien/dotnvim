@@ -5,12 +5,16 @@ let g:ale_fixers = {
 \   'javascript': ['prettier', 'eslint'],
 \   'scss': ['prettier', 'stylelint'],
 \   'python': ['autopep8', 'autoimport'],
+\   'kotlin': ['ktlint'],
+\   'go': ['gopls'],
 \}
 
 let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'python': ['mypy'],
 \   'scss': ['sccslint', 'stylelint'],
+\   'kotlin': ['kotlinc', 'ktlint'],
+\   'go': ['golint'],
 \}
 
 " FROM: https://github.com/dense-analysis/ale/issues/1353
