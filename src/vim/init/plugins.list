@@ -81,6 +81,8 @@ hjson/vim-hjson
 nathangrigg/vim-beancount
 # @language Futhark
 BeneCollyridam/futhark-vim
+# @language Kotlin
+udalov/kotlin-vim
 # =============================================================================
 # GRAVEYARD (TRIED BUT DOESN'T WORK)
 # =============================================================================

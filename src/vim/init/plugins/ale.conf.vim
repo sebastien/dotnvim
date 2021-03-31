@@ -6,6 +6,7 @@ let g:ale_fixers = {
 \   'scss': ['prettier', 'stylelint'],
 \   'python': ['autopep8', 'autoimport'],
 \   'go': ['gofmt', 'goimports'],
+\   'kotlin': ['ktlint'],
 \}
 
 let g:ale_linters = {
@@ -13,6 +14,7 @@ let g:ale_linters = {
 \   'python': ['mypy'],
 \   'scss': ['sccslint', 'stylelint'],
 \   'go': ['gopls', 'gometalinter', 'gofmt', 'staticcheck'],
+\   'kotlin': ['kotlinc', 'ktlint'],
 \}
 
 " FROM: https://github.com/dense-analysis/ale/issues/1353
