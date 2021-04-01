@@ -6,7 +6,7 @@ function! LinterStatus() abort
 	" TODO: Do we have a fixer in place?
 	" TODO: Do we have a linter in place?
     return l:counts.total == 0 ? 'OK' : printf(
-    \   '%dW %dE',
+    \   '%dW %dE %s',
     \   all_non_errors,
     \   all_errors
     \)
@@ -20,6 +20,6 @@ function! StatusFileUpdated()
 endfunction
 
 " B | path/file.ext [TYPE,MOD]                                         2 13/200
-" set statusline=[%n]%3*█▓▒░%f░▒▓█%4*\ %5*\ %6*\ %c┄\%l/%L[%p%%]%=%(%{StatusFileUpdated()}―%{LinterStatus()}―[%Y%2*%M%R%W%*]%)
+set statusline=[%n]%3*█▓▒░%f░▒▓█%4*\ %5*\ %6*\ %c┄\%l/%L[%p%%]%=%(%{StatusFileUpdated()}―%{LinterStatus()}―[%Y%2*%M%R%W%*]%)
 
 " EOF

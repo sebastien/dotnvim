@@ -29,8 +29,9 @@ neovim/nvim-lspconfig
 # @plugin Editing: completion on insertion
 # Shougo/deoplete.nvim
 # lifepillar/vim-mucomplete
-maralla/completor-neosnippet
-maralla/completor.vim
+# maralla/completor-neosnippet
+# maralla/completor.vim
+neoclide/coc.nvim
 # @plugin Editing: Automatic linting & formatting
 dense-analysis/ale
 # @plugin Editing: Spelling and grammar checkniting using LanguageTool
