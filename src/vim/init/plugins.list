@@ -19,6 +19,8 @@ sheerun/vim-polyglot
 equalsraf/neovim-gui-shim
 # @plugin Editor: Buffers displayed as tabline
 ap/vim-buftabline
+# @plugin Editor: Auto Pairs
+jiangmiao/auto-pairs
 # @plugin Editor: LSP Support
 neovim/nvim-lspconfig
 # =============================================================================
