@@ -2,7 +2,8 @@
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
-\   'javascript': ['prettier', 'eslint'],
+\   'javascript': ['prettier', 'deno'],
+\   'typescript': ['deno'],
 \   'scss': ['prettier', 'stylelint'],
 \   'python': ['autopep8', 'autoimport'],
 \   'go': ['gofmt', 'goimports'],
@@ -10,7 +11,9 @@ let g:ale_fixers = {
 \}
 
 let g:ale_linters = {
-\   'javascript': ['eslint'],
+\   'javascript': ['deno'],
+\   'typescript': ['deno'],
+\   'css': ['prettier', 'stylelint'],
 \   'python': ['mypy'],
 \   'scss': ['sccslint', 'stylelint'],
 \   'go': ['gopls', 'gometalinter', 'gofmt', 'staticcheck'],
