@@ -27,10 +27,6 @@ neovim/nvim-lspconfig
 # EDITING (AUTOMATIC)
 # =============================================================================
 # @plugin Editing: completion on insertion
-# Shougo/deoplete.nvim
-# lifepillar/vim-mucomplete
-# maralla/completor-neosnippet
-# maralla/completor.vim
 neoclide/coc.nvim
 # @plugin Editing: Automatic linting & formatting
 dense-analysis/ale
@@ -86,6 +82,8 @@ nathangrigg/vim-beancount
 BeneCollyridam/futhark-vim
 # @language Kotlin
 udalov/kotlin-vim
+# @language NIX
+LnL7/vim-nix
 # =============================================================================
 # GRAVEYARD (TRIED BUT DOESN'T WORK)
 # =============================================================================
@@ -107,4 +105,9 @@ udalov/kotlin-vim
 # zxqfl/tabnine-vim
 # problem: ALE does the same
 # fatih/vim-go
+# reason: Replaced by CoC
+# Shougo/deoplete.nvim
+# lifepillar/vim-mucomplete
+# maralla/completor-neosnippet
+# maralla/completor.vim
 # EOF - vim: syntax=shell
