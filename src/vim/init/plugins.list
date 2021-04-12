@@ -27,7 +27,10 @@ neovim/nvim-lspconfig
 # EDITING (AUTOMATIC)
 # =============================================================================
 # @plugin Editing: completion on insertion
-neoclide/coc.nvim
+nvim-lua/completion-nvim
+steelsojka/completion-buffers
+nvim-treesitter/completion-treesitter
+nvim-treesitter/nvim-treesitter
 # @plugin Editing: Automatic linting & formatting
 dense-analysis/ale
 # @plugin Editing: Spelling and grammar checkniting using LanguageTool
@@ -105,9 +108,11 @@ LnL7/vim-nix
 # zxqfl/tabnine-vim
 # problem: ALE does the same
 # fatih/vim-go
-# reason: Replaced by CoC
 # Shougo/deoplete.nvim
 # lifepillar/vim-mucomplete
+# reason: worked well, but not well integrated with LSP
 # maralla/completor-neosnippet
 # maralla/completor.vim
+# reason: configuration separate from nvim
+# neoclide/coc.nvim
 # EOF - vim: syntax=shell
