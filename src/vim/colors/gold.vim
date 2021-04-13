@@ -19,7 +19,8 @@ endif
 " TEAL          #4ABAAB
 " PURPLE_DK     #221924
 
-hi normal        guifg=#B8B8B8 guibg=#221924
+" hi normal        guifg=#B8B8B8 guibg=#221924 ctermbg=NONE
+hi normal        guifg=#B8B8B8 guibg=NONE ctermbg=NONE
 
 "Code syntax
 hi link                Value     Identifier
