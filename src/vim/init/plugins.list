@@ -48,6 +48,8 @@ mhinz/vim-signify
 reedes/vim-pencil
 # @plugin Editing: Spelling
 reedes/vim-lexical
+# @plugin: Editing: Rainbow Parens
+junegunn/rainbow_parentheses.vim
 # =============================================================================
 # EDITING (MANUAL)
 # =============================================================================
@@ -72,6 +74,7 @@ tpope/vim-fugitive
 # =============================================================================
 # @plugin Misc/Wiki
 lervag/wiki.vim
+lervag/wiki-ft.vim
 # =============================================================================
 # SYNTAX & LANGUAGE SUPPORT
 # =============================================================================
