@@ -7,7 +7,7 @@
 " =========================
 "
 " @keymap Fuzzy-finder popup with opened buffers
-nmap     <C-P>               :Telescope buffer<CR>
+nmap     <C-P>               :Telescope buffers<CR>
 " @keymap Fuzz-finder popup with tags
 nmap     <C-T>               :Telescope help_tags<CR>
 " @keymap Fuzzy-finder popup with project files
