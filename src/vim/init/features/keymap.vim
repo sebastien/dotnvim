@@ -7,13 +7,13 @@
 " =========================
 "
 " @keymap Fuzzy-finder popup with opened buffers
-nmap     <C-P>               :Telescope buffers<CR>
+nmap     <C-P>               <cmd>Buffers<CR>
 " @keymap Fuzz-finder popup with tags
-nmap     <C-T>               :Telescope help_tags<CR>
+nmap     <C-T>               <cmd>Tags<CR>
 " @keymap Fuzzy-finder popup with project files
-nmap     <C-Space>           :Telescope find_files<CR>
+nmap     <C-Space>           <cmd>FZF<CR>
 " @keymap Fuzzy-finder popup with live search
-nmap     <C-O>               :Telescope live_grep<CR>
+nmap     <C-O>               <cmd>FZF<CR>
 
 " @group Tab indentation
 " ======================

@@ -1,3 +1,4 @@
+# SEE: https://raygervais.dev/articles/2021/3/neovim-lsp/
 SOURCES_FEATURES=$(wildcard init.features.*.vim)
 SOURCES_FEATURE_LIST=init.features.list
 SOURCES_PLUGINS_LIST=init.plugins.list
@@ -13,6 +14,7 @@ deps:
 	npm install -g diagnostic-languageserver
 	npm install -g typescript typescript-language-server
 	npm install -g eslint_d prettier
+	npm install -g pyright
 
 %.md: %.vim
 	# TODO: 1) Split the file using '{{{' and '}}}'
