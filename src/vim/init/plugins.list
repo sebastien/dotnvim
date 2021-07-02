@@ -2,9 +2,13 @@
 # EDITOR
 # =============================================================================
 # @plugin Editor: search in files, buffers and tags
-junegunn/fzf
-junegunn/fzf.vim
+# junegunn/fzf
+# junegunn/fzf.vim
 # dominickng/fzf-session
+# @plugin Editor: search in files, buffers and tags  (telescope)
+nvim-telescope/telescope.nvim
+nvim-lua/popup.nvim
+nvim-lua/plenary.nvim
 # @plugin Editor: File explorer side bar
 scrooloose/nerdtree
 # @plugin Editor: Integration with NNN
@@ -23,6 +27,8 @@ ap/vim-buftabline
 jiangmiao/auto-pairs
 # @plugin Editor: LSP Support
 neovim/nvim-lspconfig
+# @plugin Editor: LSP UI
+glepnir/lspsaga.nvim
 # =============================================================================
 # EDITING (AUTOMATIC)
 # =============================================================================

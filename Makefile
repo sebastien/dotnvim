@@ -9,6 +9,11 @@ install:
 all:
 	@echo $(BUILD_FEATURE_MD)
 
+deps:
+	npm install -g diagnostic-languageserver
+	npm install -g typescript typescript-language-server
+	npm install -g eslint_d prettier
+
 %.md: %.vim
 	# TODO: 1) Split the file using '{{{' and '}}}'
 	#       2) For each line with the range, remove the leading '" '

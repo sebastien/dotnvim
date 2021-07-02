@@ -3,17 +3,17 @@
 " -----------------------------------------------------------------------------
 
 "
-" @group FZF (Fuzzy finder)
+" @group Telescpe (Fuzzy finder)
 " =========================
-" TODO: Should test for FZF feature
 "
 " @keymap Fuzzy-finder popup with opened buffers
-nmap     <C-P>               :Buffers<CR>
+nmap     <C-P>               :Telescope buffer<CR>
 " @keymap Fuzz-finder popup with tags
-nmap     <C-T>               :Tags<CR>
+nmap     <C-T>               :Telescope help_tags<CR>
 " @keymap Fuzzy-finder popup with project files
-nmap     <C-Space>           :FZF<CR>
-nmap     <C-O>               :FZF<CR>
+nmap     <C-Space>           :Telescope find_files<CR>
+" @keymap Fuzzy-finder popup with live search
+nmap     <C-O>               :Telescope live_grep<CR>
 
 " @group Tab indentation
 " ======================
