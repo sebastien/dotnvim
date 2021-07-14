@@ -2,6 +2,7 @@
 " npm install -g vscode-html-languageserver-bin
 " npm install -g vscode-css-languageserver-bin
 " npm install -g vscode-json-languageserver
+
 lua << EOF
 require'lspconfig'.denols.setup{on_attach=require'completion'.on_attach}
 require'lspconfig'.pyright.setup{on_attach=require'completion'.on_attach}

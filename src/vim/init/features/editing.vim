@@ -82,10 +82,8 @@ set concealcursor=
 " @feature Editor: Universal clipboard
 set clipboard+=unnamed
 
-if has("gui_running") || has("nvim")
-	" @feature Editor: Show line numbers (Graphical only)
-	set number
-endif
+" @feature Editor: Show line numbers
+set number
 
 " =============================================================================
 " PERFORMANCE
