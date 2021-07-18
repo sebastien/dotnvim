@@ -3,6 +3,7 @@ let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
 \   'javascript': ['prettier', 'deno'],
+\   'javascriptreact': ['prettier', 'deno'],
 \   'typescript': ['deno'],
 \   'scss': ['prettier', 'stylelint'],
 \   'python': ['autopep8', 'remove_trailing_lines', 'trim_whitespace'],
@@ -12,6 +13,7 @@ let g:ale_fixers = {
 
 let g:ale_linters = {
 \   'javascript': ['deno'],
+\   'javascriptreact': ['deno'],
 \   'typescript': ['deno'],
 \   'css': ['prettier', 'stylelint'],
 \   'python': ['mypy'],
