@@ -5,7 +5,7 @@ if exists('g:GtkGuiLoaded')
 endif
 
 "let g:font_family = 'M+ 1m'
-let g:font_family = 'Iosevka Term'
+let g:font_family = 'Iosevka Term Nerd Font Mono'
 let g:font_size   = 12
 
 function font#zoom(delta)

@@ -10,6 +10,7 @@ require'lspconfig'.gopls.setup{on_attach=require'completion'.on_attach}
 require'lspconfig'.cssls.setup{}
 require'lspconfig'.html.setup{}
 require'lspconfig'.jsonls.setup{}
+require'nvim-treesitter.configs'.setup {highlight={enable=true},}
 EOF
 
 " SEE: lsp-config
