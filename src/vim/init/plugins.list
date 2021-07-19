@@ -99,6 +99,10 @@ BeneCollyridam/futhark-vim
 udalov/kotlin-vim
 # @language NIX
 LnL7/vim-nix
+# @language Rust
+rust-lang/rust.vim
+# @language TOML
+cespare/vim-toml
 # =============================================================================
 # GRAVEYARD (TRIED BUT DOESN'T WORK)
 # =============================================================================

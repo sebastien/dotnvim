@@ -4,14 +4,33 @@
 " npm install -g vscode-json-languageserver
 
 lua << EOF
-require'lspconfig'.denols.setup{on_attach=require'completion'.on_attach}
-require'lspconfig'.pyright.setup{on_attach=require'completion'.on_attach}
-require'lspconfig'.gopls.setup{on_attach=require'completion'.on_attach}
-require'lspconfig'.cssls.setup{}
-require'lspconfig'.html.setup{}
-require'lspconfig'.jsonls.setup{}
+local nvim_lsp = require'lspconfig'
+local on_attach = function(client)
+    require'completion'.on_attach(client)
+end
+nvim_lsp.denols.setup({on_attach=on_attach})
+nvim_lsp.pyright.setup({on_attach=on_attach})
+nvim_lsp.gopls.setup({on_attach=on_attach})
+nvim_lsp.cssls.setup({on_attach=on_attach})
+nvim_lsp.html.setup({on_attach=on_attach})
+nvim_lsp.jsonls.setup({on_attach=on_attach})
+nvim_lsp.rust_analyzer.setup({on_attach=on_attach})
+
+-- Enable diagnostics
+-- FROM :https://sharksforarms.dev/posts/neovim-rust/
+-- FROM :https://sharksforarms.dev/posts/neovim-rust
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    virtual_text = true,
+    signs = true,
+    update_in_insert = true,
+  }
+)
+
 require'nvim-treesitter.configs'.setup {highlight={enable=true},}
 EOF
+
+
 
 " SEE: lsp-config
 set omnifunc=v:lua.vim.lsp.omnifunc
@@ -23,3 +42,4 @@ endfunction
 function LspInspect()
   lua print(vim.inspect(vim.lsp))
 endfunction
+" EOF
