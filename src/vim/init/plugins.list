@@ -16,6 +16,8 @@ scrooloose/nerdtree
 mcchrish/nnn.vim
 # @plugin Editor: Tag bar
 majutsushi/tagbar
+# @plugin Editor: Automatic tags
+craigemery/vim-autotag
 # @plugin Editor: Syntax highlighting for many languages
 sheerun/vim-polyglot
 # @plugin Editor: Support for 256-colors terminals
