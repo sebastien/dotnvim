@@ -19,7 +19,7 @@ majutsushi/tagbar
 # @plugin Editor: Automatic tags
 craigemery/vim-autotag
 # @plugin Editor: Syntax highlighting for many languages
-sheerun/vim-polyglot
+# sheerun/vim-polyglot
 # @plugin Editor: Support for 256-colors terminals
 # vim-scripts/CSApprox
 # @plugin Editor: Support for nvim-qt
@@ -29,9 +29,9 @@ ap/vim-buftabline
 # @plugin Editor: Auto Pairs
 jiangmiao/auto-pairs
 # @plugin Editor: LSP Support
-neovim/nvim-lspconfig
+# neovim/nvim-lspconfig
 # @plugin Editor: LSP UI
-glepnir/lspsaga.nvim
+# glepnir/lspsaga.nvim
 # =============================================================================
 # EDITING (AUTOMATIC)
 # =============================================================================
@@ -57,6 +57,8 @@ mhinz/vim-signify
 reedes/vim-pencil
 # @plugin Editing: Spelling
 reedes/vim-lexical
+# @plugin: Editing: Rainbow Parens
+junegunn/rainbow_parentheses.vim
 # =============================================================================
 # EDITING (MANUAL)
 # =============================================================================
@@ -81,6 +83,7 @@ tpope/vim-fugitive
 # =============================================================================
 # @plugin Misc/Wiki
 lervag/wiki.vim
+lervag/wiki-ft.vim
 # Dev Icons
 kyazdani42/nvim-web-devicons
 # =============================================================================
@@ -98,6 +101,10 @@ BeneCollyridam/futhark-vim
 udalov/kotlin-vim
 # @language NIX
 LnL7/vim-nix
+# @language Rust
+rust-lang/rust.vim
+# @language TOML
+cespare/vim-toml
 # =============================================================================
 # GRAVEYARD (TRIED BUT DOESN'T WORK)
 # =============================================================================
