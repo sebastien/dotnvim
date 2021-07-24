@@ -2,6 +2,9 @@
 " KEYMAP
 " -----------------------------------------------------------------------------
 
+" The local leader
+let maplocalleader=","
+
 "
 " @group Telescpe (Fuzzy finder)
 " =========================
