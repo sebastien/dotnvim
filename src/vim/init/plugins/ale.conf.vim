@@ -9,6 +9,7 @@ let g:ale_fixers = {
 \   'python': ['autopep8', 'remove_trailing_lines', 'trim_whitespace'],
 \   'go': ['gofmt', 'goimports'],
 \   'kotlin': ['ktlint'],
+\   'rust': ['rustfmt'],
 \}
 
 let g:ale_linters = {
@@ -20,6 +21,7 @@ let g:ale_linters = {
 \   'scss': ['sccslint', 'stylelint'],
 \   'go': ['gopls', 'gometalinter', 'gofmt', 'staticcheck'],
 \   'kotlin': ['kotlinc', 'ktlint'],
+\   'rust': ['analyzer', 'cargo', "rls', 'rustc'"],
 \}
 
 " FROM: https://github.com/dense-analysis/ale/issues/1353
