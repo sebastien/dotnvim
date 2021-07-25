@@ -73,6 +73,7 @@ justinmk/vim-sneak
 # @binding :Repl
 axvr/zepl.vim
 # @plugin IDE/Lisp: Parinfer formats Lisp code automagically
+# # NOTE: It seems that parinfer causes more formatting
 # eraserhd/parinfer-rust
 # @plugin IDE/Mercurial: Mercurial support
 phleet/vim-mercenary
@@ -105,6 +106,8 @@ LnL7/vim-nix
 rust-lang/rust.vim
 # @language TOML
 cespare/vim-toml
+# @language Clojure
+Olical/conjure
 # =============================================================================
 # GRAVEYARD (TRIED BUT DOESN'T WORK)
 # =============================================================================

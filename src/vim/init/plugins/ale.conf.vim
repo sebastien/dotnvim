@@ -10,6 +10,7 @@ let g:ale_fixers = {
 \   'go': ['gofmt', 'goimports'],
 \   'kotlin': ['ktlint'],
 \   'rust': ['rustfmt'],
+\   'c': ['clangtidy','uncrustify'],
 \}
 
 let g:ale_linters = {
@@ -22,6 +23,7 @@ let g:ale_linters = {
 \   'go': ['gopls', 'gometalinter', 'gofmt', 'staticcheck'],
 \   'kotlin': ['kotlinc', 'ktlint'],
 \   'rust': ['analyzer', 'cargo', "rls', 'rustc'"],
+\   'c': ['cc', 'ccls', 'clangd', 'clangtidy', 'cppcheck', 'cquery', 'flawfinder'],
 \}
 
 " FROM: https://github.com/dense-analysis/ale/issues/1353
