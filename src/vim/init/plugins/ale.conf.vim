@@ -18,7 +18,7 @@ let g:ale_linters = {
 \   'javascriptreact': ['deno'],
 \   'typescript': ['deno'],
 \   'css': ['prettier', 'stylelint'],
-\   'python': ['mypy'],
+\   'python': ['mypy', 'pyre', 'pyright'],
 \   'scss': ['sccslint', 'stylelint'],
 \   'go': ['gopls', 'gometalinter', 'gofmt', 'staticcheck'],
 \   'kotlin': ['kotlinc', 'ktlint'],
@@ -28,3 +28,7 @@ let g:ale_linters = {
 
 " FROM: https://github.com/dense-analysis/ale/issues/1353
 command! ALEToggleFixer execute "let g:ale_fix_on_save = get(g:, 'ale_fix_on_save', 0) ? 0 : 1"
+
+" FROM: https://github.com/dense-analysis/ale/issues/249
+let g:ale_sign_warning = '•'
+let g:ale_sign_error = "➤"

@@ -39,10 +39,14 @@ hi Type                guifg=#E0E0E0 gui=bold
 hi Underlined          guifg=#13BAED
 hi Number              guifg=#11D9D2
 hi Error               guibg=#401212 guifg=#C43333
+hi Warning             guibg=NONE    guifg=#4ABAAB
 hi NVimInternalError   guibg=#401212 guifg=#C43333
 
 hi TrailingWhitespace  guibg=#881300 guifg=#CE1A2C
 hi NonASCII            guibg=#1C3341 guifg=#DCF4F8
+" SEE: https://github.com/dense-analysis/ale/issues/249
+hi link ALEErrorSign    Error
+hi link ALEWarningSign  Warning
 
 " Conceal
 hi Conceal               guifg=#FFE21B guibg=#2A2A2A
@@ -59,6 +63,8 @@ hi Cursor        guibg=#A890A8 guifg=#042B01
 hi CursorLine    guibg=#321C57
 hi CursorLineNr  guifg=#A36FA3 guibg=#641F70
 hi LineNr        guifg=#373766 guibg=#221924
+" SEE: https://github.com/dense-analysis/ale/issues/309
+hi SignColumn    guifg=#F5C400 guibg=#221924
 hi Visual        guibg=#571663
 hi Folded        guifg=#808080 guibg=#202020
 
