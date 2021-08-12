@@ -2,28 +2,29 @@
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
+\   'c': ['clangtidy','uncrustify'],
+\   'go': ['gofmt', 'goimports'],
 \   'javascript': ['prettier', 'deno'],
 \   'javascriptreact': ['prettier', 'deno'],
-\   'typescript': ['deno'],
-\   'scss': ['prettier', 'stylelint'],
-\   'python': ['autopep8', 'remove_trailing_lines', 'trim_whitespace'],
-\   'go': ['gofmt', 'goimports'],
 \   'kotlin': ['ktlint'],
+\   'markdown': ['pandoc','textlint'],
+\   'python': ['autopep8', 'remove_trailing_lines', 'trim_whitespace'],
 \   'rust': ['rustfmt'],
-\   'c': ['clangtidy','uncrustify'],
+\   'scss': ['prettier', 'stylelint'],
+\   'typescript': ['deno'],
 \}
 
 let g:ale_linters = {
+\   'c': ['cc', 'ccls', 'clangd', 'clangtidy', 'cppcheck', 'cquery', 'flawfinder'],
+\   'css': ['prettier', 'stylelint'],
+\   'go': ['gopls', 'gometalinter', 'gofmt', 'staticcheck'],
 \   'javascript': ['deno'],
 \   'javascriptreact': ['deno'],
-\   'typescript': ['deno'],
-\   'css': ['prettier', 'stylelint'],
-\   'python': ['mypy', 'pyre', 'pyright'],
-\   'scss': ['sccslint', 'stylelint'],
-\   'go': ['gopls', 'gometalinter', 'gofmt', 'staticcheck'],
 \   'kotlin': ['kotlinc', 'ktlint'],
+\   'python': ['mypy', 'pyre', 'pyright'],
 \   'rust': ['analyzer', 'cargo', "rls', 'rustc'"],
-\   'c': ['cc', 'ccls', 'clangd', 'clangtidy', 'cppcheck', 'cquery', 'flawfinder'],
+\   'scss': ['sccslint', 'stylelint'],
+\   'typescript': ['deno'],
 \}
 
 " FROM: https://github.com/dense-analysis/ale/issues/1353

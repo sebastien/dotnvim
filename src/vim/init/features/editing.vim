@@ -76,6 +76,8 @@ set foldmethod=indent
 set foldlevel=4
 " @feature Editor: Shows the current cursor line
 set cursorline
+" @feature Editor: Shows the current cursor column
+set cursorcolumn
 " @feature Editor: We never want anything concealed on the current line
 set concealcursor=
 
@@ -85,13 +87,15 @@ set clipboard+=unnamed
 " @feature Editor: Show line numbers
 set number
 
+" @feature Editor: no bell
+set belloff
+
 " =============================================================================
 " PERFORMANCE
 " =============================================================================
 
-" @feature Perfomrance: ensures faster drawing in terminal
+" @feature Performance: ensures faster drawing in terminal
 set ttyfast
 " @feature Performance: do not try to highlight past the 256-th column
 set synmaxcol=256
-
 " EOF
