@@ -6,7 +6,8 @@ junegunn/fzf
 junegunn/fzf.vim
 # dominickng/fzf-session
 # @plugin Editor: File explorer side bar
-scrooloose/nerdtree
+# scrooloose/nerdtreeo
+ms-jpq/chadtree
 # @plugin Editor: Integration with NNN
 mcchrish/nnn.vim
 # @plugin Editor: Tag bar
@@ -33,10 +34,12 @@ jiangmiao/auto-pairs
 # EDITING (AUTOMATIC)
 # =============================================================================
 # @plugin Editing: completion on insertion
-nvim-lua/completion-nvim
-steelsojka/completion-buffers
-nvim-treesitter/completion-treesitter
-nvim-treesitter/nvim-treesitter
+# nvim-lua/completion-nvim
+# steelsojka/completion-buffers
+# nvim-treesitter/completion-treesitter
+# nvim-treesitter/nvim-treesitter
+ms-jpq/coq_nvim
+ms-jpq/coq.artifacts
 # @plugin Editing: Automatic linting & formatting
 dense-analysis/ale
 # @plugin Editing: Spelling and grammar checkniting using LanguageTool
