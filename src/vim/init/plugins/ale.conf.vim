@@ -5,6 +5,7 @@ let g:ale_fixers = {
 \   'javascript': ['prettier', 'deno'],
 \   'javascriptreact': ['prettier', 'deno'],
 \   'typescript': ['deno'],
+\   'css': ['prettier', 'stylelint'],
 \   'scss': ['prettier', 'stylelint'],
 \   'python': ['autopep8', 'remove_trailing_lines', 'trim_whitespace'],
 \   'go': ['gofmt', 'goimports'],

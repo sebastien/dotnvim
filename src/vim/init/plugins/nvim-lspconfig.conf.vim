@@ -6,6 +6,7 @@
 lua << EOF
 local nvim_lsp = require'lspconfig'
 local on_attach = function(client)
+    vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
     require'completion'.on_attach(client)
 end
 nvim_lsp.denols.setup({on_attach=on_attach})
@@ -15,6 +16,7 @@ nvim_lsp.cssls.setup({on_attach=on_attach})
 nvim_lsp.html.setup({on_attach=on_attach})
 nvim_lsp.jsonls.setup({on_attach=on_attach})
 nvim_lsp.rust_analyzer.setup({on_attach=on_attach})
+nvim_lsp.zls.setup({on_attach=on_attach})
 
 -- Enable diagnostics
 -- FROM :https://sharksforarms.dev/posts/neovim-rust/
@@ -29,7 +31,6 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 
 require'nvim-treesitter.configs'.setup {highlight={enable=true},}
 EOF
-
 
 
 " SEE: lsp-config
