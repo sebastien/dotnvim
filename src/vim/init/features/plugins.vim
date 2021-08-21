@@ -65,10 +65,11 @@ function plugins#autoupdate()
 	let timestamp_updated    = str2nr(getftime(plugins_updated_path))
 	let timestamp_elapsed    = timestamp_now - timestamp_updated
 	if timestamp_updated < timestamp_conf || timestamp_elapsed > 7 * 3600
-		echo "minpac: Updating plugins"
+		echo "init/plugins: Updating minpac"
 		call minpac#update()
 		call minpac#clean()
 		call writefile([timestamp_now], plugins_updated_path)
+		echo "input/plugins: Minpac updated"
 	endif
 endfunction
 
@@ -108,11 +109,11 @@ function plugins#init()
 	" Start by loading the list of plugins
 	call plugins#register()
 	" Now we update/cleanup the plugins
-	call plugins#autoupdate()
-	" We ask minpac to load all the plugins
-	call plugins#load()
-	" " We configure the plugins
-	call plugins#configure()
+ 	call plugins#autoupdate()
+ 	" We ask minpac to load all the plugins
+ 	call plugins#load()
+	" We configure the plugins
+ 	call plugins#configure()
 endfunction
 
 " -----------------------------------------------------------------------------

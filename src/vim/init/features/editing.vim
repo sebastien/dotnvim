@@ -88,7 +88,7 @@ set clipboard+=unnamed
 set number
 
 " @feature Editor: no bell
-set belloff
+" set belloff
 
 " =============================================================================
 " PERFORMANCE
