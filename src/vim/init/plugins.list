@@ -5,13 +5,9 @@
 junegunn/fzf
 junegunn/fzf.vim
 # dominickng/fzf-session
-## NOTE: Telescope seems to create some weird conflicts with insertion
-## # @plugin Editor: search in files, buffers and tags  (telescope)
-## nvim-telescope/telescope.nvim
-## nvim-lua/popup.nvim
-## nvim-lua/plenary.nvim
 # @plugin Editor: File explorer side bar
-scrooloose/nerdtree
+# scrooloose/nerdtreeo
+# ms-jpq/chadtree
 # @plugin Editor: Integration with NNN
 mcchrish/nnn.vim
 # @plugin Editor: Tag bar
@@ -32,21 +28,23 @@ jiangmiao/auto-pairs
 # neovim/nvim-lspconfig
 # @plugin Editor: LSP UI
 # glepnir/lspsaga.nvim
+# @plugin Editor: Indent Guides
+# nathanaelkane/vim-indent-guides
 # =============================================================================
 # EDITING (AUTOMATIC)
 # =============================================================================
 # @plugin Editing: completion on insertion
-nvim-lua/completion-nvim
-steelsojka/completion-buffers
-nvim-treesitter/completion-treesitter
-nvim-treesitter/nvim-treesitter
+# nvim-lua/completion-nvim
+# steelsojka/completion-buffers
+# nvim-treesitter/completion-treesitter
+# nvim-treesitter/nvim-treesitter
+# ms-jpq/coq_nvim
+# ms-jpq/coq.artifacts
 # @plugin Editing: Automatic linting & formatting
 dense-analysis/ale
 # @plugin Editing: Spelling and grammar checkniting using LanguageTool
 rhysd/vim-grammarous
 # @plugin Editing: Canned code snippets
-# NOTE: Ultisnips is hellish to configure and hijacks the tab key
-# SirVer/ultisnips
 Shougo/neosnippet.vim
 Shougo/neosnippet-snippets
 # @plugin Editing: Using .editorconfig files
@@ -138,4 +136,10 @@ ziglang/zig.vim
 # maralla/completor.vim
 # reason: configuration separate from nvim
 # neoclide/coc.nvim
-# EOF - vim: syntax=shell
+# NOTE: Ultisnips is hellish to configure and hijacks the tab key
+# SirVer/ultisnips
+### NOTE: Telescope seems to create some weird conflicts with insertion
+### # @plugin Editor: search in files, buffers and tags  (telescope)    EOF - vim: syntax=shell
+ ## nvim-telescope/telescope.nvim
+ ## nvim-lua/popup.nvim
+ ## nvim-lua/plenary.nvim

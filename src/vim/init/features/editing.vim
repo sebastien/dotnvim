@@ -53,16 +53,6 @@ set visualbell
 set t_Co=256
 
 " =============================================================================
-" GUI
-" =============================================================================
-
-" NOTE: This seems to be problematic
-" if exists('g:GtkGuiLoaded')
-" 	" @feature GUI: Native clipboard integration (neovim-gtk)
-" 	let g:GuiInternalClipboard = 1
-" endif
-
-" =============================================================================
 " EDITOR
 " =============================================================================
 
@@ -76,20 +66,26 @@ set foldmethod=indent
 set foldlevel=4
 " @feature Editor: Shows the current cursor line
 set cursorline
+" @feature Editor: Shows the current cursor column
+set cursorcolumn
 " @feature Editor: We never want anything concealed on the current line
 set concealcursor=
 
+" FIXME: This triggers a super slow load time, see: nvim -V10nvim.log
 " @feature Editor: Universal clipboard
-set clipboard+=unnamed
+" set clipboard+=unnamed
 
 " @feature Editor: Show line numbers
 set number
+
+" @feature Editor: no bell
+set belloff
 
 " =============================================================================
 " PERFORMANCE
 " =============================================================================
 
-" @feature Perfomrance: ensures faster drawing in terminal
+" @feature Performance: ensures faster drawing in terminal
 set ttyfast
 " @feature Performance: do not try to highlight past the 256-th column
 set synmaxcol=256

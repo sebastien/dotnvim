@@ -1,8 +1,8 @@
-# The list of init features to be loaded
+# The list of init features to be loaded. Note that order is
+# important and will dictate  order of loading.
+plugins
 clipboard
 completion
-editing
-fixes
 fixes
 follow-symlinks
 font
@@ -10,9 +10,9 @@ formats
 fzf
 keymap
 leader
-plugins
 spellcheck
 status
 style
 whitespace
+editing
 # EOF - vim: syntax=text

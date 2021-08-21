@@ -60,6 +60,7 @@ hi SpecialKey    guifg=#4A4A4A
 hi NonText       guifg=#3E2E42
 
 hi Cursor        guibg=#A890A8 guifg=#042B01
+hi CursorColumn  guibg=#251542
 hi CursorLine    guibg=#321C57
 hi CursorLineNr  guifg=#A36FA3 guibg=#641F70
 hi LineNr        guifg=#373766 guibg=#221924
