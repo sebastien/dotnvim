@@ -4,18 +4,20 @@ set complete+=kspell
 " We hide completion messages,
 set shortmess+=c
 
-" " TODO: Move to apc
-" let g:completion_min_length = 2
-"
-" " FROM: https://stackoverflow.com/questions/35837990/how-to-trigger-omnicomplete-auto-completion-on-keystrokes-in-insert-mode/47967462#47967462
-" function! OpenCompletion()
-" 	" FROM: https://github.com/skywind3000/vim-auto-popmenu
-" 	let matches = matchlist(strpart(getline('.'), 0, col('.') - 1), '\(\k\{' . g:completion_min_length . ',}\)$')
-" 	if empty(matches)
-" 	else
-" 		call feedkeys("\<C-p>", "n")
-" 	endif
-" endfunction
-"
-" " autocmd InsertCharPre * call OpenCompletion()
-" " autocmd CursorMovedI * call OpenCompletion()
+" " NOTE: You may already have these in your configuration somewhere.
+" Autocomplete menu options
+set completeopt=menuone,noselect,noinsert
+set noshowmode
+set shortmess+=c
+
+" 🐓 Coq completion settings
+
+" Keybindings
+" ino <silent><expr> <Esc>   pumvisible() ? "\<C-e><Esc>" : "\<Esc>"
+" ino <silent><expr> <C-c>   pumvisible() ? "\<C-e><C-c>" : "\<C-c>"
+" ino <silent><expr> <BS>    pumvisible() ? "\<C-e><BS>"  : "\<BS>"
+" ino <silent><expr> <CR>    pumvisible() ? (complete_info().selected == -1 ? "\<C-e><CR>" : "\<C-y>") : "\<CR>"
+" ino <silent><expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+" ino <silent><expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<BS>"
+
+" EOF

@@ -14,6 +14,7 @@ let g:ale_fixers = {
 \   'typescript': ['deno'],
 \}
 
+
 let g:ale_linters = {
 \   'c': ['cc', 'ccls', 'clangd', 'clangtidy', 'cppcheck', 'cquery', 'flawfinder'],
 \   'css': ['prettier', 'stylelint'],

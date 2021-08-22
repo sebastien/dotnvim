@@ -8,22 +8,10 @@ local nvim_lsp = require'lspconfig'
 local on_attach = function(client)
     require'completion'.on_attach(client)
 end
-nvim_lsp.denols.setup({on_attach=on_attach})
-nvim_lsp.pyright.setup({on_attach=on_attach})
-nvim_lsp.gopls.setup({on_attach=on_attach})
-nvim_lsp.cssls.setup({on_attach=on_attach})
-nvim_lsp.html.setup({on_attach=on_attach})
-nvim_lsp.jsonls.setup({on_attach=on_attach})
-nvim_lsp.rust_analyzer.setup({on_attach=on_attach})
 
--- FIXME: Not sure
-nvim_lsp.denols.setup(coq.lsp_ensure_capabilities())
-nvim_lsp.pyright.setup(coq.lsp_ensure_capabilities())
-nvim_lsp.gopls.setup(coq.lsp_ensure_capabilities())
-nvim_lsp.cssls.setup(coq.lsp_ensure_capabilities())
-nvim_lsp.html.setup(coq.lsp_ensure_capabilities())
-nvim_lsp.jsonls.setup(coq.lsp_ensure_capabilities())
-nvim_lsp.rust_analyzer.setup(coq.lsp_ensure_capabilities())
+for _, server in ipairs({"pyright", "denols", "gopls", "cssls", "html", "jsonls"}) do
+	nvim_lsp[server].setup({capabilities=coq.lsp_ensure_capabilities(),on_attach=on_attach})
+end
 
 -- Enable diagnostics
 -- FROM :https://sharksforarms.dev/posts/neovim-rust/
