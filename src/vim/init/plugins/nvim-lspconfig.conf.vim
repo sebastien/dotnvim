@@ -6,9 +6,9 @@
 lua << EOF
 local nvim_lsp = require'lspconfig'
 local on_attach = function(client)
+    vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
     require'completion'.on_attach(client)
 end
-
 for _, server in ipairs({"pyright", "denols", "gopls", "cssls", "html", "jsonls"}) do
 	nvim_lsp[server].setup({capabilities=coq.lsp_ensure_capabilities(),on_attach=on_attach})
 end
@@ -26,7 +26,6 @@ vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
 
 require'nvim-treesitter.configs'.setup {highlight={enable=true},}
 EOF
-
 
 
 " SEE: lsp-config

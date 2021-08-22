@@ -99,6 +99,8 @@ rust-lang/rust.vim
 cespare/vim-toml
 # @language Clojure
 Olical/conjure
+# @language Zig
+ziglang/zig.vim
 # =============================================================================
 # GRAVEYARD (TRIED BUT DOESN'T WORK)
 # =============================================================================

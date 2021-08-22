@@ -1,4 +1,17 @@
 " SEE: https://github.com/dense-analysis/ale
+let g:ale_linters = {
+\   'c': ['cc', 'ccls', 'clangd', 'clangtidy', 'cppcheck', 'cquery', 'flawfinder'],
+\   'css': ['prettier', 'stylelint'],
+\   'go': ['gopls', 'gometalinter', 'gofmt', 'staticcheck'],
+\   'javascript': ['eslint'],
+\   'javascriptreact': ['eslint'],
+\   'kotlin': ['kotlinc', 'ktlint'],
+\   'python': ['mypy', 'pyre', 'pyright'],
+\   'rust': ['analyzer', 'cargo', "rls', 'rustc'"],
+\   'scss': ['sccslint', 'stylelint'],
+\   'typescript': ['deno'],
+\}
+
 let g:ale_fix_on_save = 1
 let g:ale_fixers = {
 \   '*': ['remove_trailing_lines', 'trim_whitespace'],
@@ -11,20 +24,6 @@ let g:ale_fixers = {
 \   'python': ['autopep8', 'remove_trailing_lines', 'trim_whitespace'],
 \   'rust': ['rustfmt'],
 \   'scss': ['prettier', 'stylelint'],
-\   'typescript': ['deno'],
-\}
-
-
-let g:ale_linters = {
-\   'c': ['cc', 'ccls', 'clangd', 'clangtidy', 'cppcheck', 'cquery', 'flawfinder'],
-\   'css': ['prettier', 'stylelint'],
-\   'go': ['gopls', 'gometalinter', 'gofmt', 'staticcheck'],
-\   'javascript': ['eslint'],
-\   'javascriptreact': ['eslint'],
-\   'kotlin': ['kotlinc', 'ktlint'],
-\   'python': ['mypy', 'pyre', 'pyright'],
-\   'rust': ['analyzer', 'cargo', "rls', 'rustc'"],
-\   'scss': ['sccslint', 'stylelint'],
 \   'typescript': ['deno'],
 \}
 
