@@ -6,11 +6,13 @@
 lua << EOF
 local nvim_lsp = require'lspconfig'
 local on_attach = function(client)
-    vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
-    require'completion'.on_attach(client)
+    --vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+	vim.api.nvim_buf_set_option(0, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 end
+-- SEE: https://neovim.io/doc/user/lsp.html
 for _, server in ipairs({"pyright", "denols", "gopls", "cssls", "html", "jsonls"}) do
 	nvim_lsp[server].setup({capabilities=coq.lsp_ensure_capabilities(),on_attach=on_attach})
+	nvim_lsp[server].setup({on_attach=on_attach})
 end
 
 -- Enable diagnostics

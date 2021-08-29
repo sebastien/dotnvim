@@ -3,20 +3,31 @@
 " -----------------------------------------------------------------------------
 
 " The local leader
+let mapleader=","
 let maplocalleader=","
 
-"
-" @group Telescpe (Fuzzy finder)
+
+" @group Telescope (Fuzzy finder)
 " =========================
 "
 " @keymap Fuzzy-finder popup with opened buffers
-nmap     <C-P>               <cmd>Buffers<CR>
+nmap     <C-P>               <cmd>Telescope buffers<CR>
 " @keymap Fuzz-finder popup with tags
-nmap     <C-T>               <cmd>Tags<CR>
+nmap     <C-T>               <cmd>Telescope lsp_dynamic_workspace_symbols<CR>
 " @keymap Fuzzy-finder popup with project files
-nmap     <C-Space>           <cmd>FZF<CR>
+nmap     <C-Space>           <cmd>Telescope find_files<CR>
 " @keymap Fuzzy-finder popup with live search
-nmap     <C-O>               <cmd>FZF<CR>
+nmap     <C-O>               <cmd>Telescope live_grep<CR>
+" @keymap Fuzzy-finder popup with live search
+nmap     <C-O>               <cmd>Telescope live_grep<CR>
+" @keymap File Explorer
+nnoremap <leader>o           <cmd>CHADopen<CR>
+" @keymap Symbol Explorer
+nnoremap  <leader>t          <cmd>SymbolsOutline<CR>
+" @keymap Symbol Explorer
+nnoremap  <leader>q          <cmd>lua require('vimway-lsp-diag').open_all_diagnostics()<cr>
+nnoremap  <leader>qb         <cmd>lua require('vimway-lsp-diag').open_buffer_diagnostics()<cr>
+
 
 " @group Tab indentation
 " ======================

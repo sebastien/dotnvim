@@ -7,12 +7,10 @@ fixes
 follow-symlinks
 font
 formats
-fzf
-keymap
-leader
 spellcheck
 status
 style
 whitespace
 editing
+keymap
 # EOF - vim: syntax=text
