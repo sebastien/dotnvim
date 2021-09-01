@@ -60,8 +60,6 @@ junegunn/rainbow_parentheses.vim
 folke/which-key.nvim
 # @plugin Editing: vertical alignment of text elements
 godlygeek/tabular
-# @plugin Edition: jump between locations in a file
-justinmk/vim-sneak
 # =============================================================================
 # IDE
 # =============================================================================
@@ -156,4 +154,6 @@ ziglang/zig.vim
 # nathanaelkane/vim-indent-guides
 ## Replaced by SymbolsOutline
 # majutsushi/tagbar
+## Never used it
+# justinmk/vim-sneak
 # EOF

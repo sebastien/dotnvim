@@ -79,7 +79,7 @@ set concealcursor=
 set number
 
 " @feature Editor: no bell
-set belloff
+set belloff=all
 
 " =============================================================================
 " PERFORMANCE
