@@ -64,7 +64,7 @@ function plugins#autoupdate()
 	let timestamp_conf       = str2nr(getftime(plugins_config_path))
 	let timestamp_updated    = str2nr(getftime(plugins_updated_path))
 	let timestamp_elapsed    = timestamp_now - timestamp_updated
-	if timestamp_updated < timestamp_conf || timestamp_elapsed > 7 * 3600
+	if timestamp_updated < timestamp_conf || timestamp_elapsed > 7 * 24 * 3600
 		echo "init/plugins: Updating minpac"
 		call minpac#update()
 		call minpac#clean()

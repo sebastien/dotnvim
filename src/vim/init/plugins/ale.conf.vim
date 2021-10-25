@@ -9,6 +9,7 @@ let g:ale_linters = {
 \   'python': ['mypy', 'pyre', 'pyright'],
 \   'rust': ['analyzer', 'cargo', "rls', 'rustc'"],
 \   'scss': ['sccslint', 'stylelint'],
+\   'less': ['lessc', 'stylelint'],
 \   'typescript': ['deno'],
 \}
 
@@ -25,6 +26,7 @@ let g:ale_fixers = {
 \   'rust': ['rustfmt'],
 \   'scss': ['prettier', 'stylelint'],
 \   'typescript': ['deno'],
+\   'less': ['prettier'],
 \}
 
 " FROM: https://github.com/dense-analysis/ale/issues/1353
