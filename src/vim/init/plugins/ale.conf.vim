@@ -1,4 +1,5 @@
 " SEE: https://github.com/dense-analysis/ale
+" npm i -g eslint_d prettier
 let g:ale_linters = {
 \   'c': ['cc', 'ccls', 'clangd', 'clangtidy', 'cppcheck', 'cquery', 'flawfinder'],
 \   'css': ['prettier', 'stylelint'],
@@ -11,6 +12,7 @@ let g:ale_linters = {
 \   'scss': ['sccslint', 'stylelint'],
 \   'less': ['lessc', 'stylelint'],
 \   'typescript': ['deno'],
+\   'typescriptreact': ['tslint','tsserver'],
 \}
 
 let g:ale_fix_on_save = 1
@@ -26,6 +28,7 @@ let g:ale_fixers = {
 \   'rust': ['rustfmt'],
 \   'scss': ['prettier', 'stylelint'],
 \   'typescript': ['deno'],
+\   'typescriptreact': ['tslint','tsserver'],
 \   'less': ['prettier'],
 \}
 
