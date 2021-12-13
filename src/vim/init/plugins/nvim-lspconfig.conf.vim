@@ -2,6 +2,8 @@
 " npm install -g vscode-html-languageserver-bin
 " npm install -g vscode-css-languageserver-bin
 " npm install -g vscode-json-languageserver
+" npm install -g typescript typescript-language-server
+" npm install -g diagnostic-languageserver
 
 lua << EOF
 local nvim_lsp = require'lspconfig'
@@ -10,7 +12,7 @@ local on_attach = function(client)
 	vim.api.nvim_buf_set_option(0, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 end
 -- SEE: https://neovim.io/doc/user/lsp.html
-for _, server in ipairs({"pyright", "denols", "gopls", "cssls", "html", "jsonls"}) do
+for _, server in ipairs({"pyright", "tsserver", "gopls", "cssls", "html", "jsonls"}) do
 	nvim_lsp[server].setup({capabilities=coq.lsp_ensure_capabilities(),on_attach=on_attach})
 	nvim_lsp[server].setup({on_attach=on_attach})
 end

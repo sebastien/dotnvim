@@ -80,7 +80,8 @@ github/copilot.vim
 # =============================================================================
 # MISC
 # =============================================================================
-# @plugn Libraries
+# @plugin Libraries
+nvim-lua/popup.nvim
 nvim-lua/plenary.nvim
 # @plugin Misc/Wiki
 lervag/wiki.vim
