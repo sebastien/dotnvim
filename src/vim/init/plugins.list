@@ -31,8 +31,10 @@ onsails/vimway-lsp-diag.nvim
 onsails/lspkind-nvim
 # @plugin Editor: LSP UI
 # @plugin Editor: Indent Guides
-# @plugi Editor: Tree Sitter Parser
+# @plugin Editor: Tree Sitter Parser
 nvim-treesitter/nvim-treesitter
+# @plugin Editor: Ripgrep
+jremmen/vim-ripgrep
 # =============================================================================
 # EDITING (AUTOMATIC)
 # =============================================================================
@@ -73,6 +75,8 @@ axvr/zepl.vim
 phleet/vim-mercenary
 # @plugin IDE/Git: Git support
 tpope/vim-fugitive
+# @plugin IDE/Copilot
+github/copilot.vim
 # =============================================================================
 # MISC
 # =============================================================================
