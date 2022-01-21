@@ -13,6 +13,7 @@ local on_attach = function(client)
 end
 -- SEE: https://neovim.io/doc/user/lsp.html
 for _, server in ipairs({"pyright", "tsserver", "gopls", "cssls", "html", "jsonls"}) do
+	-- FIXME: Should detect if coq is available or not
 	nvim_lsp[server].setup({capabilities=coq.lsp_ensure_capabilities(),on_attach=on_attach})
 	nvim_lsp[server].setup({on_attach=on_attach})
 end

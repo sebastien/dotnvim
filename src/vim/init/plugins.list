@@ -10,7 +10,7 @@ ms-jpq/chadtree
 # @plugin Editor: Integration with NNN
 mcchrish/nnn.vim
 # @plugin Editor: Tag bar
-simrat39/symbols-outline.nvim
+# simrat39/symbols-outline.nvim
 # @plugin Editor: Automatic tags
 craigemery/vim-autotag
 # @plugin Editor: Syntax highlighting for many languages

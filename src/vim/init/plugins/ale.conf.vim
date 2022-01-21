@@ -28,7 +28,7 @@ let g:ale_fixers = {
 \   'rust': ['rustfmt'],
 \   'scss': ['prettier', 'stylelint'],
 \   'typescript': ['deno'],
-\   'typescriptreact': ['tslint','tsserver'],
+\   'typescriptreact': ['deno'],
 \   'less': ['prettier'],
 \}
 
