@@ -91,6 +91,8 @@ endfunction
 " @function Loads all the plugins registered in minpack and loads their
 " conifugration file if available.
 function plugins#load()
+	" NOTE: On first run, this will do 
+	" E919: Directory not found in 'packpath': "pack/*/opt/vim-mercenary"
 	for plugin in keys(minpac#getpluglist())
 		execute 'packadd ' . plugin
 	endfor

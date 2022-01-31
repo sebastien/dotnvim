@@ -24,7 +24,7 @@ let g:ale_fixers = {
 \   'javascriptreact': ['eslint', 'deno'],
 \   'kotlin': ['ktlint'],
 \   'markdown': ['pandoc','textlint'],
-\   'python': ['autopep8', 'remove_trailing_lines', 'trim_whitespace'],
+\   'python': ['black', 'remove_trailing_lines', 'trim_whitespace'],
 \   'rust': ['rustfmt'],
 \   'scss': ['prettier', 'stylelint'],
 \   'typescript': ['deno'],
