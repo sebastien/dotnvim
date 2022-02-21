@@ -14,6 +14,9 @@ let maplocalleader=","
 nmap     <C-P>               <cmd>Telescope buffers<CR>
 " @keymap Fuzz-finder popup with tags
 nmap     <C-T>               <cmd>Telescope lsp_dynamic_workspace_symbols<CR>
+" @keymap Fuzz-finder popup with tags
+nmap     <leader>d           <cmd>Telescope diagnostics<CR>
+nmap     <leader>gg          <cmd>Telescope lsp_definition<CR>
 " @keymap Fuzzy-finder popup with project files
 nmap     <C-Space>           <cmd>Telescope find_files<CR>
 " @keymap Fuzzy-finder popup with live search
