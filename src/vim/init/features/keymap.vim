@@ -13,7 +13,7 @@ let maplocalleader=","
 " @keymap Fuzzy-finder popup with opened buffers
 nmap     <C-P>               <cmd>Telescope buffers<CR>
 " @keymap Fuzz-finder popup with tags
-nmap     <C-T>               <cmd>Telescope lsp_dynamic_workspace_symbols<CR>
+nmap     <C-T>               <cmd>Telescope lsp_document_symbols<CR>
 " @keymap Fuzz-finder popup with tags
 nmap     <leader>d           <cmd>Telescope diagnostics<CR>
 nmap     <leader>gg          <cmd>Telescope lsp_definition<CR>
@@ -28,6 +28,16 @@ nnoremap  <leader>t          <cmd>SymbolsOutline<CR>
 " @keymap Symbol Explorer
 nnoremap  <leader>q          <cmd>lua require('vimway-lsp-diag').open_all_diagnostics()<cr>
 nnoremap  <leader>qb         <cmd>lua require('vimway-lsp-diag').open_buffer_diagnostics()<cr>
+
+nnoremap  <leader>q          <cmd>lua require('vimway-lsp-diag').open_all_diagnostics()<cr>
+
+" @keymap Trouble (quickfix)
+nnoremap <leader>f  <cmd>TroubleToggle<cr>
+nnoremap <leader>fd <cmd>TroubleToggle workspace_diagnostics<cr>
+nnoremap <leader>fd <cmd>TroubleToggle document_diagnostics<cr>
+nnoremap <leader>fq <cmd>TroubleToggle quickfix<cr>
+nnoremap <leader>fl <cmd>TroubleToggle loclist<cr>
+nnoremap <leader>fr <cmd>TroubleToggle lsp_references<cr>
 
 
 " @group Tab indentation

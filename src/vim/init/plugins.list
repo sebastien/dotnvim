@@ -5,6 +5,8 @@
 ## NOTE: Telescope seems to create some weird conflicts with insertion
 ## @plugin Editor: search in files, buffers and tags  (telescope)
 nvim-telescope/telescope.nvim
+nvim-telescope/telescope-symbols.nvim
+folke/trouble.nvim
 # @plugin Editor: File explorer side bar
 ms-jpq/chadtree
 # @plugin Editor: Integration with NNN
