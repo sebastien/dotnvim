@@ -18,6 +18,7 @@ nmap     <C-T>               <cmd>Telescope lsp_document_symbols<CR>
 nmap     <leader>d           <cmd>Telescope diagnostics<CR>
 nmap     <leader>gg          <cmd>Telescope lsp_definition<CR>
 " @keymap Fuzzy-finder popup with project files
+nmap     <C-I>               <cmd>Telescope find_files<CR>
 nmap     <C-Space>           <cmd>Telescope find_files<CR>
 " @keymap Fuzzy-finder popup with live search
 nmap     <C-O>               <cmd>Telescope live_grep<CR>
