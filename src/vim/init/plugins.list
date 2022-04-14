@@ -6,19 +6,20 @@
 ## @plugin Editor: search in files, buffers and tags  (telescope)
 nvim-telescope/telescope.nvim
 nvim-telescope/telescope-symbols.nvim
+# @plugin Editor: Better quickfix list
 folke/trouble.nvim
 # @plugin Editor: File explorer side bar
 ms-jpq/chadtree
 # @plugin Editor: Integration with NNN
 mcchrish/nnn.vim
 # @plugin Editor: Tag bar
-# simrat39/symbols-outline.nvim
+simrat39/symbols-outline.nvim
 # @plugin Editor: Automatic tags
 craigemery/vim-autotag
 # @plugin Editor: Syntax highlighting for many languages
-# sheerun/vim-polyglot
+sheerun/vim-polyglot
 # @plugin Editor: Support for 256-colors terminals
-# vim-scripts/CSApprox
+vim-scripts/CSApprox
 # @plugin Editor: Support for nvim-qt
 equalsraf/neovim-gui-shim
 # @plugin Editor: Buffers displayed as tabline
@@ -28,7 +29,7 @@ jiangmiao/auto-pairs
 # @plugin Editor: LSP Support
 neovim/nvim-lspconfig
 # @plugin Editor: LSP Quickfix Diagnostics
-onsails/vimway-lsp-diag.nvim
+# onsails/vimway-lsp-diag.nvim
 # @plugin Editor: LSP Icons
 onsails/lspkind-nvim
 # @plugin Editor: LSP UI
@@ -52,7 +53,7 @@ editorconfig/editorconfig-vim
 # @plugin Editing: Show VCS changes in the gutter
 mhinz/vim-signify
 # @plugin Editing: Pencil mode to automatically reflow text
-reedes/vim-pencil
+# reedes/vim-pencil
 # @plugin Editing: Spelling
 reedes/vim-lexical
 # @plugin: Editing: Rainbow Parens
@@ -74,7 +75,7 @@ axvr/zepl.vim
 # # NOTE: It seems that parinfer causes more formatting
 # eraserhd/parinfer-rust
 # @plugin IDE/Mercurial: Mercurial support
-phleet/vim-mercenary
+# phleet/vim-mercenary
 # @plugin IDE/Git: Git support
 tpope/vim-fugitive
 # @plugin IDE/Copilot
@@ -86,8 +87,8 @@ github/copilot.vim
 nvim-lua/popup.nvim
 nvim-lua/plenary.nvim
 # @plugin Misc/Wiki
-lervag/wiki.vim
-lervag/wiki-ft.vim
+# lervag/wiki.vim
+# lervag/wiki-ft.vim
 # Dev Icons
 kyazdani42/nvim-web-devicons
 # =============================================================================
