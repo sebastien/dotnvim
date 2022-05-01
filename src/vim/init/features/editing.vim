@@ -66,8 +66,9 @@ set foldmethod=indent
 set foldlevel=4
 " @feature Editor: Shows the current cursor line
 set cursorline
-" @feature Editor: Shows the current cursor column
-set cursorcolumn
+" FIXME: Disabled as this triggers huge slowdowns when remoting
+" " @feature Editor: Shows the current cursor column
+" set cursorcolumn
 " @feature Editor: We never want anything concealed on the current line
 set concealcursor=
 " @fix Editor: Command height needs to be 2 for error reporting
@@ -75,7 +76,7 @@ set cmdheight=2
 
 " FIXME: This triggers a super slow load time, see: nvim -V10nvim.log
 " @feature Editor: Universal clipboard
-" set clipboard+=unnamed
+set clipboard+=unnamed
 
 " @feature Editor: Show line numbers
 set number

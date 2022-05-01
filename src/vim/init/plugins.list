@@ -8,10 +8,6 @@ nvim-telescope/telescope.nvim
 nvim-telescope/telescope-symbols.nvim
 # @plugin Editor: Better quickfix list
 folke/trouble.nvim
-# @plugin Editor: File explorer side bar
-ms-jpq/chadtree
-# @plugin Editor: Integration with NNN
-mcchrish/nnn.vim
 # @plugin Editor: Tag bar
 simrat39/symbols-outline.nvim
 # @plugin Editor: Automatic tags
@@ -29,7 +25,7 @@ jiangmiao/auto-pairs
 # @plugin Editor: LSP Support
 neovim/nvim-lspconfig
 # @plugin Editor: LSP Quickfix Diagnostics
-# onsails/vimway-lsp-diag.nvim
+onsails/vimway-lsp-diag.nvim
 # @plugin Editor: LSP Icons
 onsails/lspkind-nvim
 # @plugin Editor: LSP UI
@@ -46,14 +42,14 @@ ms-jpq/coq_nvim
 ms-jpq/coq.artifacts
 # @plugin Editing: Automatic linting & formatting
 dense-analysis/ale
+# @plugin Editing: Completion
+# neoclide/coc.nvim
 # @plugin Editing: Spelling and grammar checkniting using LanguageTool
 rhysd/vim-grammarous
 # @plugin Editing: Using .editorconfig files
 editorconfig/editorconfig-vim
 # @plugin Editing: Show VCS changes in the gutter
 mhinz/vim-signify
-# @plugin Editing: Pencil mode to automatically reflow text
-# reedes/vim-pencil
 # @plugin Editing: Spelling
 reedes/vim-lexical
 # @plugin: Editing: Rainbow Parens
@@ -78,17 +74,12 @@ axvr/zepl.vim
 # phleet/vim-mercenary
 # @plugin IDE/Git: Git support
 tpope/vim-fugitive
-# @plugin IDE/Copilot
-github/copilot.vim
 # =============================================================================
 # MISC
 # =============================================================================
 # @plugin Libraries
 nvim-lua/popup.nvim
 nvim-lua/plenary.nvim
-# @plugin Misc/Wiki
-# lervag/wiki.vim
-# lervag/wiki-ft.vim
 # Dev Icons
 kyazdani42/nvim-web-devicons
 # =============================================================================
@@ -164,4 +155,13 @@ ziglang/zig.vim
 # majutsushi/tagbar
 ## Never used it
 # justinmk/vim-sneak
-# EOF
+## Too slow (see top)
+# ms-jpq/chadtree
+## Does not use this
+# mcchrish/nnn.vim
+# lervag/wiki.vim
+# lervag/wiki-ft.vim
+# github/copilot.vim
+# @plugin Editing: Pencil mode to automatically reflow text
+# reedes/vim-pencil
+# EOF -- vim: syntax=python

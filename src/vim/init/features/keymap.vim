@@ -23,8 +23,6 @@ nmap     <C-Space>           <cmd>Telescope find_files<CR>
 nnoremap <leader>i           <cmd>Telescope find_files<CR>
 " @keymap Fuzzy-finder popup with live search
 nmap     <C-O>               <cmd>Telescope live_grep<CR>
-" @keymap File Explorer
-nnoremap <leader>o           <cmd>CHADopen<CR>
 " @keymap Symbol Explorer
 nnoremap  <leader>t          <cmd>SymbolsOutline<CR>
 " @keymap Symbol Explorer
