@@ -21,6 +21,7 @@ nmap     <leader>gg          <cmd>Telescope lsp_definition<CR>
 nmap     <C-I>               <cmd>Telescope find_files<CR>
 nmap     <C-Space>           <cmd>Telescope find_files<CR>
 nnoremap <leader>i           <cmd>Telescope find_files<CR>
+nnoremap <leader>o           <cmd>Telescope file_browser<CR>
 " @keymap Fuzzy-finder popup with live search
 nmap     <C-O>               <cmd>Telescope live_grep<CR>
 " @keymap Symbol Explorer
@@ -32,12 +33,12 @@ nnoremap  <leader>qb         <cmd>lua require('vimway-lsp-diag').open_buffer_dia
 nnoremap  <leader>q          <cmd>lua require('vimway-lsp-diag').open_all_diagnostics()<cr>
 
 " @keymap Trouble (quickfix)
-nnoremap <leader>f  <cmd>TroubleToggle<cr>
-nnoremap <leader>fd <cmd>TroubleToggle workspace_diagnostics<cr>
-nnoremap <leader>fd <cmd>TroubleToggle document_diagnostics<cr>
-nnoremap <leader>fq <cmd>TroubleToggle quickfix<cr>
-nnoremap <leader>fl <cmd>TroubleToggle loclist<cr>
-nnoremap <leader>fr <cmd>TroubleToggle lsp_references<cr>
+nnoremap <leader>e  <cmd>TroubleToggle<cr>
+nnoremap <leader>ed <cmd>TroubleToggle workspace_diagnostics<cr>
+nnoremap <leader>ed <cmd>TroubleToggle document_diagnostics<cr>
+nnoremap <leader>eq <cmd>TroubleToggle quickfix<cr>
+nnoremap <leader>el <cmd>TroubleToggle loclist<cr>
+nnoremap <leader>er <cmd>TroubleToggle lsp_references<cr>
 
 
 " @group Tab indentation
