@@ -64,9 +64,9 @@ filetype plugin indent on
 set foldmethod=indent
 " @feature Editor: Folding level is up to 4
 set foldlevel=4
-" @feature Editor: Shows the current cursor line
-set cursorline
 " FIXME: Disabled as this triggers huge slowdowns when remoting
+" @feature Editor: Shows the current cursor line
+" set cursorline
 " " @feature Editor: Shows the current cursor column
 " set cursorcolumn
 " @feature Editor: We never want anything concealed on the current line
