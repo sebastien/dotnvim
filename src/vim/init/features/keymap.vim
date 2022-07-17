@@ -82,7 +82,7 @@ nnoremap <C-Q> :qa<CR>
 nnoremap <C-a> ggvG$
 " @keymap Select line
 nnoremap <C-l> 0v$
-" @keymap Copy to cplyboard
+" @keymap Copy to clipboard
 vmap     <C-c> "+yi
 " @keymap Cut to clipboard
 vmap     <C-x> "+c

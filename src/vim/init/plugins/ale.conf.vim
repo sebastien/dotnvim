@@ -7,10 +7,12 @@ let g:ale_linters = {
 \   'javascript': ['eslint'],
 \   'javascriptreact': ['eslint'],
 \   'kotlin': ['kotlinc', 'ktlint'],
+\   'make': ['checkmake'],
 \   'python': ['mypy', 'pyre', 'pyright'],
 \   'rust': ['analyzer', 'cargo', "rls', 'rustc'"],
 \   'scss': ['sccslint', 'stylelint'],
 \   'less': ['lessc', 'stylelint'],
+\   'yaml': ['circleci', 'yamllint'],
 \   'typescript': ['deno'],
 \   'typescriptreact': ['tslint','tsserver'],
 \}
@@ -30,6 +32,7 @@ let g:ale_fixers = {
 \   'typescript': ['deno'],
 \   'typescriptreact': ['deno'],
 \   'less': ['prettier'],
+\   'yaml': ['yamlfix'],
 \}
 
 " FROM: https://github.com/dense-analysis/ale/issues/1353
