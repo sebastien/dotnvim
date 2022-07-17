@@ -53,6 +53,15 @@ endif
 " FUNCTIONS
 " -----------------------------------------------------------------------------
 
+function plugins#update()
+	let timestamp_now        = str2nr(localtime())
+	let plugins_updated_path = g:vim_config_path . "/init/.plugins.updated"
+	call minpac#update()
+	call minpac#clean()
+	call writefile([timestamp_now], plugins_updated_path)
+	echo "input/plugins: Minpac updated"
+endfunction
+
 " @function Automatically updates the added plugins if the list of plugins has
 " changed or if it's been more than a week.
 function plugins#autoupdate()
@@ -91,11 +100,13 @@ endfunction
 " @function Loads all the plugins registered in minpack and loads their
 " conifugration file if available.
 function plugins#load()
-	" NOTE: On first run, this will do 
+	" NOTE: On first run, this will do
 	" E919: Directory not found in 'packpath': "pack/*/opt/vim-mercenary"
 	for plugin in keys(minpac#getpluglist())
 		execute 'packadd ' . plugin
 	endfor
+	" TODO: If we had errors there, we should cleanup the .plugins.updated
+	" file
 endfunction
 
 function plugins#configure()
