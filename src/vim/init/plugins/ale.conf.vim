@@ -8,7 +8,7 @@ let g:ale_linters = {
 \   'javascriptreact': ['eslint'],
 \   'kotlin': ['kotlinc', 'ktlint'],
 \   'make': ['checkmake'],
-\   'python': ['mypy', 'pyre', 'pyright'],
+\   'python': ['mypy', 'pyre', 'pyright', 'bandit'],
 \   'rust': ['analyzer', 'cargo', "rls', 'rustc'"],
 \   'scss': ['sccslint', 'stylelint'],
 \   'less': ['lessc', 'stylelint'],
