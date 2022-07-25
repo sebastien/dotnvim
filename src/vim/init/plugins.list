@@ -39,8 +39,9 @@ jremmen/vim-ripgrep
 # EDITING (AUTOMATIC)
 # =============================================================================
 # @plugin Editing: completion on insertion
-ms-jpq/coq_nvim
-ms-jpq/coq.artifacts
+# ms-jpq/coq_nvim
+# ms-jpq/coq.artifacts
+neoclide/coc.nvim
 # @plugin Editing: Automatic linting & formatting
 dense-analysis/ale
 # @plugin Editing: Completion
