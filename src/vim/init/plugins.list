@@ -7,6 +7,15 @@
 nvim-telescope/telescope.nvim
 nvim-telescope/telescope-symbols.nvim
 nvim-telescope/telescope-file-browser.nvim
+# @plugin Editor: completion
+# hrsh7th/cmp-nvim-lsp
+# hrsh7th/cmp-buffer
+# hrsh7th/cmp-path
+# hrsh7th/cmp-cmdline
+# hrsh7th/nvim-cmp
+# hrsh7th/cmp-vsnip
+# hrsh7th/vim-vsnip
+ms-jpq/coq_nvim
 # @plugin Editor: Better quickfix list
 folke/trouble.nvim
 # @plugin Editor: Tag bar
@@ -38,14 +47,8 @@ jremmen/vim-ripgrep
 # =============================================================================
 # EDITING (AUTOMATIC)
 # =============================================================================
-# @plugin Editing: completion on insertion
-# ms-jpq/coq_nvim
-# ms-jpq/coq.artifacts
-neoclide/coc.nvim
 # @plugin Editing: Automatic linting & formatting
 dense-analysis/ale
-# @plugin Editing: Completion
-# neoclide/coc.nvim
 # @plugin Editing: Spelling and grammar checkniting using LanguageTool
 rhysd/vim-grammarous
 # @plugin Editing: Using .editorconfig files
@@ -104,7 +107,7 @@ rust-lang/rust.vim
 # @language TOML
 cespare/vim-toml
 # @language Clojure
-Olical/conjure
+# Olical/conjure
 # @language Zig
 ziglang/zig.vim
 # =============================================================================
@@ -114,8 +117,6 @@ ziglang/zig.vim
 # problem: Conflicts with NERDTree
 # thaerkh/vim-workspace
 # @plugin Editing: VSCode-like completion
-# problem: Can't get it to work
-# neoclide/coc.vim
 # @plugin IDE/Lisp: SLIME-like REPL
 # problem: Does kind of work but the Ctrl-C binding clashes with other bindings
 # jpalardy/vim-slime
@@ -158,7 +159,7 @@ ziglang/zig.vim
 ## Never used it
 # justinmk/vim-sneak
 ## Too slow (see top)
-# ms-jpq/chadtree
+ms-jpq/chadtree
 ## Does not use this
 # mcchrish/nnn.vim
 # lervag/wiki.vim

@@ -1,4 +1,5 @@
-set completeopt=longest,menuone,preview,noinsert,noselect
+" set completeopt=longest,menuone,preview,noinsert,noselect
+set completeopt=menu,menuone,noselect
 " We add the dictionary to the completion
 set complete+=kspell
 " We hide completion messages,
