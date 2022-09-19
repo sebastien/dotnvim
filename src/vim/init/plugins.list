@@ -4,9 +4,9 @@
 # @plugin Editor: search in files, buffers and tags
 ## NOTE: Telescope seems to create some weird conflicts with insertion
 ## @plugin Editor: search in files, buffers and tags  (telescope)
-nvim-telescope/telescope.nvim
-nvim-telescope/telescope-symbols.nvim
 nvim-telescope/telescope-file-browser.nvim
+nvim-telescope/telescope-symbols.nvim
+nvim-telescope/telescope.nvim
 # @plugin Editor: Better quickfix list
 folke/trouble.nvim
 # @plugin Editor: Tag bar
@@ -23,11 +23,11 @@ equalsraf/neovim-gui-shim
 ap/vim-buftabline
 # @plugin Editor: Auto Pairs
 jiangmiao/auto-pairs
-# @plugin Editor: LSP Support
-neovim/nvim-lspconfig
-# @plugin Editor: LSP Quickfix Diagnostics
-onsails/vimway-lsp-diag.nvim
-# @plugin Editor: LSP Icons
+## # @plugin Editor: LSP Support
+## neovim/nvim-lspconfig
+## # @plugin Editor: LSP Quickfix Diagnostics
+## onsails/vimway-lsp-diag.nvim
+## # @plugin Editor: LSP Icons
 onsails/lspkind-nvim
 # @plugin Editor: LSP UI
 # @plugin Editor: Indent Guides
@@ -35,9 +35,9 @@ onsails/lspkind-nvim
 nvim-treesitter/nvim-treesitter
 # @plugin Editor: Ripgrep
 jremmen/vim-ripgrep
-# =============================================================================
-# EDITING (AUTOMATIC)
-# =============================================================================
+## # =============================================================================
+## # EDITING (AUTOMATIC)
+## # =============================================================================
 # @plugin Editing: completion on insertion
 ms-jpq/coq_nvim
 ms-jpq/coq.artifacts
@@ -53,8 +53,6 @@ editorconfig/editorconfig-vim
 mhinz/vim-signify
 # @plugin Editing: Spelling
 reedes/vim-lexical
-# @plugin: Editing: Rainbow Parens
-junegunn/rainbow_parentheses.vim
 # =============================================================================
 # EDITING (MANUAL)
 # =============================================================================
@@ -62,17 +60,13 @@ junegunn/rainbow_parentheses.vim
 folke/which-key.nvim
 # @plugin Editing: vertical alignment of text elements
 godlygeek/tabular
-# =============================================================================
-# IDE
-# =============================================================================
-# @plugin IDE/REPL: A multi-lingual REPL
-# @binding :Repl
-axvr/zepl.vim
-# @plugin IDE/Lisp: Parinfer formats Lisp code automagically
-# # NOTE: It seems that parinfer causes more formatting
-# eraserhd/parinfer-rust
-# @plugin IDE/Mercurial: Mercurial support
-# phleet/vim-mercenary
+## # =============================================================================
+## # IDE
+## # =============================================================================
+## # @plugin IDE/REPL: A multi-lingual REPL
+## # @binding :Repl
+## axvr/zepl.vim
+## # @plugin IDE/Lisp: Parinfer formats Lisp code automagically
 # @plugin IDE/Git: Git support
 tpope/vim-fugitive
 # =============================================================================
