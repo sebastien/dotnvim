@@ -6,9 +6,10 @@ let g:ale_linters = {
 \   'go': ['gopls', 'gometalinter', 'gofmt', 'staticcheck'],
 \   'javascript': ['eslint'],
 \   'javascriptreact': ['eslint'],
+\   'json': ['eslint'],
 \   'kotlin': ['kotlinc', 'ktlint'],
 \   'make': ['checkmake'],
-\   'python': ['mypy', 'pyre', 'pyright'],
+\   'python': ['mypy', 'pyre', 'pyright', 'bandit', 'pylint'],
 \   'rust': ['analyzer', 'cargo', "rls', 'rustc'"],
 \   'scss': ['sccslint', 'stylelint'],
 \   'less': ['lessc', 'stylelint'],
@@ -24,6 +25,7 @@ let g:ale_fixers = {
 \   'go': ['gofmt', 'goimports'],
 \   'javascript': ['eslint', 'deno'],
 \   'javascriptreact': ['eslint', 'deno'],
+\   'json': ['prettier'],
 \   'kotlin': ['ktlint'],
 \   'markdown': ['pandoc','textlint'],
 \   'python': ['black', 'remove_trailing_lines', 'trim_whitespace'],
@@ -44,3 +46,8 @@ let g:ale_set_quickfix = 1
 " FROM: https://github.com/dense-analysis/ale/issues/249
 let g:ale_sign_warning = '•'
 let g:ale_sign_error = "➤"
+" NOTE: We disable LSP as we have Coc
+" <https://github.com/dense-analysis/ale#5iii-how-can-i-use-ale-and-cocnvim-together>
+let g:ale_disable_lsp = 1
+
+" EOF
