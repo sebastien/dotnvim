@@ -40,7 +40,8 @@ let g:plugins_initialized = 0
 
 " If minpac is not available, we get it from Github and make it ready
 if !exists('*minpac#init')
-	if !isdirectory(g:minpac_root)
+	if !isdirectory(g:minpac_root . "/minpac/.git")
+		echo "init/plugins: Installing Minpac"
 		call mkdir(g:minpac_root, "p")
 		" NOTE: We construct the command instead of using env vars, as that would not
 		" work in Windows.
@@ -56,10 +57,11 @@ endif
 function plugins#update()
 	let timestamp_now        = str2nr(localtime())
 	let plugins_updated_path = g:vim_config_path . "/init/.plugins.updated"
+	echo "init/plugins: Upading plugins"
 	call minpac#update()
 	call minpac#clean()
 	call writefile([timestamp_now], plugins_updated_path)
-	echo "input/plugins: Minpac updated"
+	echo "init/plugins: Minpac updated"
 endfunction
 
 " @function Automatically updates the added plugins if the list of plugins has
@@ -103,6 +105,7 @@ function plugins#load()
 	" NOTE: On first run, this will do
 	" E919: Directory not found in 'packpath': "pack/*/opt/vim-mercenary"
 	for plugin in keys(minpac#getpluglist())
+		" TODO: Should test for the plugin to exist
 		execute 'packadd ' . plugin
 	endfor
 	" TODO: If we had errors there, we should cleanup the .plugins.updated

@@ -66,7 +66,7 @@ set foldmethod=indent
 set foldlevel=4
 " FIXME: Disabled as this triggers huge slowdowns when remoting
 " @feature Editor: Shows the current cursor line
-" set cursorline
+set cursorline
 " " @feature Editor: Shows the current cursor column
 " set cursorcolumn
 " @feature Editor: We never want anything concealed on the current line

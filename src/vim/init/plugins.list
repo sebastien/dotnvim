@@ -4,8 +4,11 @@
 # @plugin Editor: search in files, buffers and tags
 ## NOTE: Telescope seems to create some weird conflicts with insertion
 ## @plugin Editor: search in files, buffers and tags  (telescope)
+# junegunn/fzf
+junegunn/fzf.vim
 nvim-telescope/telescope-file-browser.nvim
 nvim-telescope/telescope-symbols.nvim
+# nvim-telescope/telescope-fzf-native.nvim
 nvim-telescope/telescope.nvim
 # @plugin Editor: completion
 # hrsh7th/cmp-nvim-lsp
