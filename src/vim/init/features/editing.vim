@@ -80,6 +80,8 @@ set clipboard+=unnamed
 
 " @feature Editor: Show line numbers
 set number
+" @feature Editor: Show relative line numbers
+set relativenumber
 
 " @feature Editor: no bell
 set belloff=all
