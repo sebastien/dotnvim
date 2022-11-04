@@ -68,7 +68,9 @@ reedes/vim-lexical
 # =============================================================================
 # EDITING (MANUAL)
 # =============================================================================
-# @plugin Edigin: display keybindings
+# @plugin Editing: easymotion
+easymotion/vim-easymotion
+# @plugin Editing: display keybindings
 folke/which-key.nvim
 # @plugin Editing: vertical alignment of text elements
 godlygeek/tabular
