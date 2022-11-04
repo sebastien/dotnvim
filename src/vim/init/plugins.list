@@ -50,6 +50,8 @@ jremmen/vim-ripgrep
 # =============================================================================
 # EDITING (AUTOMATIC)
 # =============================================================================
+# @plugin Editing: fast jumping
+ggandor/leap.nvim
 # @plugin Editing: completion on insertion
 ms-jpq/coq_nvim
 ms-jpq/coq.artifacts
