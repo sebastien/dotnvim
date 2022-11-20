@@ -82,7 +82,7 @@ godlygeek/tabular
 ## axvr/zepl.vim
 ## # @plugin IDE/Lisp: Parinfer formats Lisp code automagically
 # @plugin IDE/Git: Git support
-tpope/vim-fugitive
+jreybert/vimagit
 # =============================================================================
 # MISC
 # =============================================================================
@@ -171,4 +171,5 @@ ms-jpq/chadtree
 # github/copilot.vim
 # @plugin Editing: Pencil mode to automatically reflow text
 # reedes/vim-pencil
+# tpope/vim-fugitive
 # EOF -- vim: syntax=python
