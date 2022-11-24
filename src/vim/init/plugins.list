@@ -83,6 +83,8 @@ godlygeek/tabular
 ## # @plugin IDE/Lisp: Parinfer formats Lisp code automagically
 # @plugin IDE/Git: Git support
 jreybert/vimagit
+nvim-tree/nvim-web-devicons
+nvim-tree/nvim-tree.lua
 # =============================================================================
 # MISC
 # =============================================================================
@@ -163,7 +165,7 @@ ziglang/zig.vim
 ## Never used it
 # justinmk/vim-sneak
 ## Too slow (see top)
-ms-jpq/chadtree
+# ms-jpq/chadtree
 ## Does not use this
 # mcchrish/nnn.vim
 # lervag/wiki.vim
