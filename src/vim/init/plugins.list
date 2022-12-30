@@ -10,15 +10,6 @@ nvim-telescope/telescope-file-browser.nvim
 nvim-telescope/telescope-symbols.nvim
 # nvim-telescope/telescope-fzf-native.nvim
 nvim-telescope/telescope.nvim
-# @plugin Editor: completion
-# hrsh7th/cmp-nvim-lsp
-# hrsh7th/cmp-buffer
-# hrsh7th/cmp-path
-# hrsh7th/cmp-cmdline
-# hrsh7th/nvim-cmp
-# hrsh7th/cmp-vsnip
-# hrsh7th/vim-vsnip
-ms-jpq/coq_nvim
 # @plugin Editor: Better quickfix list
 folke/trouble.nvim
 # @plugin Editor: Tag bar
@@ -36,7 +27,7 @@ ap/vim-buftabline
 # @plugin Editor: Auto Pairs
 jiangmiao/auto-pairs
 ## # @plugin Editor: LSP Support
-## neovim/nvim-lspconfig
+neovim/nvim-lspconfig
 ## # @plugin Editor: LSP Quickfix Diagnostics
 ## onsails/vimway-lsp-diag.nvim
 ## # @plugin Editor: LSP Icons
@@ -53,6 +44,13 @@ jremmen/vim-ripgrep
 # @plugin Editing: fast jumping
 ggandor/leap.nvim
 # @plugin Editing: completion on insertion
+# hrsh7th/cmp-nvim-lsp
+# hrsh7th/cmp-buffer
+# hrsh7th/cmp-path
+# hrsh7th/cmp-cmdline
+# hrsh7th/nvim-cmp
+# hrsh7th/cmp-vsnip
+# hrsh7th/vim-vsnip
 ms-jpq/coq_nvim
 ms-jpq/coq.artifacts
 # @plugin Editing: Automatic linting & formatting

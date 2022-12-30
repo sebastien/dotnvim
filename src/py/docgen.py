@@ -5,6 +5,7 @@ BLOCK_END   = re.compile("\\}\\}\\}")
 TEXT        = re.compile('^(\s*"\s?)(.*)$')
 DIRECTIVE   = re.compile("\s*\"\s*@(keymap|command)\s+(.*)$")
 
+E
 class Extractor(object):
 
 	def __init__( self ):
