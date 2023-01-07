@@ -2,12 +2,13 @@
 # EDITOR
 # =============================================================================
 # @plugin Editor: search in files, buffers and tags
-## NOTE: Telescope seems to create some weird conflicts with insertion
-## @plugin Editor: search in files, buffers and tags  (telescope)
+# NOTE: Telescope seems to create some weird conflicts with insertion
+# @plugin Editor: search in files, buffers and tags  (telescope)
 # junegunn/fzf
 junegunn/fzf.vim
 nvim-telescope/telescope-file-browser.nvim
 nvim-telescope/telescope-symbols.nvim
+# FIXME: Does not work
 # nvim-telescope/telescope-fzf-native.nvim
 nvim-telescope/telescope.nvim
 # @plugin Editor: Better quickfix list
@@ -20,17 +21,14 @@ craigemery/vim-autotag
 sheerun/vim-polyglot
 # @plugin Editor: Support for 256-colors terminals
 vim-scripts/CSApprox
-# @plugin Editor: Support for nvim-qt
-equalsraf/neovim-gui-shim
 # @plugin Editor: Buffers displayed as tabline
 ap/vim-buftabline
-# @plugin Editor: Auto Pairs
-jiangmiao/auto-pairs
-## # @plugin Editor: LSP Support
+# # @plugin Editor: Auto Pairs
+# @plugin Editor: LSP Support
 neovim/nvim-lspconfig
-## # @plugin Editor: LSP Quickfix Diagnostics
-## onsails/vimway-lsp-diag.nvim
-## # @plugin Editor: LSP Icons
+# @plugin Editor: LSP Quickfix Diagnostics
+onsails/vimway-lsp-diag.nvim
+# @plugin Editor: LSP Icons
 onsails/lspkind-nvim
 # @plugin Editor: LSP UI
 # @plugin Editor: Indent Guides
@@ -172,4 +170,5 @@ ziglang/zig.vim
 # @plugin Editing: Pencil mode to automatically reflow text
 # reedes/vim-pencil
 # tpope/vim-fugitive
+# jiangmiao/auto-pairs # Slows down large files
 # EOF -- vim: syntax=python
