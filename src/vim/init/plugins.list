@@ -25,6 +25,7 @@ vim-scripts/CSApprox
 ap/vim-buftabline
 # # @plugin Editor: Auto Pairs
 # @plugin Editor: LSP Support
+williamboman/nvim-lsp-installer
 neovim/nvim-lspconfig
 # @plugin Editor: LSP Quickfix Diagnostics
 onsails/vimway-lsp-diag.nvim
@@ -78,7 +79,7 @@ godlygeek/tabular
 ## axvr/zepl.vim
 ## # @plugin IDE/Lisp: Parinfer formats Lisp code automagically
 # @plugin IDE/Git: Git support
-jreybert/vimagit
+tpope/vim-fugitive
 nvim-tree/nvim-web-devicons
 nvim-tree/nvim-tree.lua
 # =============================================================================
@@ -169,6 +170,5 @@ ziglang/zig.vim
 # github/copilot.vim
 # @plugin Editing: Pencil mode to automatically reflow text
 # reedes/vim-pencil
-# tpope/vim-fugitive
 # jiangmiao/auto-pairs # Slows down large files
 # EOF -- vim: syntax=python
