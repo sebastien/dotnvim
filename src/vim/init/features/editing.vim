@@ -74,10 +74,6 @@ set concealcursor=
 " @fix Editor: Command height needs to be 2 for error reporting
 set cmdheight=2
 
-" FIXME: This triggers a super slow load time, see: nvim -V10nvim.log
-" @feature Editor: Universal clipboard
-set clipboard+=unnamed
-
 " @feature Editor: Show line numbers
 set number
 
