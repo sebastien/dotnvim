@@ -8,6 +8,7 @@
 junegunn/fzf.vim
 nvim-telescope/telescope-file-browser.nvim
 nvim-telescope/telescope-symbols.nvim
+simrat39/symbols-outline.nvim
 # FIXME: Does not work
 # nvim-telescope/telescope-fzf-native.nvim
 nvim-telescope/telescope.nvim
