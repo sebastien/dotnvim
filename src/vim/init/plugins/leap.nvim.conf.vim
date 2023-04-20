@@ -1,3 +1,5 @@
 lua <<EOF
-require('leap').set_default_keymaps()
+if pcall(require, 'leap') then
+	require('leap').set_default_keymaps()
+end
 EOF
