@@ -16,6 +16,7 @@ let g:ale_linters = {
 \   'less': ['lessc', 'stylelint'],
 \   'yaml': ['circleci', 'yamllint'],
 \   'html': ['htmlhint', 'tidy'],
+\   'xhtml': ['htmlhint', 'tidy'],
 \   'typescript': ['deno'],
 \   'typescriptreact': ['tslint','tsserver'],
 \}
@@ -40,6 +41,7 @@ let g:ale_fixers = {
 \   'less': ['prettier'],
 \   'yaml': ['yamlfix'],
 \   'html': ['prettier'],
+\   'xhtml': ['prettier'],
 \}
 
 " FROM: https://github.com/dense-analysis/ale/issues/1353
