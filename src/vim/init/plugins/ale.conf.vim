@@ -9,7 +9,7 @@ let g:ale_linters = {
 \   'json': ['eslint'],
 \   'kotlin': ['kotlinc', 'ktlint'],
 \   'make': ['checkmake'],
-\   'python': ['mypy', 'pyflakes', 'bandit'],
+\   'python': ['mypy', 'ruff', 'bandit'],
 \   'rust': ['analyzer', 'cargo', "rls', 'rustc'"],
 \   'scss': ['sccslint', 'stylelint'],
 \   'sh': ['shellcheck'],
