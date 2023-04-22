@@ -57,7 +57,7 @@ ms-jpq/coq_nvim
 ms-jpq/coq.artifacts
 # @plugin Editing: Automatic linting & formatting
 dense-analysis/ale
-vim-autoformat/vim-autoformat
+# vim-autoformat/vim-autoformat
 # @plugin Editing: Spelling and grammar checkniting using LanguageTool
 rhysd/vim-grammarous
 # @plugin Editing: Using .editorconfig files

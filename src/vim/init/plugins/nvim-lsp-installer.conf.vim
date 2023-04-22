@@ -1,4 +1,5 @@
 lua <<EOF
+if pcall(require,"nvim-lsp-installer") then
 require("nvim-lsp-installer").setup({
     automatic_installation = true, -- automatically detect which servers to install (based on which servers are set up via lspconfig)
     ui = {
@@ -9,4 +10,5 @@ require("nvim-lsp-installer").setup({
         }
     }
 })
+end
 EOF

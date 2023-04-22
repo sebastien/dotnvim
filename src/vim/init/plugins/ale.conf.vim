@@ -17,7 +17,6 @@ let g:ale_linters = {
 \   'yaml': ['circleci', 'yamllint'],
 \   'html': ['htmlhint', 'tidy'],
 \   'xhtml': ['htmlhint', 'tidy'],
-\   'xslt': ['xmllint'],
 \   'typescript': ['deno'],
 \   'typescriptreact': ['tslint','tsserver'],
 \}
@@ -43,25 +42,10 @@ let g:ale_fixers = {
 \   'yaml': ['yamlfix'],
 \   'html': ['prettier'],
 \   'xhtml': ['prettier'],
-\   'xslt': ['prettier'],
 \}
 
-" function! FormatXSLT(buffer) abort
-"     return {
-"     \   'command': 'luafmt --stdin'
-"     \}
-" endfunction
-
-" execute ale#fix#registry#Add('xsltproc', 'FormatXSL', ['xslt'], 'luafmt for lua')
-
-" FROM: https://github.com/dense-analysis/ale/issues/1353
+" function! For" FROM: https://github.com/dense-analysis/ale/issues/1353
 command! ALEToggleFixer execute "let g:ale_fix_on_save = get(g:, 'ale_fix_on_save', 0) ? 0 : 1"
-
-" From ChatGPT: "This command sets the formatexpr option for the xslt filetype
-" to run the xsltproc command on the current file, and then returns the
-" output. The --nonet option disables network access, and the -o - option
-" specifies that the output should be written to stdout."
-" autocmd FileType xslt setlocal formatexpr=system('xsltproc --nonet -o - ' . shellescape(expand('%')))
 
 " NOTE: This makes it possible to show the quickfix with :copen
 let g:ale_set_loclist = 0

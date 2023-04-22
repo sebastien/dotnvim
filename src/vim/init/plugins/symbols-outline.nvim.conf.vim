@@ -62,5 +62,7 @@ local opts = {
     Fragment = { icon = "", hl = "@constant" },
   },
 }
-require("symbols-outline").setup(opts)
+if pcall(require, "symbols-outline") then
+	require("symbols-outline").setup(opts)
+end
 EOF
