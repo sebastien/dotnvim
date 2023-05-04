@@ -53,8 +53,6 @@ let g:ale_set_quickfix = 1
 " FROM: https://github.com/dense-analysis/ale/issues/249
 let g:ale_sign_warning = '•'
 let g:ale_sign_error = "➤"
-" NOTE: We disable LSP as we have Coc
-" <https://github.com/dense-analysis/ale#5iii-how-can-i-use-ale-and-cocnvim-together>
-let g:ale_disable_lsp = 1
+let g:ale_disable_lsp = 0
 
 " EOF
