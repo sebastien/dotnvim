@@ -17,6 +17,8 @@ let g:ale_linters = {
 \   'yaml': ['circleci', 'yamllint'],
 \   'html': ['htmlhint', 'tidy'],
 \   'xhtml': ['htmlhint', 'tidy'],
+\   'xml': ['xmllint'],
+\   'xslt': ['xmllint'],
 \   'typescript': ['deno'],
 \   'typescriptreact': ['tslint','tsserver'],
 \}
@@ -42,6 +44,8 @@ let g:ale_fixers = {
 \   'yaml': ['yamlfix'],
 \   'html': ['prettier'],
 \   'xhtml': ['prettier'],
+\   'xml': ['prettier'],
+\   'xslt': ['prettier'],
 \}
 
 " function! For" FROM: https://github.com/dense-analysis/ale/issues/1353

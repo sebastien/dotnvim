@@ -9,4 +9,5 @@ let g:formatters_xslt = ['xmllint']
 " Autoformat is easier to configure than ALE
 
 au BufWrite xslt :Autoformat
+au BufWrite xml  :Autoformat
 " EOF
