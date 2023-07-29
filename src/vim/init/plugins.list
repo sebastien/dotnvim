@@ -29,7 +29,8 @@ vim-scripts/CSApprox
 ap/vim-buftabline
 # # @plugin Editor: Auto Pairs
 # @plugin Editor: LSP Support
-williamboman/nvim-lsp-installer
+williamboman/mason.nvim
+williamboman/mason-lspconfig.nvim
 neovim/nvim-lspconfig
 # @plugin Editor: LSP Quickfix Diagnostics
 onsails/vimway-lsp-diag.nvim
@@ -176,4 +177,5 @@ ziglang/zig.vim
 # @plugin Editing: Pencil mode to automatically reflow text
 # reedes/vim-pencil
 # jiangmiao/auto-pairs # Slows down large files
+# williamboman/nvim-lsp-installer # Replaced by Mason
 # EOF -- vim: syntax=python
