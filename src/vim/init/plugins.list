@@ -33,7 +33,6 @@ williamboman/mason.nvim
 williamboman/mason-lspconfig.nvim
 neovim/nvim-lspconfig
 # @plugin Editor: LSP Quickfix Diagnostics
-onsails/vimway-lsp-diag.nvim
 # @plugin Editor: LSP Icons
 onsails/lspkind-nvim
 # @plugin Editor: LSP UI
@@ -177,5 +176,6 @@ ziglang/zig.vim
 # @plugin Editing: Pencil mode to automatically reflow text
 # reedes/vim-pencil
 # jiangmiao/auto-pairs # Slows down large files
+# onsails/vimway-lsp-diag.nvim # Does not work
 # williamboman/nvim-lsp-installer # Replaced by Mason
 # EOF -- vim: syntax=python
