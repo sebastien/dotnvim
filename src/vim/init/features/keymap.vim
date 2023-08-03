@@ -15,7 +15,9 @@ nmap     <C-P>               <cmd>Telescope buffers<CR>
 " @keymap Fuzz-finder popup with tags
 nmap     <C-T>               <cmd>Telescope lsp_document_symbols<CR>
 " @keymap Fuzz-finder popup with tags
-nmap     <leader>d           <cmd>Telescope diagnostics<CR>
+nmap     <leader>d           <cmd>Trouble document_diagnostics<CR>
+nmap     <leader>dg          <cmd>Trouble workspace_diagnostics<CR>
+nmap     <leader>dq          <cmd>Trouble quickfix<CR>
 nmap     <leader>gg          <cmd>Telescope lsp_definition<CR>
 " @keymap Fuzzy-finder popup with project files
 nmap     <C-I>               <cmd>Telescope find_files<CR>

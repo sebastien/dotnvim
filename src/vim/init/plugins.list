@@ -35,6 +35,7 @@ neovim/nvim-lspconfig
 # @plugin Editor: LSP Quickfix Diagnostics
 # @plugin Editor: LSP Icons
 onsails/lspkind-nvim
+folke/lsp-colors.nvim
 # @plugin Editor: LSP UI
 # @plugin Editor: Indent Guides
 # @plugin Editor: Tree Sitter Parser
@@ -84,7 +85,8 @@ godlygeek/tabular
 ## axvr/zepl.vim
 ## # @plugin IDE/Lisp: Parinfer formats Lisp code automagically
 # @plugin IDE/Git: Git support
-tpope/vim-fugitive
+# tpope/vim-fugitive
+sindrets/diffview.nvim
 nvim-tree/nvim-web-devicons
 nvim-tree/nvim-tree.lua
 # =============================================================================
