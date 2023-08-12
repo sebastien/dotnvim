@@ -118,6 +118,11 @@ function plugins#configure()
 		if filereadable(plugin_path)
 			execute 'source ' . fnameescape(plugin_path)
 		endif
+		" We do the same for the lua file
+		let plugin_path = g:vim_config_path . "/init/plugins/" . plugin . ".conf.lua"
+		if filereadable(plugin_path)
+			execute 'source ' . fnameescape(plugin_path)
+		endif
 	endfor
 endfunction
 
