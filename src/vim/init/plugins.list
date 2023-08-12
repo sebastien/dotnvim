@@ -86,8 +86,9 @@ godlygeek/tabular
 ## # @plugin IDE/Lisp: Parinfer formats Lisp code automagically
 # @plugin IDE/Git: Git support
 # tpope/vim-fugitive
-tanvirtin/vgit.nvim
-sindrets/diffview.nvim
+# tanvirtin/vgit.nvim
+# sindrets/diffview.nvim
+dinhhuy258/git.nvim
 nvim-tree/nvim-web-devicons
 nvim-tree/nvim-tree.lua
 # =============================================================================
