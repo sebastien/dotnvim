@@ -44,8 +44,8 @@ let g:ale_fixers = {
 \   'yaml': ['yamlfix'],
 \   'html': ['prettier'],
 \   'xhtml': ['prettier'],
-\   'xml': ['prettier'],
-\   'xslt': ['prettier'],
+\   'xml': ['prettier','xmllint'],
+\   'xslt': ['prettier','xmllint'],
 \}
 
 " function! For" FROM: https://github.com/dense-analysis/ale/issues/1353
