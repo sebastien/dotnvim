@@ -8,7 +8,8 @@
 junegunn/fzf.vim
 nvim-telescope/telescope-file-browser.nvim
 nvim-telescope/telescope-symbols.nvim
-simrat39/symbols-outline.nvim
+# simrat39/symbols-outline.nvim
+stevearc/aerial.nvim
 schickling/vim-bufonly
 MunifTanjim/nui.nvim
 # jackMort/ChatGPT.nvim
