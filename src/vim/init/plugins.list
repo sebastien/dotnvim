@@ -123,6 +123,7 @@ cespare/vim-toml
 # Olical/conjure
 # @language Zig
 ziglang/zig.vim
+janet-lang/janet.vim
 # =============================================================================
 # GRAVEYARD (TRIED BUT DOESN'T WORK)
 # =============================================================================

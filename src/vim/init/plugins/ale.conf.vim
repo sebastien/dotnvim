@@ -7,6 +7,7 @@ let g:ale_linters = {
 \   'javascript': ['eslint', 'deno'],
 \   'javascriptreact': ['eslint', 'deno'],
 \   'json': ['eslint'],
+\   'janet': ['janet'],
 \   'kotlin': ['kotlinc', 'ktlint'],
 \   'make': ['checkmake'],
 \   'python': ['mypy', 'pyflakes', 'bandit'],
@@ -21,6 +22,7 @@ let g:ale_linters = {
 \   'xslt': ['xmllint'],
 \   'typescript': ['deno'],
 \   'typescriptreact': ['tslint','tsserver'],
+\   'zig': ['zls'],
 \}
 
 let g:ale_fix_on_save = 1
@@ -31,6 +33,7 @@ let g:ale_fixers = {
 \   'javascript': ['prettier'],
 \   'javascriptreact': ['prettier'],
 \   'json': ['prettier'],
+\   'janet': ['jfmt'],
 \   'kotlin': ['ktlint'],
 \   'markdown': ['pandoc','textlint'],
 \   'python': ['black', 'remove_trailing_lines', 'trim_whitespace'],
@@ -46,6 +49,7 @@ let g:ale_fixers = {
 \   'xhtml': ['prettier'],
 \   'xml': ['prettier','xmllint'],
 \   'xslt': ['prettier','xmllint'],
+\   'zig': ['zigfmt'],
 \}
 
 " function! For" FROM: https://github.com/dense-analysis/ale/issues/1353
