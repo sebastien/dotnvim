@@ -1,3 +1,4 @@
+" UNUSED
 local saga = require 'lspsaga'```lua
 saga.init_lsp_saga {
   error_sign = '',
