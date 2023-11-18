@@ -7,6 +7,11 @@ BUILD_FEATURE_MD=$(SOURCES_FEATURES:%.vim=%.md)
 install:
 	ln -sfr src/vim ~/.config/nvim
 
+clean:
+	if [ -d src/vim/pack ]; then
+		rm -rf src/vim/pack
+	fi
+
 all:
 	@echo $(BUILD_FEATURE_MD)
 
@@ -21,4 +26,7 @@ deps:
 	#       2) For each line with the range, remove the leading '" '
 	#       3) Output the result in an .md file (documentation)
 	#       4) Look for @command, @keymap
+
+.ONESHELL:
+
 # EOF
