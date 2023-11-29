@@ -1,4 +1,6 @@
   -- Set up nvim-cmp.
+local has_cmp, _ =pcall(require,'cmp')
+if has_cmp then
   local cmp = require'cmp'
 
   cmp.setup({
@@ -61,11 +63,15 @@
   })
 
   -- Set up lspconfig.
-  local capabilities = require('cmp_nvim_lsp').default_capabilities()
-  local lspconfig = require('lspconfig')
-  for _, server in ipairs({"pyright", "tsserver", "gopls", "cssls", "html", "jsonls", "zls"}) do
-    lspconfig[server].setup {
-      capabilities = capabilities
-    }
-  end
+  local has_lspconfg, _ = pcall(require, 'lspconfig')
+  if has_lspconfig then
+	  local capabilities = require('cmp_nvim_lsp').default_capabilities()
+	  local lspconfig = require('lspconfig')
+	  for _, server in ipairs({"pyright", "tsserver", "gopls", "cssls", "html", "jsonls", "zls"}) do
+		lspconfig[server].setup {
+		  capabilities = capabilities
+		}
+	  end
+	end
   -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
+end

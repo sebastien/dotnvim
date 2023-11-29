@@ -1,2 +1,4 @@
 -- see: https://github.com/dinhhuy258/git.nvim
-require('git').setup()
+if pcall(require, 'git') then
+	require('git').setup()
+end
