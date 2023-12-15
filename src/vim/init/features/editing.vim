@@ -22,7 +22,8 @@ set showmatch
 " @feature Editing: Hitting tab inserts spaces or tabs based on the configuration
 set smarttab
 " @feature Editing: Whitespace characters are visible
-set list listchars=tab:»-,trail:·,eol:¬,extends:¬,precedes:¬
+" set list listchars=tab:»-,trail:·,eol:¬,extends:¬,precedes:¬
+ set list listchars=tab:▹―,trail:·,eol:¬,extends:¬,precedes:¬
 " @feature Editing: Backspace works over indent and newlines
 set backspace=indent,eol,start
 " @feature Editing: Persistent undo (between sessions)
