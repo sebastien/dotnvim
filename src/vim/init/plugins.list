@@ -59,8 +59,10 @@ hrsh7th/vim-vsnip
 # ms-jpq/coq_nvim
 # ms-jpq/coq.artifacts
 # @plugin Editing: Automatic linting & formatting
-dense-analysis/ale
-vim-autoformat/vim-autoformat
+# dense-analysis/ale
+# vim-autoformat/vim-autoformat
+mfussenegger/nvim-lint
+stevearc/conform.nvim
 # @plugin Editing: Spelling and grammar checkniting using LanguageTool
 rhysd/vim-grammarous
 # @plugin Editing: Using .editorconfig files
