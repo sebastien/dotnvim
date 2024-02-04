@@ -10,4 +10,6 @@ let g:formatters_xslt = ['xmllint']
 
 au BufWrite xslt :Autoformat
 au BufWrite xml  :Autoformat
+au BufWrite py   :Autoformat
+au BufWrite js   :Autoformat
 " EOF
