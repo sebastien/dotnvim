@@ -12,6 +12,7 @@ nvim-telescope/telescope-symbols.nvim
 # stevearc/aerial.nvim
 schickling/vim-bufonly
 MunifTanjim/nui.nvim
+wellle/context.vim
 # jackMort/ChatGPT.nvim
 # FIXME: Does not work
 # nvim-telescope/telescope-fzf-native.nvim

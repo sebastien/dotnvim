@@ -8,6 +8,8 @@ require("conform").setup({
     -- Use a sub-list to run only the first available formatter
     javascript = { { "prettierd", "prettier" } },
     xml = { { "xmllint" } },
+    nix = { { "nixfmt" } },
+    sh = { { "shellcheck" } },
     -- Use the "*" filetype to run formatters on all filetypes.
     ["*"] = { "codespell" },
     -- Use the "_" filetype to run formatters on filetypes that don't
