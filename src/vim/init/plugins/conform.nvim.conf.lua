@@ -9,7 +9,7 @@ require("conform").setup({
     javascript = { { "prettierd", "prettier" } },
     xml = { { "xmllint" } },
     nix = { { "nixfmt" } },
-    sh = { { "shellcheck" } },
+    sh = { { "shellcheck", "shfmt" } },
     -- Use the "*" filetype to run formatters on all filetypes.
     ["*"] = { "codespell" },
     -- Use the "_" filetype to run formatters on filetypes that don't
