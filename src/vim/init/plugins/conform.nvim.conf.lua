@@ -1,5 +1,6 @@
 -- SEE https://github.com/stevearc/conform.nvim
-
+local success, err = pcall(function() require("conform") end)
+if success then
 require("conform").setup({
   formatters_by_ft = {
     -- lua = { "stylua" },
@@ -27,5 +28,6 @@ require("conform").setup({
   -- Conform will notify you when a formatter errors
   notify_on_error = true,
 })
+end
 
 -- EOF
