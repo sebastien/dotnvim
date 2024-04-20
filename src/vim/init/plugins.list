@@ -80,6 +80,7 @@ easymotion/vim-easymotion
 folke/which-key.nvim
 # @plugin Editing: vertical alignment of text elements
 godlygeek/tabular
+joshuavial/aider.nvim
 ## # =============================================================================
 ## # IDE
 ## # =============================================================================
