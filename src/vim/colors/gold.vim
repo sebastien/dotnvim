@@ -121,6 +121,6 @@ hi User5 term=inverse gui=inverse ctermfg=grey guifg=#373766
 hi User6 term=inverse gui=inverse ctermfg=grey guifg=#373766
 
 " For columns
-hi ColorColumn term=bold ctermbg=0 guibg=#281D29
+hi ColorColumn ctermbg=0 guibg=#2a0f41
 
 " EOF
