@@ -24,7 +24,8 @@ sheerun/vim-polyglot
 # @plugin Editor: Support for 256-colors terminals
 vim-scripts/CSApprox
 # @plugin Editor: Buffers displayed as tabline
-ap/vim-buftabline
+akinsho/bufferline.nvim
+# ap/vim-buftabline
 # # @plugin Editor: Auto Pairs
 # @plugin Editor: LSP Support
 williamboman/mason.nvim
@@ -53,8 +54,8 @@ hrsh7th/cmp-vsnip
 hrsh7th/vim-vsnip
 # @plugin Editing: Automatic linting & formatting
 mfussenegger/nvim-lint
-stevearc/conform.nvim
-# dense-analysis/ale
+# stevearc/conform.nvim
+dense-analysis/ale
 # @plugin Editing: Spelling and grammar checking using LanguageTool
 rhysd/vim-grammarous
 # @plugin Editing: Using .editorconfig files
@@ -72,6 +73,7 @@ easymotion/vim-easymotion
 folke/which-key.nvim
 # @plugin Editing: vertical alignment of text elements
 godlygeek/tabular
+lukas-reineke/indent-blankline.nvim
 # # =============================================================================
 # # IDE
 # # =============================================================================
@@ -183,5 +185,6 @@ elkasztano/nushell-syntax-vim
 # FIXME: Does not work
 # nvim-telescope/telescope-fzf-native.nvim
 # dense-analysis/ale
+#nvimdev/indentmini.nvim
 # vim-autoformat/vim-autoformat
 # EOF -- vim: syntax=python
