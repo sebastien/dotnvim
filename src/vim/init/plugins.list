@@ -54,8 +54,8 @@ hrsh7th/cmp-vsnip
 hrsh7th/vim-vsnip
 # @plugin Editing: Automatic linting & formatting
 mfussenegger/nvim-lint
-# stevearc/conform.nvim
-dense-analysis/ale
+stevearc/conform.nvim
+# dense-analysis/ale
 # @plugin Editing: Spelling and grammar checking using LanguageTool
 rhysd/vim-grammarous
 # @plugin Editing: Using .editorconfig files
