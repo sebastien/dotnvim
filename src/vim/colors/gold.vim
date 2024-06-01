@@ -34,6 +34,7 @@ hi Delimiter           guifg=#855600
 hi Statement           guifg=#FFFFFF gui=bold
 hi Operator            guifg=#FFFFFF gui=NONE
 hi Identifier          guifg=#F5C400
+hi Function            guifg=#F5C400
 hi PreProc             guifg=#2D89AD
 hi Type                guifg=#E0E0E0 gui=bold
 hi Underlined          guifg=#13BAED
@@ -48,6 +49,14 @@ hi NonASCII            guibg=#1C3341 guifg=#DCF4F8
 hi link ALEErrorSign    Error
 hi link ALEWarningSign  Warning
 
+" Digagostics
+hi DiagnosticError	guifg=#c20005
+hi DiagnosticWarn	 guifg=#ec9607
+hi DiagnosticInfo	guifg=#5eaba7
+hi DiagnosticHint	guifg=#68358b
+hi DiagnosticOk	guifg=#86cc46
+
+"
 " Conceal
 hi Conceal               guifg=#FFE21B guibg=#2A2A2A
 hi ConcealStatement      guifg=#FFE21B guibg=#2A2A2A
