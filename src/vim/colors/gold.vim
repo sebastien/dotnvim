@@ -49,6 +49,14 @@ hi NonASCII            guibg=#1C3341 guifg=#DCF4F8
 hi link ALEErrorSign    Error
 hi link ALEWarningSign  Warning
 
+" Digagostics
+hi DiagnosticError	guifg=#c20005
+hi DiagnosticWarn	 guifg=#ec9607
+hi DiagnosticInfo	guifg=#5eaba7
+hi DiagnosticHint	guifg=#68358b
+hi DiagnosticOk	guifg=#86cc46
+
+"
 " Conceal
 hi Conceal               guifg=#FFE21B guibg=#2A2A2A
 hi ConcealStatement      guifg=#FFE21B guibg=#2A2A2A
