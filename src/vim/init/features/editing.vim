@@ -33,7 +33,7 @@ set undofile
 " SEARCHING
 " =============================================================================
 
-" @feature Search: Highligth search expression matches
+" @feature Search: Highlight search expression matches
 set hlsearch
 " @feature Search: Searches while typing an expression
 set incsearch
@@ -59,7 +59,7 @@ set t_Co=256
 
 " @feature Editor: Enables syntax plugins
 syntax enable
-" @feature Editor: Enables file type plugins and identation
+" @feature Editor: Enables file type plugins and indentation
 filetype plugin indent on
 " @feature Editor: Folding is based on indentation
 set foldmethod=indent
@@ -89,5 +89,11 @@ set belloff=all
 set ttyfast
 " @feature Performance: do not try to highlight past the 256-th column
 set synmaxcol=256
+
+
+" =============================================================================
+" DIGRAPHS
+" =============================================================================
+"digraph cx ⨯
 
 " EOF

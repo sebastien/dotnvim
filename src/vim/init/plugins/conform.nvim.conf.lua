@@ -5,7 +5,9 @@ require("conform").setup({
   formatters_by_ft = {
     -- lua = { "stylua" },
     -- Conform will run multiple formatters sequentially
-    python = { "black" },
+	-- NOTE: Ruff is too eager
+    -- python = { "ruff_fix", "ruff_format" },
+    python = { "black"},
     -- Use a sub-list to run only the first available formatter
     javascript = { { "prettierd", "prettier" } },
     xml = { { "xmllint" } },

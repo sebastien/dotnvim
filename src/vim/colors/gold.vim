@@ -34,6 +34,7 @@ hi Delimiter           guifg=#855600
 hi Statement           guifg=#FFFFFF gui=bold
 hi Operator            guifg=#FFFFFF gui=NONE
 hi Identifier          guifg=#F5C400
+hi Function            guifg=#F5C400
 hi PreProc             guifg=#2D89AD
 hi Type                guifg=#E0E0E0 gui=bold
 hi Underlined          guifg=#13BAED
