@@ -4,17 +4,14 @@
 # @plugin Editor: search in files, buffers and tags
 # NOTE: Telescope seems to create some weird conflicts with insertion
 # @plugin Editor: search in files, buffers and tags  (telescope)
-# junegunn/fzf
-junegunn/fzf.vim
 nvim-telescope/telescope-file-browser.nvim
 nvim-telescope/telescope-symbols.nvim
+junegunn/fzf.vim
 # simrat39/symbols-outline.nvim
 # stevearc/aerial.nvim
 schickling/vim-bufonly
 MunifTanjim/nui.nvim
-# jackMort/ChatGPT.nvim
-# FIXME: Does not work
-# nvim-telescope/telescope-fzf-native.nvim
+wellle/context.vim
 nvim-telescope/telescope.nvim
 # @plugin Editor: Better quickfix list
 folke/trouble.nvim
@@ -37,8 +34,6 @@ neovim/nvim-lspconfig
 # @plugin Editor: LSP Icons
 onsails/lspkind-nvim
 folke/lsp-colors.nvim
-# @plugin Editor: LSP UI
-# @plugin Editor: Indent Guides
 # @plugin Editor: Tree Sitter Parser
 nvim-treesitter/nvim-treesitter
 # @plugin Editor: Ripgrep
@@ -56,14 +51,11 @@ hrsh7th/cmp-path
 hrsh7th/cmp-cmdline
 hrsh7th/cmp-vsnip
 hrsh7th/vim-vsnip
-# ms-jpq/coq_nvim
-# ms-jpq/coq.artifacts
 # @plugin Editing: Automatic linting & formatting
-# dense-analysis/ale
-# vim-autoformat/vim-autoformat
 mfussenegger/nvim-lint
 stevearc/conform.nvim
-# @plugin Editing: Spelling and grammar checkniting using LanguageTool
+# dense-analysis/ale
+# @plugin Editing: Spelling and grammar checking using LanguageTool
 rhysd/vim-grammarous
 # @plugin Editing: Using .editorconfig files
 editorconfig/editorconfig-vim
@@ -81,17 +73,13 @@ folke/which-key.nvim
 # @plugin Editing: vertical alignment of text elements
 godlygeek/tabular
 joshuavial/aider.nvim
-## # =============================================================================
-## # IDE
-## # =============================================================================
-## # @plugin IDE/REPL: A multi-lingual REPL
-## # @binding :Repl
-## axvr/zepl.vim
-## # @plugin IDE/Lisp: Parinfer formats Lisp code automagically
+# =============================================================================
+# IDE
+# =============================================================================
+# @plugin IDE/REPL: A multi-lingual REPL
+# @binding :Repl
+# axvr/zepl.vim
 # @plugin IDE/Git: Git support
-# tpope/vim-fugitive
-# tanvirtin/vgit.nvim
-# sindrets/diffview.nvim
 dinhhuy258/git.nvim
 nvim-tree/nvim-web-devicons
 nvim-tree/nvim-tree.lua
@@ -122,8 +110,6 @@ LnL7/vim-nix
 rust-lang/rust.vim
 # @language TOML
 cespare/vim-toml
-# @language Clojure
-# Olical/conjure
 # @language Zig
 ziglang/zig.vim
 # @language Janet
@@ -190,4 +176,15 @@ elkasztano/nushell-syntax-vim
 # jiangmiao/auto-pairs # Slows down large files
 # onsails/vimway-lsp-diag.nvim # Does not work
 # williamboman/nvim-lsp-installer # Replaced by Mason
+# ms-jpq/coq_nvim
+# ms-jpq/coq.artifacts
+# tpope/vim-fugitive
+# tanvirtin/vgit.nvim
+# sindrets/diffview.nvim
+# axvr/zepl.vim
+# jackMort/ChatGPT.nvim
+# FIXME: Does not work
+# nvim-telescope/telescope-fzf-native.nvim
+# dense-analysis/ale
+# vim-autoformat/vim-autoformat
 # EOF -- vim: syntax=python

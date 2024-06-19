@@ -1,5 +1,6 @@
 -- SEE https://github.com/stevearc/conform.nvim
-
+local success, err = pcall(function() require("conform") end)
+if success then
 require("conform").setup({
   formatters_by_ft = {
     -- lua = { "stylua" },
@@ -8,6 +9,8 @@ require("conform").setup({
     -- Use a sub-list to run only the first available formatter
     javascript = { { "prettierd", "prettier" } },
     xml = { { "xmllint" } },
+    nix = { { "nixfmt" } },
+    sh = { { "shellcheck", "shfmt" } },
     -- Use the "*" filetype to run formatters on all filetypes.
     ["*"] = { "codespell" },
     -- Use the "_" filetype to run formatters on filetypes that don't
@@ -25,5 +28,6 @@ require("conform").setup({
   -- Conform will notify you when a formatter errors
   notify_on_error = true,
 })
+end
 
 -- EOF

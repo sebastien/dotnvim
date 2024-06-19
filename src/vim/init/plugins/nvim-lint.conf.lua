@@ -1,4 +1,6 @@
 -- SEE: https://github.com/mfussenegger/nvim-lint
+local success, err = pcall(function() require("conform") end)
+if success then
 require('lint').linters_by_ft = {
   markdown = {'vale',},
   python = {'mypy','bandit','codespell',},
@@ -12,4 +14,5 @@ vim.api.nvim_create_autocmd({ "BufWritePost" }, {
     require("lint").try_lint()
   end,
 })
-
+end
+-- EOF
