@@ -24,7 +24,8 @@ sheerun/vim-polyglot
 # @plugin Editor: Support for 256-colors terminals
 vim-scripts/CSApprox
 # @plugin Editor: Buffers displayed as tabline
-ap/vim-buftabline
+akinsho/bufferline.nvim
+# ap/vim-buftabline
 # # @plugin Editor: Auto Pairs
 # @plugin Editor: LSP Support
 williamboman/mason.nvim
@@ -186,5 +187,6 @@ elkasztano/nushell-syntax-vim
 # FIXME: Does not work
 # nvim-telescope/telescope-fzf-native.nvim
 # dense-analysis/ale
+#nvimdev/indentmini.nvim
 # vim-autoformat/vim-autoformat
 # EOF -- vim: syntax=python
