@@ -54,10 +54,12 @@ hrsh7th/cmp-vsnip
 hrsh7th/vim-vsnip
 # @plugin Editing: Automatic linting & formatting
 mfussenegger/nvim-lint
+rshkarin/mason-nvim-lint
 stevearc/conform.nvim
 # dense-analysis/ale
 # @plugin Editing: Spelling and grammar checking using LanguageTool
-rhysd/vim-grammarous
+# rhysd/vim-grammarous
+rodolfoap/vim-grammarous
 # @plugin Editing: Using .editorconfig files
 editorconfig/editorconfig-vim
 # @plugin Editing: Show VCS changes in the gutter
