@@ -11,7 +11,7 @@ junegunn/fzf.vim
 # stevearc/aerial.nvim
 schickling/vim-bufonly
 MunifTanjim/nui.nvim
-wellle/context.vim
+# wellle/context.vim -- too slow?
 nvim-telescope/telescope.nvim
 # @plugin Editor: Better quickfix list
 folke/trouble.nvim
