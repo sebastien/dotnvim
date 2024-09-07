@@ -75,8 +75,8 @@ set concealcursor=
 " @fix Editor: Command height needs to be 2 for error reporting
 set cmdheight=2
 
-" @feature Editor: Show line numbers
-set number
+" @feature Editor: Show line numbers (relatively, useful in Makefile)
+set relnumber
 
 " @feature Editor: no bell
 set belloff=all
