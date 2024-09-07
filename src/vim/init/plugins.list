@@ -86,6 +86,7 @@ joshuavial/aider.nvim
 dinhhuy258/git.nvim
 nvim-tree/nvim-web-devicons
 nvim-tree/nvim-tree.lua
+echasnovski/mini.icons
 # =============================================================================
 # MISC
 # =============================================================================
@@ -97,6 +98,8 @@ kyazdani42/nvim-web-devicons
 # =============================================================================
 # SYNTAX & LANGUAGE SUPPORT
 # =============================================================================
+# @language Elvish
+dmix/elvish.vim
 # @language GLSL
 tikhomirov/vim-glsl
 # @language HJSON

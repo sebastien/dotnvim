@@ -67,7 +67,7 @@ if has_cmp then
   if has_lspconfig then
 	  local capabilities = require('cmp_nvim_lsp').default_capabilities()
 	  local lspconfig = require('lspconfig')
-	  for _, server in ipairs({"pyright", "tsserver", "gopls", "cssls", "html", "jsonls", "zls"}) do
+	  for _, server in ipairs({"pyright", "ts_ls", "gopls", "cssls", "html", "jsonls", "zls"}) do
 		lspconfig[server].setup {
 		  capabilities = capabilities
 		}

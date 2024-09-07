@@ -21,7 +21,7 @@ let g:ale_linters = {
 \   'xml': ['xmllint'],
 \   'xslt': ['xmllint'],
 \   'typescript': ['deno'],
-\   'typescriptreact': ['tslint','tsserver'],
+\   'typescriptreact': ['tslint','ts_ls'],
 \   'zig': ['zls'],
 \}
 

@@ -68,7 +68,7 @@ lua <<EOF
   local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
   -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 
-	for _, server in ipairs({"pyright", "tsserver", "gopls", "cssls", "html", "jsonls"}) do
+	for _, server in ipairs({"pyright", "ts_ls", "gopls", "cssls", "html", "jsonls"}) do
 		require('lspconfig')[server].setup({capabilities = capabilities})
 	end
 EOF
