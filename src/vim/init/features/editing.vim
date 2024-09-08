@@ -76,7 +76,7 @@ set concealcursor=
 set cmdheight=2
 
 " @feature Editor: Show line numbers (relatively, useful in Makefile)
-set relnumber
+set number
 
 " @feature Editor: no bell
 set belloff=all
