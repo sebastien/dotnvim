@@ -1,4 +1,4 @@
-# =============================================================================
+# =============================================================================plu
 # EDITOR
 # =============================================================================
 # @plugin Editor: search in files, buffers and tags
@@ -7,8 +7,6 @@
 nvim-telescope/telescope-file-browser.nvim
 nvim-telescope/telescope-symbols.nvim
 junegunn/fzf.vim
-# simrat39/symbols-outline.nvim
-# stevearc/aerial.nvim
 schickling/vim-bufonly
 MunifTanjim/nui.nvim
 # wellle/context.vim -- too slow?
@@ -16,7 +14,9 @@ nvim-telescope/telescope.nvim
 # @plugin Editor: Better quickfix list
 folke/trouble.nvim
 # @plugin Editor: Tag bar
-simrat39/symbols-outline.nvim
+# hedyhli/outline.nvim
+# simrat39/symbols-outline.nvim
+stevearc/aerial.nvim
 # @plugin Editor: Automatic tags
 craigemery/vim-autotag
 # @plugin Editor: Syntax highlighting for many languages
@@ -194,4 +194,5 @@ elkasztano/nushell-syntax-vim
 # dense-analysis/ale
 #nvimdev/indentmini.nvim
 # vim-autoformat/vim-autoformat
+# simrat39/symbols-outline.nvim
 # EOF -- vim: syntax=python
