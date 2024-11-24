@@ -53,6 +53,7 @@ hrsh7th/cmp-cmdline
 # garymjr/nvim-snippets
 # hrsh7th/cmp-vsnip
 # hrsh7th/vim-vsnip
+garymjr/nvim-snippets
 # @plugin Editing: Automatic linting & formatting
 mfussenegger/nvim-lint
 rshkarin/mason-nvim-lint
