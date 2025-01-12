@@ -1,6 +1,9 @@
-" FIXME: This triggers a super slow load time, see: nvim -V10nvim.log
-" set clipboard=unnamedplus
+" MacOS requires unnamedplus
+if executable("pbcopy")
+	set clipboard=unnamedplus
+end
 
+" FIXME: This triggers a super slow load time, see: nvim -V10nvim.log
 " lua << EOF
 " -- FROM: https://github.com/wez/wezterm/discussions/5231
 " -- vim.g.clipboard = {
