@@ -1,18 +1,18 @@
 -- SEE https://github.com/stevearc/conform.nvim
-local success, err = pcall(function() require("conform") end)
+local success, _ = pcall(function() require("conform") end)
 if success then
 require("conform").setup({
   formatters_by_ft = {
-    -- lua = { "stylua" },
+   lua = { "stylua" },
     -- Conform will run multiple formatters sequentially
 	-- NOTE: Ruff is too eager
     -- python = { "ruff_fix", "ruff_format" },
     python = { "black"},
     -- Use a sub-list to run only the first available formatter
-    javascript = { { "prettierd", "prettier" } },
-    xml = { { "xmllint" } },
-    nix = { { "nixfmt" } },
-    sh = { { "shellcheck", "shfmt" } },
+    javascript = {  "prettierd"  },
+    xml = {  "xmllint"  },
+    nix = {  "nixfmt"  },
+    sh = {  "shellcheck", "shfmt"  },
     -- Use the "*" filetype to run formatters on all filetypes.
     -- ["*"] = { "codespell" },
     -- Use the "_" filetype to run formatters on filetypes that don't
