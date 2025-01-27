@@ -31,7 +31,10 @@ if has_cmp then
       -- { name = 'ultisnips' }, -- For ultisnips users.
       -- { name = 'snippy' }, -- For snippy users.
     }, {
+		--  SEE: CmpStatus
       { name = 'buffer' },
+      { name = 'path' },
+      { name = 'cmdline' },
     })
   })
 
@@ -59,7 +62,8 @@ if has_cmp then
       { name = 'path' }
     }, {
       { name = 'cmdline' }
-    })
+    }),
+    matching = { disallow_symbol_nonprefix_matching = false }
   })
 
   -- Set up lspconfig.
