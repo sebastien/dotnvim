@@ -64,6 +64,7 @@ editorconfig/editorconfig-vim
 mhinz/vim-signify
 # @plugin Editing: Spelling
 reedes/vim-lexical
+gergap/vim-ollama
 # =============================================================================
 # EDITING (MANUAL)
 # =============================================================================

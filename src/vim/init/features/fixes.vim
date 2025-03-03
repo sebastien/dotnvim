@@ -2,3 +2,6 @@
 " SEE: https://jdhao.github.io/2019/01/17/nvim_qt_settings_on_windows/
 " GuiPopupmenu 0
 " GuiTabline   0
+"
+let $PATH = $HOME . '/.local/share/mise/shims:' . $PATH
+" EOF
