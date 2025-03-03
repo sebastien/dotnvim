@@ -9,14 +9,15 @@ nvim-telescope/telescope-symbols.nvim
 junegunn/fzf.vim
 schickling/vim-bufonly
 MunifTanjim/nui.nvim
-# wellle/context.vim -- too slow?
 nvim-telescope/telescope.nvim
+# @plugin Editor: Shows context (parent symbols)
+nvim-treesitter/nvim-treesitter-context
 # @plugin Editor: Better quickfix list
 folke/trouble.nvim
 # @plugin Editor: Tag bar
-# hedyhli/outline.nvim
-# simrat39/symbols-outline.nvim
 stevearc/aerial.nvim
+# @plugin: Editor: better diagnostics
+rachartier/tiny-inline-diagnostic.nvim
 # @plugin Editor: Automatic tags
 craigemery/vim-autotag
 # @plugin Editor: Syntax highlighting for many languages
@@ -51,15 +52,11 @@ hrsh7th/cmp-buffer
 hrsh7th/cmp-path
 hrsh7th/cmp-cmdline
 garymjr/nvim-snippets
-# hrsh7th/cmp-vsnip
-# hrsh7th/vim-vsnip
 # @plugin Editing: Automatic linting & formatting
 mfussenegger/nvim-lint
 rshkarin/mason-nvim-lint
 stevearc/conform.nvim
-# dense-analysis/ale
 # @plugin Editing: Spelling and grammar checking using LanguageTool
-# rhysd/vim-grammarous
 rodolfoap/vim-grammarous
 # @plugin Editing: Using .editorconfig files
 editorconfig/editorconfig-vim
@@ -195,5 +192,10 @@ elkasztano/nushell-syntax-vim
 # dense-analysis/ale
 #nvimdev/indentmini.nvim
 # vim-autoformat/vim-autoformat
+# rhysd/vim-grammarous
 # simrat39/symbols-outline.nvim
+# hrsh7th/cmp-vsnip
+# hrsh7th/vim-vsnip
+# wellle/context.vim -- too slow?
 # EOF -- vim: syntax=python
+# simrat39/symbols-outline.nvim
