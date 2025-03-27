@@ -3,8 +3,9 @@ local success, err = pcall(function() require("conform") end)
 if success then
 require('lint').linters_by_ft = {
   markdown = {'vale',},
-  python = {'mypy','bandit',},
-  javascript = {'eslint','deno',},
+  python = {'mypy','bandit','deepsource'},
+  javascript = {'eslint','deno','deepsource'},
+  sh = {'deepsource'},
   html = {'tidy',},
   bash = {'shellcheck',},
   lua = {'luacheck',},

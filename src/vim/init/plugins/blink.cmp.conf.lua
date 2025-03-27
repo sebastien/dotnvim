@@ -5,9 +5,9 @@
 -- if that doesn't work, the files can be downloaded and installed in
 -- target/release/libblink_cmp_fuzzy.{so,dylib}
 require("blink.cmp").setup({
-	 keymap = {
-	 	['<Tab>'] = {'accept'}
-	 },
+	 -- keymap = {
+	 -- 	['<Tab>'] = {'accept'}
+	 -- },
 	-- SEE: https://github.com/saghen/blink.cmp/releases/tag/v1.1.1
 	fuzzy = {
 	    implementation = "prefer_rust_with_warning",

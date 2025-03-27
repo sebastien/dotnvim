@@ -73,6 +73,8 @@ folke/which-key.nvim
 # @plugin Editing: vertical alignment of text elements
 godlygeek/tabular
 joshuavial/aider.nvim
+# @plugin Merging: jujutsu diff merge
+rafikdraoui/jj-diffconflicts
 # =============================================================================
 # IDE
 # =============================================================================

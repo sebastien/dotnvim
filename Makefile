@@ -5,7 +5,13 @@ SOURCES_PLUGINS_LIST=init.plugins.list
 BUILD_FEATURE_MD=$(SOURCES_FEATURES:%.vim=%.md)
 
 install:
-	ln -sfr src/vim ~/.config/nvim
+	@ln -sfr src/vim ~/.config/nvim
+	for FILE in $$(find src/lua -name "*.lua"); do
+		BASE=$${FILE##src/}
+		DEST=$$HOME/.config/nvim/$$(dirname $$BASE)
+		mkdir -p "$$DEST"
+		ln -sfr "$$FILE" "$$HOME/.config/nvim/$$BASE"
+	done
 
 clean:
 	if [ -d src/vim/pack ]; then
