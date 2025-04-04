@@ -45,12 +45,9 @@ jremmen/vim-ripgrep
 # =============================================================================
 # @plugin Editing: fast jumping
 ggandor/leap.nvim
-# @plugin Editing: completion on insertion
-hrsh7th/nvim-cmp
-hrsh7th/cmp-nvim-lsp
-hrsh7th/cmp-buffer
-hrsh7th/cmp-path
-hrsh7th/cmp-cmdline
+# @plugin Editing: completion on inertion
+ms-jpq/coq_nvim
+ms-jpq/coq.artifacts
 garymjr/nvim-snippets
 # @plugin Editing: Automatic linting & formatting
 mfussenegger/nvim-lint
@@ -64,7 +61,6 @@ editorconfig/editorconfig-vim
 mhinz/vim-signify
 # @plugin Editing: Spelling
 reedes/vim-lexical
-gergap/vim-ollama
 # =============================================================================
 # EDITING (MANUAL)
 # =============================================================================
@@ -83,8 +79,9 @@ joshuavial/aider.nvim
 # axvr/zepl.vim
 # @plugin IDE/Git: Git support
 dinhhuy258/git.nvim
-nvim-tree/nvim-web-devicons
-nvim-tree/nvim-tree.lua
+ms-jpq/chadtree
+# nvim-tree/nvim-web-devicons
+# nvim-tree/nvim-tree.lua
 echasnovski/mini.icons
 rafikdraoui/jj-diffconflicts
 # =============================================================================
@@ -182,8 +179,6 @@ elkasztano/nushell-syntax-vim
 # jiangmiao/auto-pairs # Slows down large files
 # onsails/vimway-lsp-diag.nvim # Does not work
 # williamboman/nvim-lsp-installer # Replaced by Mason
-# ms-jpq/coq_nvim
-# ms-jpq/coq.artifacts
 # tpope/vim-fugitive
 # tanvirtin/vgit.nvim
 # sindrets/diffview.nvim
@@ -198,6 +193,12 @@ elkasztano/nushell-syntax-vim
 # simrat39/symbols-outline.nvim
 # hrsh7th/cmp-vsnip
 # hrsh7th/vim-vsnip
+# NOTE: nvim-cmp did not work with :! completion, annoying!
+# hrsh7th/nvim-cmp
+# hrsh7th/cmp-nvim-lsp
+# hrsh7th/cmp-buffer
+# hrsh7th/cmp-path
+# hrsh7th/cmp-cmdline
 # wellle/context.vim -- too slow?
 # EOF -- vim: syntax=python
 # simrat39/symbols-outline.nvim
