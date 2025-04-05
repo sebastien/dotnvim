@@ -4,16 +4,16 @@
 # @plugin Editor: search in files, buffers and tags
 # NOTE: Telescope seems to create some weird conflicts with insertion
 # @plugin Editor: search in files, buffers and tags  (telescope)
-nvim-telescope/telescope-file-browser.nvim
-nvim-telescope/telescope-symbols.nvim
-junegunn/fzf.vim
+# nvim-telescope/telescope-file-browser.nvim
+# nvim-telescope/telescope-symbols.nvim
+# nvim-telescope/telescope.nvim
+ibhagwan/fzf-lua
 schickling/vim-bufonly
 MunifTanjim/nui.nvim
-nvim-telescope/telescope.nvim
 # @plugin Editor: Shows context (parent symbols)
 nvim-treesitter/nvim-treesitter-context
 # @plugin Editor: Better quickfix list
-folke/trouble.nvim
+# folke/trouble.nvim
 # @plugin Editor: Tag bar
 stevearc/aerial.nvim
 # @plugin: Editor: better diagnostics
@@ -200,5 +200,6 @@ elkasztano/nushell-syntax-vim
 # hrsh7th/cmp-path
 # hrsh7th/cmp-cmdline
 # wellle/context.vim -- too slow?
+# junegunn/fzf.vim
 # EOF -- vim: syntax=python
 # simrat39/symbols-outline.nvim

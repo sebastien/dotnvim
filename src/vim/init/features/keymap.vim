@@ -11,34 +11,15 @@ let maplocalleader=","
 " =========================
 "
 " @keymap Fuzzy-finder popup with opened buffers
-nmap     <C-P>               <cmd>Telescope buffers<CR>
-nmap     <C-I>               <cmd>Telescope find_files<CR>
+nmap     <C-P>               <cmd>FzfLua buffers<CR>
+nmap     <C-I>               <cmd>FzfLua files<CR>
 " @keymap Fuzz-finder popup with tags
-nmap     <C-T>               <cmd>Telescope lsp_document_symbols<CR>
-" @keymap Fuzz-finder popup with tags
-nmap     <leader>d           <cmd>Trouble document_diagnostics<CR>
-nmap     <leader>dg          <cmd>Trouble workspace_diagnostics<CR>
-nmap     <leader>dq          <cmd>Trouble quickfix<CR>
-nmap     <leader>gg          <cmd>Telescope lsp_definition<CR>
-" @keymap Fuzzy-finder popup with project files
-nnoremap <leader>i           <cmd>Telescope find_files<CR>
-nnoremap <leader>o           <cmd>Telescope file_browser<CR>
+nmap     <C-T>               <cmd>FzfLua lsp_document_symbols<CR>
 " @keymap Fuzzy-finder popup with live search
-nmap     <C-O>               <cmd>Telescope live_grep<CR>
-" @keymap Symbol Explorer
-nnoremap  <leader>q          <cmd>lua require('vimway-lsp-diag').open_all_diagnostics()<cr>
-nnoremap  <leader>qb         <cmd>lua require('vimway-lsp-diag').open_buffer_diagnostics()<cr>
-
-nnoremap  <leader>q          <cmd>lua require('vimway-lsp-diag').open_all_diagnostics()<cr>
-
-" @keymap Trouble (quickfix)
-nnoremap <leader>e  <cmd>TroubleToggle<cr>
-nnoremap <leader>ed <cmd>TroubleToggle workspace_diagnostics<cr>
-nnoremap <leader>ed <cmd>TroubleToggle document_diagnostics<cr>
-nnoremap <leader>eq <cmd>TroubleToggle quickfix<cr>
-nnoremap <leader>el <cmd>TroubleToggle loclist<cr>
-nnoremap <leader>er <cmd>TroubleToggle lsp_references<cr>
-
+nmap     <C-O>               <cmd>FzfLua grep_visual<CR>
+nmap     <leader>gg          <cmd>FzfLua lsp_definition<CR>
+" @keymap Fuzzy-finder popup with project files
+nnoremap <leader>o           <cmd>CHADopen<CR>
 
 " @group Tab indentation
 " ======================
