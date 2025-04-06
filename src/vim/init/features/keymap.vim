@@ -16,7 +16,7 @@ nmap     <C-I>               <cmd>FzfLua files<CR>
 " @keymap Fuzz-finder popup with tags
 nmap     <C-T>               <cmd>FzfLua lsp_document_symbols<CR>
 " @keymap Fuzzy-finder popup with live search
-nmap     <C-O>               <cmd>FzfLua grep_visual<CR>
+nmap     <C-O>               <cmd>FzfLua grep_project<CR>
 nmap     <leader>gg          <cmd>FzfLua lsp_definition<CR>
 " @keymap Fuzzy-finder popup with project files
 nnoremap <leader>o           <cmd>CHADopen<CR>
