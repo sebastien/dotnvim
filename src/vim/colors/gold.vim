@@ -110,7 +110,7 @@ hi TagbarKind        guifg=#2A7679
 hi StatusLine    guibg=#A36FA3 guifg=#641F70
 hi StatusLineNC  guibg=#A6A2BA guifg=#373766
 
-hi TabLineFill   guibg=#A6A2BA guifg=#321C57
+hi TabLineFill   guibg=NONE guifg=#321C57
 hi TabLine       guifg=#7242CC guibg=#321C57 gui=NONE
 hi TabLineSel    guifg=#D41FDE guibg=#641F70
 
