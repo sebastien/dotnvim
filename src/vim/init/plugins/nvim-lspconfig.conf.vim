@@ -11,12 +11,19 @@ if pcall(require, "lspconfig") then
 	local on_attach = function(client)
 		--vim.api.nvim_buf_set_option(bufnr, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
 		vim.api.nvim_buf_set_option(0, 'omnifunc', 'v:lua.vim.lsp.omnifunc')
+		-- We disable LSP format expr
+		vim.api.nvim_buf_set_option(0, 'formatexpr', '')
+		-- Disable document formatting for this LSP client
+		client.server_capabilities.documentFormattingProvider = false
+		client.server_capabilities.documentRangeFormattingProvider = false
 	end
 	-- SEE: https://neovim.io/doc/user/lsp.html
 	for _, server in ipairs({"pyright", "ts_ls", "gopls", "cssls", "html", "jsonls", "zls"}) do
 		-- FIXME: Should detect if coq is available or not
 		if coq then
-			nvim_lsp[server].setup({capabilities=coq.lsp_ensure_capabilities(),on_attach=on_attach})
+			nvim_lsp[server].setup({
+				capabilities=coq.lsp_ensure_capabilities(),on_attach=on_attach
+			})
 		end
 		nvim_lsp[server].setup({on_attach=on_attach})
 	end

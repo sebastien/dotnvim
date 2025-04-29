@@ -6,6 +6,16 @@
 let mapleader=","
 let maplocalleader=","
 
+" @func Toggle format expression betwen VIM & LSP
+function! ToggleFormatExpr()
+  if &formatexpr == 'v:lua.vim.lsp.formatexpr()'
+    setlocal formatexpr=
+    echo 'Using standard formatting'
+  else
+    setlocal formatexpr=v:lua.vim.lsp.formatexpr()
+    echo 'Using LSP formatting'
+  endif
+endfunction
 
 " @group Telescope (Fuzzy finder)
 " =========================
@@ -20,6 +30,9 @@ nmap     <C-O>               <cmd>FzfLua grep_project<CR>
 nmap     <leader>gg          <cmd>FzfLua lsp_definition<CR>
 " @keymap Fuzzy-finder popup with project files
 nnoremap <leader>o           <cmd>NvimTreeToggle<CR>
+nnoremap <leader>t           <cmd>AerialToggle<CR>
+" @keymap Toggles Formatting
+nnoremap <leader>tf           <cmd>ToggleFormat<CR>
 
 " @group Tab indentation
 " ======================
