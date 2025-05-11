@@ -30,8 +30,8 @@ willothy/nvim-cokeline
 # ap/vim-buftabline
 # # @plugin Editor: Auto Pairs
 # @plugin Editor: LSP Support
-williamboman/mason.nvim
-williamboman/mason-lspconfig.nvim
+mason-org/mason.nvim
+mason-org/mason-lspconfig.nvim
 neovim/nvim-lspconfig
 # @plugin Editor: LSP Quickfix Diagnostics
 # @plugin Editor: LSP Icons
