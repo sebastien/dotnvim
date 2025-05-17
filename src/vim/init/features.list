@@ -13,4 +13,5 @@ style
 whitespace
 editing
 keymap
+# lsp
 # EOF - vim: syntax=text

@@ -67,7 +67,7 @@ require("tiny-inline-diagnostic").setup({
 		},
 
 		-- Display all diagnostic messages on the cursor line
-		show_all_diags_on_cursorline = false,
+		show_all_diags_on_cursorline = true,
 
 		-- Enable diagnostics in Insert mode
 		-- If enabled, it is better to set the `throttle` option to 0 to avoid visual artifacts

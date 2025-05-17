@@ -37,6 +37,7 @@ neovim/nvim-lspconfig
 # @plugin Editor: LSP Icons
 onsails/lspkind-nvim
 folke/lsp-colors.nvim
+# jinzhongjia/LspUI.nvim
 # @plugin Editor: Tree Sitter Parser
 nvim-treesitter/nvim-treesitter
 # @plugin Editor: Ripgrep
@@ -60,7 +61,8 @@ rodolfoap/vim-grammarous
 # @plugin Editing: Using .editorconfig files
 editorconfig/editorconfig-vim
 # @plugin Editing: Show VCS changes in the gutter
-mhinz/vim-signify
+# mhinz/vim-signify
+lewis6991/gitsigns.nvim
 # @plugin Editing: Spelling
 reedes/vim-lexical
 # =============================================================================
@@ -87,18 +89,25 @@ dinhhuy258/git.nvim
 nvim-tree/nvim-web-devicons
 nvim-tree/nvim-tree.lua
 echasnovski/mini.icons
+# @feature Jujutsu Diff
 rafikdraoui/jj-diffconflicts
+# @feature DAP Debugger
+mfussenegger/nvim-dap
 # =============================================================================
 # MISC
 # =============================================================================
 # @plugin Libraries
 nvim-lua/popup.nvim
 nvim-lua/plenary.nvim
+j-hui/fidget.nvim
 # Dev Icons
 kyazdani42/nvim-web-devicons
 # =============================================================================
 # SYNTAX & LANGUAGE SUPPORT
 # =============================================================================
+# @language Scala
+scalameta/nvim-metals
+ckipp01/scala-utils.nvim
 # @language Elvish
 dmix/elvish.vim
 # @language GLSL
@@ -205,5 +214,6 @@ elkasztano/nushell-syntax-vim
 # hrsh7th/cmp-cmdline
 # wellle/context.vim -- too slow?
 # junegunn/fzf.vim
+# lewis6991/hover.nvim -- annoying
 # EOF -- vim: syntax=python
 # simrat39/symbols-outline.nvim
