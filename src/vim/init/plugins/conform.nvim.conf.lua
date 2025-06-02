@@ -22,6 +22,8 @@ if success then
 			hcl = { "hcl" },
 			nix = { "nixfmt" },
 			sh = { "shellcheck", "shfmt" },
+			json = { "fixjson" },
+			jsonc = { "fixjson" },
 			-- Use the "*" filetype to run formatters on all filetypes.
 			-- ["*"] = { "codespell" },
 			-- Use the "_" filetype to run formatters on filetypes that don't

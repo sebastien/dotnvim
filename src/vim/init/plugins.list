@@ -12,7 +12,7 @@ schickling/vim-bufonly
 MunifTanjim/nui.nvim
 # @plugin Editor: Shows context (parent symbols)
 nvim-treesitter/nvim-treesitter
-nvim-treesitter/nvim-treesitter-context
+# nvim-treesitter/nvim-treesitter-context (sucks)
 # @plugin Editor: Better quickfix list
 # folke/trouble.nvim
 # @plugin Editor: Tag bar
