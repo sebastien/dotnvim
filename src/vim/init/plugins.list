@@ -133,6 +133,8 @@ ziglang/zig.vim
 janet-lang/janet.vim
 # @language Nu
 elkasztano/nushell-syntax-vim
+# @language TailwindCSS
+luckasRanarison/tailwind-tools.nvim
 # =============================================================================
 # GRAVEYARD (TRIED BUT DOESN'T WORK)
 # =============================================================================

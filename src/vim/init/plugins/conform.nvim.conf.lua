@@ -8,12 +8,16 @@ if success then
 			lua = { "stylua" },
 			-- Conform will run multiple formatters sequentially
 			-- NOTE: Ruff is too eager
-			-- python = { "ruff_fix", "ruff_format" },
-			python = { "isort", "black" },
+			python = { "ruff_fix", "ruff_format" },
+			-- python = { "isort", "black" },
 			-- Use a sub-list to run only the first available formatter
 			javascript = { "prettierd" },
 			typescript = { "prettierd" },
+			json = { "prettierd" },
+			jsonc = { "prettierd" },
+			css = { "prettierd" },
 			xml = { "xmllint" },
+			html = { "htmlbeautifier" },
 			terraform = { "terraform_fmt" },
 			hcl = { "hcl" },
 			nix = { "nixfmt" },
