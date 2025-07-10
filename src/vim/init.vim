@@ -32,17 +32,17 @@ function init#features_load()
 	if !filereadable(vim_init_features_path)
 		echo "init.vim: Edit the '" . vim_init_features_path . "' file with a list of features to load"
 	else
-		let features_list = filter(readfile(vim_init_features_path), 'v:val !~ "#"')
+		let features_list = filter(map(readfile(vim_init_features_path), 'trim(v:val)'), 'v:val !~ "^#" && v:val != ""')
 		for feature in features_list
 			" TODO: Should register the feature globally so that it can be queried.
 			let vim_feature_path = g:vim_config_path . '/init/features/' . feature . '.vim'
 			let lua_feature_path = g:vim_config_path . '/init/features/' . feature . '.lua'
-			if !filereadable(vim_feature_path) && !filereadable(lua_feature_path)
-				echo "init.vim: Cannot find feature '" . feature . "' init script: " . fnameescape(vim_feature_path) . " or " . fnameescape(lua_feature_path)
-			elif filereadable(lua_feature_path)
+			if filereadable(lua_feature_path)
 				:execute 'source ' . fnameescape(lua_feature_path)
-			else
+			elseif filereadable(vim_feature_path)
 				:execute 'source ' . fnameescape(vim_feature_path)
+			else
+				echo "init.vim: Cannot find feature '" . feature . "' init script: " . fnameescape(vim_feature_path) . " or " . fnameescape(lua_feature_path)
 			end
 		endfor
 	endif
