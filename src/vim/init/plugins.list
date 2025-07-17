@@ -129,6 +129,8 @@ rust-lang/rust.vim
 cespare/vim-toml
 # @language Zig
 ziglang/zig.vim
+# @language Flix
+flix/nvim
 # @language Janet
 janet-lang/janet.vim
 # @language Nu

@@ -13,6 +13,5 @@ style
 whitespace
 editing
 keymap
-lang-flix
 # lsp
 # EOF - vim: syntax=text
