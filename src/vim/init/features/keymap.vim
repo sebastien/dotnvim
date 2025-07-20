@@ -46,14 +46,14 @@ vnoremap <S-Tab> <LT>
 " ==============================
 
 " @keymap Fold
-nnoremap <C-Up>        zC
+nnoremap <C-S-U>        zC
 " @keymap Unfold
-nnoremap <C-Down>      zO
+nnoremap <C-S-K>      zO
 
 " @keymap Increase fold level
-nnoremap <C-Right>     zr
+nnoremap <C-S-L>     zr
 " @keymap Decrease fold level
-nnoremap <C-Left>      zm
+nnoremap <C-S-J>      zm
 
 " @group Font zoom
 " ================
