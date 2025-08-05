@@ -13,6 +13,9 @@ if has_cmp then
         -- vim.fn["UltiSnips#Anon"](args.body) -- For `ultisnips` users.
       end,
     },
+    completion = {
+      autocomplete = { 'TextChanged' },
+    },
     window = {
       -- completion = cmp.config.window.bordered(),
       -- documentation = cmp.config.window.bordered(),

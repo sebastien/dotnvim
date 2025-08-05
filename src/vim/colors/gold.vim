@@ -87,7 +87,7 @@ hi IncSearch     guifg=#09CDEB guibg=#0D313D gui=NONE
 
 hi WildMenu      guifg=#CCCCCC guibg=#1E1F1D
 
-hi VertSplit     guifg=#221924 guibg=#373766
+hi VertSplit     guifg=#32cd32 guibg=#1a2e1a
 
 hi WildMenu      guibg=#41494D guifg=#62A4E8
 hi MatchParen    guifg=#01a6f3 guibg=#105E6E
@@ -131,5 +131,58 @@ hi User6 term=inverse gui=inverse ctermfg=grey guifg=#373766
 
 " For columns
 hi ColorColumn ctermbg=0 guibg=#2a0f41
+
+" Blink.cmp completion green theme
+hi BlinkCmpDocGreen guibg=#1a2e1a guifg=#90ee90
+hi BlinkCmpDocBorderGreen guibg=#1a2e1a guifg=#32cd32 gui=bold
+hi BlinkCmpDocCursorLineGreen guibg=#2d4a2d guifg=#98fb98
+hi BlinkCmpSignatureHelpGreen guibg=#0f1f0f guifg=#90ee90
+hi BlinkCmpSignatureHelpBorderGreen guibg=#0f1f0f guifg=#228b22 gui=bold
+hi BlinkCmpDocSeparator guibg=#1a2e1a guifg=#32cd32
+
+" LSP popups with green theme
+hi NormalFloat guibg=#1a2e1a guifg=#90ee90
+hi FloatBorder guibg=#1a2e1a guifg=#32cd32 gui=bold ctermbg=NONE ctermfg=green
+hi FloatTitle guibg=#1a2e1a guifg=#98fb98 gui=bold
+
+" Comprehensive border styling to eliminate black borders
+hi WinSeparator guibg=#1a2e1a guifg=#32cd32
+hi VertSplit guibg=#1a2e1a guifg=#32cd32
+hi StatusLineTerm guibg=#1a2e1a guifg=#32cd32
+hi StatusLineTermNC guibg=#1a2e1a guifg=#32cd32
+
+" Additional LSP and diagnostic borders
+hi LspFloatWinNormal guibg=#1a2e1a guifg=#90ee90
+hi LspFloatWinBorder guibg=#1a2e1a guifg=#32cd32 gui=bold
+hi DiagnosticFloatingError guibg=#1a2e1a guifg=#ff6b6b
+hi DiagnosticFloatingWarn guibg=#1a2e1a guifg=#ffd93d
+hi DiagnosticFloatingInfo guibg=#1a2e1a guifg=#6bcf7f
+hi DiagnosticFloatingHint guibg=#1a2e1a guifg=#74c0fc
+
+" Progress and notification styling  
+hi NotifyBackground guibg=#1a2e1a
+hi NotifyBorder guibg=#1a2e1a guifg=#32cd32
+
+" Fidget LSP progress notifications with green theme
+hi FidgetTask guibg=#1a2e1a guifg=#4a7c59
+hi FidgetTitle guibg=#1a2e1a guifg=#32cd32 gui=bold
+hi FidgetNormal guibg=#1a2e1a guifg=#4a7c59
+hi FidgetBorder guibg=#1a2e1a guifg=#32cd32 gui=bold
+hi FidgetSpinner guibg=#1a2e1a guifg=#4a7c59
+hi FidgetProgress guibg=#1a2e1a guifg=#4a7c59
+hi FidgetLspClientName guibg=#1a2e1a guifg=#4a7c59 gui=NONE
+hi FidgetLspProgressTitle guibg=#1a2e1a guifg=#4a7c59 gui=NONE
+hi FidgetLspProgressMessage guibg=#1a2e1a guifg=#4a7c59 gui=NONE
+
+" Additional fidget highlight groups for progress text
+hi FidgetProgressIcon guibg=#1a2e1a guifg=#4a7c59 gui=NONE
+hi FidgetProgressText guibg=#1a2e1a guifg=#4a7c59 gui=NONE
+hi FidgetIcon guibg=#1a2e1a guifg=#4a7c59 gui=NONE
+hi FidgetText guibg=#1a2e1a guifg=#4a7c59 gui=NONE
+hi link FidgetProgressClient FidgetText
+hi link FidgetProgressGroup FidgetText
+
+" Fallback for any remaining white text in fidget
+hi! link @text.fidget FidgetText
 
 " EOF
