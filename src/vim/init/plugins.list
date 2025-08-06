@@ -4,10 +4,10 @@
 # @plugin Editor: search in files, buffers and tags
 # NOTE: Telescope seems to create some weird conflicts with insertion
 # @plugin Editor: search in files, buffers and tags  (telescope)
-# nvim-telescope/telescope-file-browser.nvim
-# nvim-telescope/telescope-symbols.nvim
-# nvim-telescope/telescope.nvim
-ibhagwan/fzf-lua
+nvim-telescope/telescope-file-browser.nvim
+nvim-telescope/telescope-symbols.nvim
+nvim-telescope/telescope.nvim
+# ibhagwan/fzf-lua
 schickling/vim-bufonly
 MunifTanjim/nui.nvim
 # @plugin Editor: Shows context (parent symbols)

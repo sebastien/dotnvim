@@ -21,13 +21,13 @@ endfunction
 " =========================
 "
 " @keymap Fuzzy-finder popup with opened buffers
-nmap     <C-P>               <cmd>FzfLua buffers<CR>
-nmap     <C-I>               <cmd>FzfLua files<CR>
+nmap     <C-P>               <cmd>Telescope buffers<CR>
+nmap     <C-I>               <cmd>Telescope find_files<CR>
 " @keymap Fuzz-finder popup with tags
-nmap     <C-T>               <cmd>FzfLua lsp_document_symbols<CR>
+nmap     <C-T>               <cmd>Telescope lsp_document_symbols<CR>
 " @keymap Fuzzy-finder popup with live search
-nmap     <C-O>               <cmd>FzfLua grep_project<CR>
-nmap     <leader>gg          <cmd>FzfLua lsp_definition<CR>
+nmap     <C-O>               <cmd>Telescope grep_string<CR>
+nmap     <leader>gg          <cmd>Telescope lsp_definitions<CR>
 " @keymap Fuzzy-finder popup with project files
 nnoremap <leader>o           <cmd>NvimTreeToggle<CR>
 nnoremap <leader>t           <cmd>AerialToggle<CR>

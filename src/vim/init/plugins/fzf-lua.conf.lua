@@ -2,7 +2,7 @@
 require("fzf-lua").setup({
 	files = {
 		-- Use git ls-files when in a git repo to respect .gitignore
-		cmd = "git ls-files --exclude-standard --cached --others 2>/dev/null || find . -type f -not -path '*/.*' | head -1000",
+		cmd = "git ls-files --exclude-standard --cached 2>/dev/null || find . -type f -not -path '*/.*' | head -1000",
 		git_icons = true,
 		file_icons = true,
 		color_icons = true,
