@@ -1,1 +1,1 @@
-../../../../../../../Perso/dotnvim/src/lua/lint/linters/deepsource.lua
+../../../../lua/lint/linters/deepsource.lua

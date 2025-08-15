@@ -5,7 +5,7 @@ end)
 if success then
 	require("lint").linters_by_ft = {
 		markdown = { "vale" },
-		python = { "mypy", "bandit" },
+		python = { "ruff" },
 		javascript = { "eslint", "deno" },
 		sh = { "shellcheck" },
 		html = { "tidy" },

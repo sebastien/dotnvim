@@ -70,7 +70,7 @@ if has_cmp then
   })
 
   -- Set up lspconfig.
-  local has_lspconfg, _ = pcall(require, 'lspconfig')
+  local has_lspconfig, _ = pcall(require, 'lspconfig')
   if has_lspconfig then
 	  local capabilities = require('cmp_nvim_lsp').default_capabilities()
 	  local lspconfig = require('lspconfig')
