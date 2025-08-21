@@ -28,11 +28,35 @@ nmap     <C-T>               <cmd>Telescope lsp_document_symbols<CR>
 " @keymap Fuzzy-finder popup with live search
 nmap     <C-O>               <cmd>Telescope live_grep<CR>
 nmap     <leader>gg          <cmd>Telescope lsp_definitions<CR>
+nmap     <leader>d           <cmd>Telescope lsp_definitions<CR>
+nmap     <leader>r           <cmd>Telescope lsp_references<CR>
+nmap     <leader>b           :pop<CR>
 " @keymap Fuzzy-finder popup with project files
 nnoremap <leader>o           <cmd>NvimTreeToggle<CR>
 nnoremap <leader>t           <cmd>AerialToggle<CR>
 " @keymap Toggles Formatting
 nnoremap <leader>tf           <cmd>ToggleFormat<CR>
+
+" Basic opencode commands
+nnoremap <silent> <leader>oa :lua opencode.ask()<CR>
+nnoremap <silent> <leader>ot :lua opencode.toggle()<CR>
+nnoremap <silent> <leader>op :lua opencode.select_prompt()<CR>
+nnoremap <silent> <leader>on :lua opencode.command("session_new")<CR>
+
+" Context-aware commands
+nnoremap <silent> <leader>oA :lua opencode.ask("@cursor: ")<CR>
+vnoremap <silent> <leader>oa :lua opencode.ask("@selection: ")<CR>
+nnoremap <silent> <leader>oe :lua opencode.prompt("Explain @cursor and its context")<CR>
+
+" Message navigation
+nnoremap <silent> <S-C-u> :lua opencode.command("messages_half_page_up")<CR>
+nnoremap <silent> <S-C-d> :lua opencode.command("messages_half_page_down")<CR>
+
+" Utility commands
+nnoremap <silent> <leader>oy :lua opencode.command("messages_copy")<CR>
+" FIXME: Does not seem to work
+" inoremap <silent> <S-Tab>copilot#Accept("\<CR>")<CR>
+
 
 " @group Tab indentation
 " ======================

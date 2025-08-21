@@ -9,6 +9,9 @@ nvim-telescope/telescope-symbols.nvim
 nvim-telescope/telescope.nvim
 # ibhagwan/fzf-lua
 schickling/vim-bufonly
+github/copilot.vim
+NickvanDyke/opencode.nvim
+folke/snacks.nvim
 MunifTanjim/nui.nvim
 # @plugin Editor: Shows context (parent symbols)
 nvim-treesitter/nvim-treesitter
@@ -34,6 +37,8 @@ willothy/nvim-cokeline
 mason-org/mason.nvim
 mason-org/mason-lspconfig.nvim
 neovim/nvim-lspconfig
+# @plugin Editor: Displays characters to hint about LSP options
+roobert/action-hints.nvim
 # @plugin Editor: LSP Quickfix Diagnostics
 # @plugin Editor: LSP Icons
 onsails/lspkind-nvim
@@ -191,7 +196,6 @@ luckasRanarison/tailwind-tools.nvim
 # mcchrish/nnn.vim
 # lervag/wiki.vim
 # lervag/wiki-ft.vim
-# github/copilot.vim
 # @plugin Editing: Pencil mode to automatically reflow text
 # reedes/vim-pencil
 # jiangmiao/auto-pairs # Slows down large files

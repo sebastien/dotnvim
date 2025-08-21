@@ -6,7 +6,7 @@ vim.api.nvim_create_autocmd("CursorHold", {
 	buffer = 0, -- Apply to all buffers
 	callback = function()
 		-- Check if LSP is active in the current buffer
-		if vim.lsp.buf_get_clients() then
+		if vim.lsp.get_clients({ bufnr = 0 }) then
 			vim.lsp.buf.hover()
 		end
 	end,
@@ -25,3 +25,8 @@ vim.api.nvim_create_autocmd("CursorMoved", {
 		end
 	end,
 })
+
+-- Enables inlay hints for LSP
+vim.lsp.inlay_hint.enable()
+
+-- EOF

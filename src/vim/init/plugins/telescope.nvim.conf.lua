@@ -15,6 +15,12 @@ local telescope = require("telescope")
 telescope.setup({
 	defaults = {
 		file_ignore_patterns = ignore_filetypes_list,
+		path_display = {
+			shorten = {
+				len = 1,
+				exclude = {1, 2, -3, -2, -1}
+			}
+		},
 	},
 })
 -- EOF

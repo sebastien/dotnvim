@@ -28,36 +28,30 @@ if pcall(require, "lspconfig") then
 		nvim_lsp[server].setup({on_attach=on_attach})
 	end
 
-	-- Enable diagnostics
-	-- FROM :https://sharksforarms.dev/posts/neovim-rust/
-	-- FROM :https://sharksforarms.dev/posts/neovim-rust
-	vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-	  vim.lsp.diagnostic.on_publish_diagnostics, {
+ 	-- Enable diagnostics
+ 	-- FROM :https://sharksforarms.dev/posts/neovim-rust/
+ 	-- FROM :https://sharksforarms.dev/posts/neovim-rust
+	vim.diagnostic.config({
 		virtual_text = true,
 		signs = true,
 		update_in_insert = true,
-	  }
-	)
-	
+		float = {
+			border = "rounded"
+		}
+	})
+
 	-- Configure LSP floating windows with rounded borders
 	vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
 		vim.lsp.handlers.hover, {
 			border = "rounded"
 		}
 	)
-	
-	vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
-		vim.lsp.handlers.signature_help, {
-			border = "rounded"
-		}
-	)
-	
-	-- Configure diagnostic floating windows
-	vim.diagnostic.config({
-		float = {
-			border = "rounded"
-		}
-	})
+
+ 	vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
+ 		vim.lsp.handlers.signatureHelp, {
+ 			border = "rounded"
+ 		}
+ 	)
 end
 
 if pcall(require, "nvim-treesitter.configs") then
@@ -70,7 +64,7 @@ EOF
 set omnifunc=v:lua.vim.lsp.omnifunc
 
 function LspStatus()
-  lua print(vim.inspect(vim.lsp.buf_get_clients()))
+  lua print(vim.inspect(vim.lsp.get_clients()))
 endfunction
 
 function LspInspect()
