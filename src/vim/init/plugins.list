@@ -11,7 +11,7 @@ nvim-telescope/telescope.nvim
 schickling/vim-bufonly
 github/copilot.vim
 NickvanDyke/opencode.nvim
-folke/snacks.nvim
+# folke/snacks.nvim
 MunifTanjim/nui.nvim
 # @plugin Editor: Shows context (parent symbols)
 nvim-treesitter/nvim-treesitter

@@ -7,7 +7,7 @@ local opencode = require("opencode")
 _G.opencode = opencode
 
 -- Setup opencode with basic configuration
-opencode.setup({
+vim.g.opencode_opts = {
 	-- Model configuration
 	model = "github-copilot/gpt-4.1",
 
@@ -17,10 +17,10 @@ opencode.setup({
 	},
 
 	-- UI configuration
-	ui = {
-		-- Use snacks input for better prompt input
-		input = "snacks",
-	},
+	-- ui = {
+	-- 	-- Use snacks input for better prompt input
+	-- 	input = "snacks",
+	-- },
 
 	-- Terminal configuration
 	terminal = {
@@ -35,7 +35,7 @@ opencode.setup({
 		enabled = true,
 		patterns = { "*.lua", "*.py", "*.js", "*.ts", "*.rs", "*.go" },
 	},
-})
+}
 
 -- -- Key mappings for opencode functions
 -- local map = vim.keymap.set
@@ -60,16 +60,16 @@ opencode.setup({
 -- map("n", "<leader>oy", function() opencode.command("messages_copy") end, { desc = "Copy last message" })
 --
 -- Listen for opencode events
-vim.api.nvim_create_autocmd("User", {
-	pattern = "OpencodeEvent",
-	callback = function(args)
-		local event = args.data
-		if event.type == "session.idle" then
-			vim.notify("Opencode finished responding", vim.log.levels.INFO)
-		elseif event.type == "session.error" then
-			vim.notify("Opencode error: " .. (event.message or "Unknown error"), vim.log.levels.ERROR)
-		end
-	end,
-})
+-- vim.api.nvim_create_autocmd("User", {
+-- 	pattern = "OpencodeEvent",
+-- 	callback = function(args)
+-- 		local event = args.data
+-- 		if event.type == "session.idle" then
+-- 			vim.notify("Opencode finished responding", vim.log.levels.INFO)
+-- 		elseif event.type == "session.error" then
+-- 			vim.notify("Opencode error: " .. (event.message or "Unknown error"), vim.log.levels.ERROR)
+-- 		end
+-- 	end,
+-- })
 
 -- EOF

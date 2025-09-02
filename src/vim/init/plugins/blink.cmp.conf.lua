@@ -20,7 +20,7 @@ require("blink.cmp").setup({
 			"fallback",
 		},
 		["<C-k>"] = { "show_documentation", "fallback" },
-		["K"] = { "show_documentation", "fallback" },
+		["<C-K>"] = { "show_documentation", "fallback" },
 	},
 	-- Enable automatic completion as you type
 	completion = {

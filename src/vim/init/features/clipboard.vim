@@ -1,23 +1,24 @@
-" MacOS requires unnamedplus
-if executable("pbcopy")
-	set clipboard=unnamedplus
-end
+ " Use system clipboard when available, OSC52 as fallback
+ " if executable("pbcopy") || executable("xclip") || executable("wl-copy")
+ " 	set clipboard=unnamedplus
+ " else
+ " 	set clipboard=unnamed
+ " end
 
-" FIXME: This triggers a super slow load time, see: nvim -V10nvim.log
-" lua << EOF
-" -- FROM: https://github.com/wez/wezterm/discussions/5231
-" -- vim.g.clipboard = {
-" -- 	name = 'OSC 52',
-" -- 	copy = {
-" -- 	  ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
-" -- 	  ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
-" -- 	},
-" -- 	paste = {
-" -- 	  ['+'] = require('vim.ui.clipboard.osc52').paste('+'),
-" -- 	  ['*'] = require('vim.ui.clipboard.osc52').paste('*'),
-" -- 	},
-" -- }
-" EOF
+lua << EOF
+-- FROM: https://github.com/wez/wezterm/discussions/5231
+vim.g.clipboard = {
+	name = 'OSC 52',
+	copy = {
+	  ['+'] = require('vim.ui.clipboard.osc52').copy('+'),
+	  ['*'] = require('vim.ui.clipboard.osc52').copy('*'),
+	},
+	paste = {
+	  ['+'] = require('vim.ui.clipboard.osc52').paste('+'),
+	  ['*'] = require('vim.ui.clipboard.osc52').paste('*'),
+	},
+}
+EOF
 " SEE: https://vi.stackexchange.com/questions/12376/vim-on-wsl-synchronize-system-clipboard-set-clipboard-unnamed
 " let s:clip = '/mnt/c/Windows/System32/clip.exe'
 " if executable(s:clip)
