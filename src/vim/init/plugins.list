@@ -38,7 +38,7 @@ mason-org/mason.nvim
 mason-org/mason-lspconfig.nvim
 neovim/nvim-lspconfig
 # @plugin Editor: Displays characters to hint about LSP options
-roobert/action-hints.nvim
+# roobert/action-hints.nvim
 # @plugin Editor: LSP Quickfix Diagnostics
 # @plugin Editor: LSP Icons
 onsails/lspkind-nvim
