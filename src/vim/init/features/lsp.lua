@@ -1,3 +1,6 @@
+-- Set omnifunc for LSP completion
+vim.api.nvim_set_option_value('omnifunc', 'v:lua.vim.lsp.omnifunc', {})
+
 -- Set a reasonable updatetime (default is 4000ms, which is too long)
 vim.opt.updatetime = 300
 
