@@ -3,7 +3,7 @@
 ## Build/Test Commands
 - `make install` - Install Neovim configuration to ~/.config/nvim
 - `make clean` - Remove pack directory
-- `make deps` - Install language servers and tools (typescript, pyright, eslint_d, prettier)
+- `make deps` - Install language servers and tools (typescript, pyright, eslint_d, @biomejs/biome)
 - No formal test suite - configuration is tested by installation and usage
 
 ## Code Structure

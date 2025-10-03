@@ -24,7 +24,7 @@ all:
 deps:
 	npm install -g diagnostic-languageserver
 	npm install -g typescript typescript-language-server
-	npm install -g eslint_d prettier
+	npm install -g eslint_d @biomejs/biome
 	npm install -g pyright
 
 %.md: %.vim
