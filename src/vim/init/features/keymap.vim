@@ -70,23 +70,23 @@ vnoremap <S-Tab> <LT>
 " ==============================
 
 " @keymap Fold
-nnoremap <C-S-U>        zC
+nnoremap <C-S-u>        zC
 " @keymap Unfold
-nnoremap <C-S-K>      zO
+nnoremap <C-S-k>      zO
 
 " @keymap Increase fold level
-nnoremap <C-S-L>     zr
+nnoremap <C-S-h>     zr
 " @keymap Decrease fold level
-nnoremap <C-S-J>      zm
+nnoremap <C-S-l>      zm
 
 " @group Font zoom
 " ================
 
-" @keymap Font zoom in
-nnoremap <C-+> :call font#increase()<CR>
-
-" @keymap Font zoom out
-nnoremap <C--> :call font#decrease()<CR>
+" " @keymap Font zoom in
+" nnoremap <C-+> :call font#increase()<CR>
+"
+" " @keymap Font zoom out
+" nnoremap <C--> :call font#decrease()<CR>
 
 " @group Common editor shortcuts
 " ==============================

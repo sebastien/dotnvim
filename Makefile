@@ -26,6 +26,7 @@ deps:
 	npm install -g typescript typescript-language-server
 	npm install -g eslint_d @biomejs/biome
 	npm install -g pyright
+	npm install -g yaml-language-server
 
 %.md: %.vim
 	# TODO: 1) Split the file using '{{{' and '}}}'

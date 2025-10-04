@@ -142,6 +142,8 @@ janet-lang/janet.vim
 elkasztano/nushell-syntax-vim
 # @language TailwindCSS
 luckasRanarison/tailwind-tools.nvim
+# @language HUML
+huml-lang/vim-huml
 # =============================================================================
 # GRAVEYARD (TRIED BUT DOESN'T WORK)
 # =============================================================================

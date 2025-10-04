@@ -71,11 +71,7 @@ if has_cmp then
 
 	-- Set up lspconfig.
 	local capabilities = require("cmp_nvim_lsp").default_capabilities()
-	for _, server in ipairs({ "pyright", "ts_ls", "gopls", "cssls", "html", "jsonls", "zls" }) do
-		nvim.lsp.config(server, {
-			capabilities = capabilities,
-		})
-	end
+	-- Don't setup servers here since they're already configured in nvim-lspconfig.conf.vim
 
 	-- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
 end
