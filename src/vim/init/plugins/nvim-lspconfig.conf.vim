@@ -77,6 +77,8 @@ for _, server in ipairs(servers) do
     }
   end
   
+  
+  
   vim.lsp.config[server] = config
   -- Start the language server
   vim.lsp.enable(server)

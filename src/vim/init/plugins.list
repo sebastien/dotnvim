@@ -144,6 +144,8 @@ elkasztano/nushell-syntax-vim
 luckasRanarison/tailwind-tools.nvim
 # @language HUML
 huml-lang/vim-huml
+# @language HOCON
+jvirtanen/vim-hocon
 # =============================================================================
 # GRAVEYARD (TRIED BUT DOESN'T WORK)
 # =============================================================================

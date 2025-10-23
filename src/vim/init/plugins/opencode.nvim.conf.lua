@@ -33,7 +33,7 @@ vim.g.opencode_opts = {
 	-- File watching for auto-reload
 	watch = {
 		enabled = true,
-		patterns = { "*.lua", "*.py", "*.js", "*.ts", "*.rs", "*.go" },
+		patterns = { "*.lua", "*.py", "*.js", "*.ts", "*.tsx", "*.rs", "*.go" },
 	},
 }
 
