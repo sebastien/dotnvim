@@ -50,8 +50,6 @@ jremmen/vim-ripgrep
 # =============================================================================
 # EDITING (AUTOMATIC)
 # =============================================================================
-# @plugin Editing: fast jumping
-ggandor/leap.nvim
 # @plugin Editing: completion on inertion
 saghen/blink.cmp
 # ms-jpq/coq_nvim
@@ -79,7 +77,7 @@ easymotion/vim-easymotion
 folke/which-key.nvim
 # @plugin Editing: vertical alignment of text elements
 godlygeek/tabular
-joshuavial/aider.nvim
+# joshuavial/aider.nvim
 # @plugin Merging: jujutsu diff merge
 rafikdraoui/jj-diffconflicts
 # =============================================================================

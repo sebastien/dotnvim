@@ -91,8 +91,7 @@ function plugins#register()
 		" We have a list of plugins, we get them and add them
 		let plugins_list = filter(readfile(plugins_config_path), 'v:val !~ "#"')
 		for plugin in plugins_list
-			" NOTE: the upd_method:clone may be a problem
-			call minpac#add(plugin, {'type':'opt', 'upd_method':'clone'})
+			call minpac#add(plugin, {'type':'opt'})
 		endfor
 	else
 		echo "minpac: Edit the '" . plugins_config_path . "' file with a list of plugins to load"
@@ -146,7 +145,7 @@ endfunction
 if g:plugins_initialized==0
 	" We initialize minpac
 	call minpac#init()
-	call minpac#add('k-takata/minpac', {'type': 'opt', 'upd_method': 'clone'})
+	call minpac#add('k-takata/minpac', {'type': 'opt'})
 	call plugins#init()
 	let g:plugins_initialized=1
 endif
