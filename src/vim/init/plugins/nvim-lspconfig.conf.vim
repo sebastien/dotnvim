@@ -86,8 +86,8 @@ end
 
 -- Enable diagnostics
 vim.diagnostic.config({
-  virtual_text = false,
-  signs = false,
+  virtual_text = true,
+  signs = true,
   update_in_insert = true,
   float = {
     border = "rounded"

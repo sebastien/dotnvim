@@ -7,6 +7,8 @@ if success then
 		markdown = { "vale" },
 		python = { "ruff" },
 		javascript = { "eslint", "deno" },
+		typescript = { "eslint" },
+		typescriptreact = { "eslint" },
 		sh = { "shellcheck" },
 		html = { "tidy" },
 		bash = { "shellcheck" },
