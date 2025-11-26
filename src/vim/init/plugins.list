@@ -37,6 +37,7 @@ willothy/nvim-cokeline
 mason-org/mason.nvim
 mason-org/mason-lspconfig.nvim
 neovim/nvim-lspconfig
+TomDeneire/lsp-in-gutter.nvim
 # @plugin Editor: Displays characters to hint about LSP options
 # roobert/action-hints.nvim
 # @plugin Editor: LSP Quickfix Diagnostics
