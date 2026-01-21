@@ -34,6 +34,9 @@ deps:
 	#       3) Output the result in an .md file (documentation)
 	#       4) Look for @command, @keymap
 
+compile:
+	env -C ~/.config/nvim/pack/minpac/opt/blink.cmp/ cargo build --release
+
 .ONESHELL:
 
 # EOF

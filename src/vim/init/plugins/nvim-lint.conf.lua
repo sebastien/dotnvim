@@ -6,9 +6,9 @@ if success then
 	require("lint").linters_by_ft = {
 		markdown = { "vale" },
 		python = { "ruff" },
-		javascript = { "eslint", "deno" },
-		typescript = { "eslint" },
-		typescriptreact = { "eslint" },
+		javascript = { "biomejs", "deno" },
+		typescript = { "biomejs" },
+		typescriptreact = { "biomejs" },
 		sh = { "shellcheck" },
 		html = { "tidy" },
 		bash = { "shellcheck" },

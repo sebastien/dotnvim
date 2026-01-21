@@ -30,6 +30,9 @@ nmap     <C-O>               <cmd>Telescope live_grep<CR>
 nmap     <leader>gg          <cmd>Telescope lsp_definitions<CR>
 nmap     <leader>d           <cmd>Telescope lsp_definitions<CR>
 nmap     <leader>r           <cmd>Telescope lsp_references<CR>
+" Quickfix list
+nmap     <leader>f           <cmd>Telescope diagnostics<CR>
+nmap     <leader>qf          <cmd>:lua vim.diagnostic.setqflist({open=true})<CR>
 nmap     <leader>b           :pop<CR>
 " @keymap Fuzzy-finder popup with project files
 nnoremap <leader>o           <cmd>NvimTreeToggle<CR>
@@ -70,14 +73,14 @@ vnoremap <S-Tab> <LT>
 " ==============================
 
 " @keymap Fold
-nnoremap <C-S-u>        zC
+nnoremap <C-Up>        zC
 " @keymap Unfold
-nnoremap <C-S-k>      zO
+nnoremap <C-Down>      zO
 
 " @keymap Increase fold level
-nnoremap <C-S-h>     zr
+nnoremap <C-Right>     zr
 " @keymap Decrease fold level
-nnoremap <C-S-l>      zm
+nnoremap <C-Left>      zm
 
 " @group Font zoom
 " ================
