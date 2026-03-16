@@ -13,10 +13,14 @@ install:
 		ln -sfr "$$FILE" "$$HOME/.config/nvim/$$BASE"
 	done
 
+setup:
+	@grep -R "SETUP:" | grep plugins | cut -d: -f3- | xargs -ISCRIPT sh -c "echo 'Running setup for SCRIPT'; SCRIPT"
+
 clean:
 	if [ -d src/vim/pack ]; then
 		rm -rf src/vim/pack
 	fi
+	rm -f src/vim/init/.plugins.updated
 
 all:
 	@echo $(BUILD_FEATURE_MD)

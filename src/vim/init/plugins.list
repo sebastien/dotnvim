@@ -52,6 +52,7 @@ jremmen/vim-ripgrep
 # EDITING (AUTOMATIC)
 # =============================================================================
 # @plugin Editing: completion on inertion
+saghen/blink.lib
 saghen/blink.cmp
 # ms-jpq/coq_nvim
 # ms-jpq/coq.artifacts
@@ -143,6 +144,7 @@ luckasRanarison/tailwind-tools.nvim
 huml-lang/vim-huml
 # @language HOCON
 jvirtanen/vim-hocon
+imsnif/kdl.vim
 # =============================================================================
 # GRAVEYARD (TRIED BUT DOESN'T WORK)
 # =============================================================================

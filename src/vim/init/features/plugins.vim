@@ -71,14 +71,29 @@ function plugins#autoupdate()
 	" link.
 	let plugins_config_path  = resolve(expand(g:vim_config_path . '/init/plugins.list'))
 	let plugins_updated_path = g:vim_config_path . "/init/.plugins.updated"
+	let plugins_feature_path = resolve(expand(g:vim_config_path . '/init/features/plugins.vim'))
+	let blink_init_path      = g:vim_config_path . '/pack/minpac/opt/blink.cmp/lua/blink/cmp/init.lua'
 	let timestamp_now        = str2nr(localtime())
 	let timestamp_conf       = str2nr(getftime(plugins_config_path))
+	let timestamp_feature    = str2nr(getftime(plugins_feature_path))
 	let timestamp_updated    = str2nr(getftime(plugins_updated_path))
 	let timestamp_elapsed    = timestamp_now - timestamp_updated
-	if timestamp_updated < timestamp_conf || timestamp_elapsed > 7 * 24 * 3600
+	" We also force an update if the pack directory is missing (e.g. after make clean)
+	let pack_missing = !isdirectory(g:vim_config_path . '/pack/minpac/opt')
+	" blink.cmp v2 requires nvim 0.12+. If we're on an older version, force an
+	" update so minpac can apply the compatibility pin declared in plugins#register.
+	let blink_needs_downgrade = 0
+	if !has('nvim-0.12') && filereadable(blink_init_path)
+		let blink_init_content = readfile(blink_init_path)
+		if !empty(filter(copy(blink_init_content), 'v:val =~ "requires nvim 0\\.12+"'))
+			let blink_needs_downgrade = 1
+		endif
+	endif
+	if pack_missing || timestamp_updated < timestamp_conf || timestamp_updated < timestamp_feature || timestamp_elapsed > 7 * 24 * 3600 || blink_needs_downgrade
 		echo "init/plugins: Updating minpac"
 		call minpac#update()
-		call minpac#clean()
+		" NOTE: minpac#clean() can prompt for interactive confirmation, which
+		" blocks startup in headless/non-interactive sessions.
 		call writefile([timestamp_now], plugins_updated_path)
 		echo "input/plugins: Minpac updated"
 	endif
@@ -90,8 +105,20 @@ function plugins#register()
 	if filereadable(plugins_config_path)
 		" We have a list of plugins, we get them and add them
 		let plugins_list = filter(readfile(plugins_config_path), 'v:val !~ "#"')
+		let is_nvim_012 = has('nvim-0.12')
 		for plugin in plugins_list
-			call minpac#add(plugin, {'type':'opt'})
+			if plugin ==# 'saghen/blink.cmp'
+				if is_nvim_012
+					call minpac#add(plugin, {'type':'opt'})
+				else
+					call minpac#add(plugin, {'type':'opt', 'rev':'v1.1.1'})
+				endif
+			elseif plugin ==# 'saghen/blink.lib' && !is_nvim_012
+				" blink.lib is only required by blink.cmp v2 (Neovim 0.12+).
+				continue
+			else
+				call minpac#add(plugin, {'type':'opt'})
+			endif
 		endfor
 	else
 		echo "minpac: Edit the '" . plugins_config_path . "' file with a list of plugins to load"

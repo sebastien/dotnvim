@@ -1,12 +1,12 @@
 " SEE: https://github.com/dense-analysis/ale
-" npm i -g eslint_d @biomejs/biome
+" SETUP: npm i -g @biomejs/biome
 let g:ale_linters = {
 \   'c': ['cc', 'ccls', 'clangd', 'clangtidy', 'cppcheck', 'cquery', 'flawfinder'],
 \   'css': ['prettier', 'stylelint'],
 \   'go': ['gopls', 'gometalinter', 'gofmt', 'staticcheck'],
-\   'javascript': ['eslint'],
-\   'javascriptreact': ['eslint'],
-\   'json': ['eslint'],
+\   'javascript': ['biome'],
+\   'javascriptreact': ['biome'],
+\   'json': ['biomet'],
 \   'janet': ['janet'],
 \   'kotlin': ['kotlinc', 'ktlint'],
 \   'make': ['checkmake'],
