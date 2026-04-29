@@ -129,6 +129,8 @@ hi User4 term=inverse gui=inverse ctermfg=grey guifg=#373766
 hi User5 term=inverse gui=inverse ctermfg=grey guifg=#373766
 hi User6 term=inverse gui=inverse ctermfg=grey guifg=#373766
 
+hi SpecialKey guifg=#F5C400 gui=bold
+
 " For columns
 hi ColorColumn ctermbg=0 guibg=#2a0f41
 
@@ -159,7 +161,7 @@ hi DiagnosticFloatingWarn guibg=#1a2e1a guifg=#ffd93d
 hi DiagnosticFloatingInfo guibg=#1a2e1a guifg=#6bcf7f
 hi DiagnosticFloatingHint guibg=#1a2e1a guifg=#74c0fc
 
-" Progress and notification styling  
+" Progress and notification styling
 hi NotifyBackground guibg=#1a2e1a
 hi NotifyBorder guibg=#1a2e1a guifg=#32cd32
 

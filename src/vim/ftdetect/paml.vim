@@ -1,0 +1,1 @@
+autocmd BufRead,BufNewFile *.paml* set filetype=paml

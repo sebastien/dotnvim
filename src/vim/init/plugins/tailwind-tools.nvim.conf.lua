@@ -6,10 +6,19 @@ local util = {
 	root_pattern = function(...)
 		local patterns = {...}
 		return function(fname)
+			local path = fname
+			if type(path) == "number" then
+				path = vim.api.nvim_buf_get_name(path)
+			end
+			if type(path) ~= "string" or path == "" then
+				return nil
+			end
+			local start = vim.fs.dirname(vim.fs.normalize(path))
 			for _, pattern in ipairs(patterns) do
-				local path = vim.fn.find(pattern, vim.fn.fnamemodify(fname, ':p:h') .. ';')
-				if path ~= '' then
-					return vim.fn.fnamemodify(path, ':p:h')
+				local matches = vim.fs.find(pattern, { path = start, upward = true, limit = 1 })
+				local path = matches[1]
+				if path then
+					return vim.fs.dirname(path)
 				end
 			end
 			return nil

@@ -10,7 +10,11 @@ lua << EOF
 vim.g.lspconfig_new_api = true
 
 -- Configure LSP logging
-vim.lsp.set_log_level("WARN")
+if vim.lsp.log and vim.lsp.log.set_level then
+  vim.lsp.log.set_level("WARN")
+elseif vim.lsp.set_log_level then
+  vim.lsp.set_log_level("WARN")
+end
 
 -- Set up log truncation to keep log size under control
 local log_path = vim.fn.stdpath('state') .. '/lsp.log'

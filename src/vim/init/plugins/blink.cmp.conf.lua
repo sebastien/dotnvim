@@ -5,7 +5,9 @@
 -- if that doesn't work, the files can be downloaded and installed in
 -- target/release/libblink_cmp_fuzzy.{so,dylib}
 
-require("blink.cmp").setup({
+local blink_cmp = require("blink.cmp")
+
+local config = {
 	-- SEE <https://cmp.saghen.dev/configuration/keymap.html>
 	keymap = {
 		["<Tab>"] = {
@@ -83,4 +85,10 @@ require("blink.cmp").setup({
 		implementation = "rust",
 		prebuilt_binaries = { download = true, ignore_version_mismatch = true },
 	},
-})
+}
+
+local ok, err = pcall(blink_cmp.setup, config)
+if not ok and tostring(err):find("Rust fuzzy matcher not available", 1, true) then
+	config.fuzzy.implementation = "lua"
+	blink_cmp.setup(config)
+end
