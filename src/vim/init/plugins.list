@@ -145,6 +145,7 @@ elkasztano/nushell-syntax-vim
 # @language HOCON
 # jvirtanen/vim-hocon
 imsnif/kdl.vim
+thalesgelinger/toon.nvim
 # =============================================================================
 # GRAVEYARD (TRIED BUT DOESN'T WORK)
 # =============================================================================
