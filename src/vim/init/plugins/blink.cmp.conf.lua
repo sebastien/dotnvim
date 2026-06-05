@@ -1,13 +1,17 @@
 -- SEE: https://cmp.saghen.dev/installation.html
--- NOTES: Need to be compiled by hand,
+-- NOTES: Built automatically after vim.pack install/update.
 -- rustup toolchain install nightly
 -- SETUP: env -C ~/.config/nvim/pack/minpac/opt/blink.cmp/ cargo build --release
 -- if that doesn't work, the files can be downloaded and installed in
 -- target/release/libblink_cmp_fuzzy.{so,dylib}
 
-local blink_cmp = require("blink.cmp")
+local blink = require("blink.cmp")
 
-local config = {
+if not blink.library_available() then
+	blink.build():pwait()
+end
+
+blink.setup({
 	-- SEE <https://cmp.saghen.dev/configuration/keymap.html>
 	keymap = {
 		["<Tab>"] = {
@@ -83,7 +87,6 @@ local config = {
 	-- SEE: https://github.com/saghen/blink.cmp/releases/tag/v1.1.1
 	fuzzy = {
 		implementation = "rust",
-		prebuilt_binaries = { download = true, ignore_version_mismatch = true },
 	},
 }
 

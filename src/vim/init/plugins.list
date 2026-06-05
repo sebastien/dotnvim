@@ -104,8 +104,6 @@ mfussenegger/nvim-dap
 nvim-lua/popup.nvim
 nvim-lua/plenary.nvim
 j-hui/fidget.nvim
-# Dev Icons
-kyazdani42/nvim-web-devicons
 # =============================================================================
 # SYNTAX & LANGUAGE SUPPORT
 # =============================================================================

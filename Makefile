@@ -39,7 +39,7 @@ deps:
 	#       4) Look for @command, @keymap
 
 compile:
-	env -C ~/.config/nvim/pack/minpac/opt/blink.cmp/ cargo build --release
+	env -C ~/.local/share/nvim/site/pack/core/opt/blink.cmp/ cargo build --release
 
 .ONESHELL:
 

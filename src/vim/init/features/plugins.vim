@@ -1,21 +1,19 @@
 "" -----------------------------------------------------------------------------
 " PACKAGE MANAGER
 " -----------------------------------------------------------------------------
-" We're using `minpack` as recommended by Modern Vim ― there's a little bit
-" of extra boilerplate but it leverages Vim8+ new features.
-" SEE: <https://github.com/k-takata/minpac>
+" We're using `vim.pack`, the builtin package manager for Neovim 0.12+.
+" SEE: <https://neovim.io/doc/user/pack.html#vim.pack>
 "
 " {{{
 "
-" Minpac Package Manager
-" ======================
+" vim.pack Package Manager
+" ========================
 "
-" Automatically loads and installs
-" [minpac](https://github.com/k-takata/minpac). Looks for a `init.plugins`
-" file in the configuration file and installs the plugins listed there.
+" Automatically loads and installs the plugins listed in
+" `init/plugins.list`.
 "
 " ```shell
-" $ cat ~/.config/nvim/init.plugins
+" $ cat ~/.config/nvim/init/plugins.list
 " # The list of plugins to be loaded
 " junegunn/fzf
 " junegunn/fzf.vim
@@ -32,148 +30,70 @@
 " BOOTSTRAPPING
 " -----------------------------------------------------------------------------
 
-" We try to load minpac.
-silent! packadd minpac
+let s:plugins_config_path = g:vim_config_path . '/init/plugins.list'
+let g:plugins_initialized = get(g:, 'plugins_initialized', 0)
 
-let g:minpac_root=g:vim_config_path . '/pack/minpac/opt'
-let g:plugins_initialized = 0
+lua << EOF
+local function build_blink(ev)
+  local spec = ev.data and ev.data.spec
+  if not spec or spec.name ~= 'blink.cmp' then
+    return
+  end
+  if ev.data.kind ~= 'install' and ev.data.kind ~= 'update' then
+    return
+  end
 
-" If minpac is not available, we get it from Github and make it ready
-if !exists('*minpac#init')
-	if !isdirectory(g:minpac_root . "/minpac/.git")
-		echo "init/plugins: Installing Minpac"
-		call mkdir(g:minpac_root, "p")
-		" NOTE: We construct the command instead of using env vars, as that would not
-		" work in Windows.
-		execute '!git clone https://github.com/k-takata/minpac.git "' . g:minpac_root . '/minpac"'
-		silent! packadd minpac
+  if not ev.data.active then
+    vim.cmd.packadd('blink.cmp')
+  end
+
+  require('blink.cmp').build():pwait()
+end
+
+vim.api.nvim_create_autocmd('PackChanged', {
+  callback = build_blink,
+})
+EOF
+
+function! s:read_plugins() abort
+	if !filereadable(s:plugins_config_path)
+		echo "init/plugins: Edit the '" . s:plugins_config_path . "' file with a list of plugins to load"
+		execute 'edit ' . fnameescape(s:plugins_config_path)
+		return []
 	endif
-endif
-
-" -----------------------------------------------------------------------------
-" FUNCTIONS
-" -----------------------------------------------------------------------------
-
-function plugins#update()
-	let timestamp_now        = str2nr(localtime())
-	let plugins_updated_path = g:vim_config_path . "/init/.plugins.updated"
-	echo "init/plugins: Upading plugins"
-	call minpac#update()
-	call minpac#clean()
-	call writefile([timestamp_now], plugins_updated_path)
-	echo "init/plugins: Minpac updated"
+	return filter(map(readfile(s:plugins_config_path), 'trim(v:val)'), 'v:val !~ "^#" && v:val != ""')
 endfunction
 
-" @function Automatically updates the added plugins if the list of plugins has
-" changed or if it's been more than a week.
-function plugins#autoupdate()
-	" NOTE: We need to read the links otherwise the mtime will be that of the
-	" link.
-	let plugins_config_path  = resolve(expand(g:vim_config_path . '/init/plugins.list'))
-	let plugins_updated_path = g:vim_config_path . "/init/.plugins.updated"
-	let plugins_feature_path = resolve(expand(g:vim_config_path . '/init/features/plugins.vim'))
-	let blink_init_path      = g:vim_config_path . '/pack/minpac/opt/blink.cmp/lua/blink/cmp/init.lua'
-	let timestamp_now        = str2nr(localtime())
-	let timestamp_conf       = str2nr(getftime(plugins_config_path))
-	let timestamp_feature    = str2nr(getftime(plugins_feature_path))
-	let timestamp_updated    = str2nr(getftime(plugins_updated_path))
-	let timestamp_elapsed    = timestamp_now - timestamp_updated
-	" We also force an update if the pack directory is missing (e.g. after make clean)
-	let pack_missing = !isdirectory(g:vim_config_path . '/pack/minpac/opt')
-	" blink.cmp v2 requires nvim 0.12+. If we're on an older version, force an
-	" update so minpac can apply the compatibility pin declared in plugins#register.
-	let blink_needs_downgrade = 0
-	if !has('nvim-0.12') && filereadable(blink_init_path)
-		let blink_init_content = readfile(blink_init_path)
-		if !empty(filter(copy(blink_init_content), 'v:val =~ "requires nvim 0\\.12+"'))
-			let blink_needs_downgrade = 1
-		endif
-	endif
-	if pack_missing || timestamp_updated < timestamp_conf || timestamp_updated < timestamp_feature || timestamp_elapsed > 7 * 24 * 3600 || blink_needs_downgrade
-		echo "init/plugins: Updating minpac"
-		call minpac#update()
-		" NOTE: minpac#clean() can prompt for interactive confirmation, which
-		" blocks startup in headless/non-interactive sessions.
-		call writefile([timestamp_now], plugins_updated_path)
-		echo "input/plugins: Minpac updated"
-	endif
-endfunction
-
-" @function Registers all the plugins declared in `plugins.list`
-function plugins#register()
-	let plugins_config_path = g:vim_config_path . "/init/plugins.list"
-	if filereadable(plugins_config_path)
-		" We have a list of plugins, we get them and add them
-		let plugins_list = filter(readfile(plugins_config_path), 'v:val !~ "#"')
-		let is_nvim_012 = has('nvim-0.12')
-		for plugin in plugins_list
-			if plugin ==# 'saghen/blink.cmp'
-				if is_nvim_012
-					call minpac#add(plugin, {'type':'opt'})
-				else
-					call minpac#add(plugin, {'type':'opt', 'rev':'v1.1.1'})
-				endif
-			elseif plugin ==# 'saghen/blink.lib' && !is_nvim_012
-				" blink.lib is only required by blink.cmp v2 (Neovim 0.12+).
-				continue
-			else
-				call minpac#add(plugin, {'type':'opt'})
-			endif
-		endfor
-	else
-		echo "minpac: Edit the '" . plugins_config_path . "' file with a list of plugins to load"
-		execute 'edit ' . fnameescape(plugins_config_path)
-	endif
-endfunction
-
-" @function Loads all the plugins registered in minpack and loads their
-" conifugration file if available.
-function plugins#load()
-	" NOTE: On first run, this will do
-	" E919: Directory not found in 'packpath': "pack/*/opt/vim-mercenary"
-	for plugin in keys(minpac#getpluglist())
-		" TODO: Should test for the plugin to exist
-		execute 'packadd ' . plugin
-	endfor
-	" TODO: If we had errors there, we should cleanup the .plugins.updated
-	" file
-endfunction
-
-function plugins#configure()
-	for plugin in keys(minpac#getpluglist())
-		let plugin_path = g:vim_config_path . "/init/plugins/" . plugin . ".conf.vim"
+function! s:source_plugin_configs(plugins) abort
+	for plugin in a:plugins
+		let plugin_name = fnamemodify(plugin, ':t')
+		let plugin_path = g:vim_config_path . '/init/plugins/' . plugin_name . '.conf.vim'
 		if filereadable(plugin_path)
 			execute 'source ' . fnameescape(plugin_path)
 		endif
-		" We do the same for the lua file
-		let plugin_path = g:vim_config_path . "/init/plugins/" . plugin . ".conf.lua"
+		let plugin_path = g:vim_config_path . '/init/plugins/' . plugin_name . '.conf.lua'
 		if filereadable(plugin_path)
 			execute 'source ' . fnameescape(plugin_path)
 		endif
 	endfor
 endfunction
 
-function plugins#init()
-	" Start by loading the list of plugins
-	call plugins#register()
-	" Now we update/cleanup the plugins
- 	call plugins#autoupdate()
- 	" We ask minpac to load all the plugins
- 	call plugins#load()
-	" We configure the plugins
- 	call plugins#configure()
+function! s:init_plugins() abort
+	let plugins = s:read_plugins()
+	if empty(plugins)
+		return
+	endif
+	let g:dotvim_plugins = map(copy(plugins), '"https://github.com/" . v:val')
+	lua vim.pack.add(vim.g.dotvim_plugins, { confirm = false, load = true })
+	call s:source_plugin_configs(plugins)
 endfunction
 
 " -----------------------------------------------------------------------------
 " INIT
 " -----------------------------------------------------------------------------
 
-" We try to see if it's available now
 if g:plugins_initialized==0
-	" We initialize minpac
-	call minpac#init()
-	call minpac#add('k-takata/minpac', {'type': 'opt'})
-	call plugins#init()
+	call s:init_plugins()
 	let g:plugins_initialized=1
 endif
 
@@ -182,16 +102,14 @@ endif
 " -----------------------------------------------------------------------------
 
 " Define user commands for updating/cleaning the plugins.
-" Each of them loads minpac, reloads .vimrc to register the
-" information of plugins, then performs the task.
 
 " @command Updates all registered packages
-command! PluginsUpdate packadd minpac | call plugins#init()
+command! PluginsUpdate packupdate!
 
 " @command Cleans all installed packages
-command! PluginsClean  packadd minpac | call minpac#clean()
+command! PluginsClean  packdel ++all
 
 " @command Lists the installed packages
-command! PluginsList  packadd minpac | call minpac#getpluglist()
+command! PluginsList   lua vim.print(vim.pack.get(nil, { info = false }))
 
 " EOF
