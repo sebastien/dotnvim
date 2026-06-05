@@ -99,17 +99,15 @@ vim.diagnostic.config({
 })
 
 -- Configure LSP floating windows with rounded borders
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
-  vim.lsp.handlers.hover, {
-    border = "rounded"
-  }
-)
+local function with_rounded_border(handler)
+  return function(err, result, ctx, config)
+    config = vim.tbl_extend("force", { border = "rounded" }, config or {})
+    return handler(err, result, ctx, config)
+  end
+end
 
-vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(
-  vim.lsp.handlers.signatureHelp, {
-    border = "rounded"
-  }
-)
+vim.lsp.handlers["textDocument/hover"] = with_rounded_border(vim.lsp.handlers.hover)
+vim.lsp.handlers["textDocument/signatureHelp"] = with_rounded_border(vim.lsp.handlers.signatureHelp)
 
 -- Setup treesitter if available
 if pcall(require, "nvim-treesitter.configs") then

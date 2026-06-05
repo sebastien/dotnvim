@@ -11,7 +11,7 @@ if not blink.library_available() then
 	blink.build():pwait()
 end
 
-blink.setup({
+local config = {
 	-- SEE <https://cmp.saghen.dev/configuration/keymap.html>
 	keymap = {
 		["<Tab>"] = {
@@ -90,8 +90,10 @@ blink.setup({
 	},
 }
 
-local ok, err = pcall(blink_cmp.setup, config)
+local ok, err = pcall(blink.setup, config)
 if not ok and tostring(err):find("Rust fuzzy matcher not available", 1, true) then
 	config.fuzzy.implementation = "lua"
-	blink_cmp.setup(config)
+	blink.setup(config)
+elseif not ok then
+	error(err)
 end
