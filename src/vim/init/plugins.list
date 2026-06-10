@@ -7,6 +7,8 @@
 nvim-telescope/telescope-file-browser.nvim
 nvim-telescope/telescope-symbols.nvim
 nvim-telescope/telescope.nvim
+# NOTE: FZF lua is slower than Telepcope
+# ingur/fzf-oil.nvim
 # ibhagwan/fzf-lua
 schickling/vim-bufonly
 github/copilot.vim
@@ -88,11 +90,12 @@ godlygeek/tabular
 # axvr/zepl.vim
 # @plugin IDE/Git: Git support
 dinhhuy258/git.nvim
-# ms-jpq/chadtree
+ms-jpq/chadtree
+stevearc/oil.nvim
 nvim-tree/nvim-web-devicons
-nvim-tree/nvim-tree.lua
+# nvim-tree/nvim-tree.lua
 # stevearc/oil.nvim
-echasnovski/mini.icons
+nvim-min/mini.icons
 # @feature Jujutsu Diff
 rafikdraoui/jj-diffconflicts
 # @feature DAP Debugger

@@ -16,6 +16,10 @@
       "rev": "b127d48bf8e9ac9cf41f6e0fbead317503f76558",
       "src": "https://github.com/saghen/blink.lib"
     },
+    "chadtree": {
+      "rev": "6c37557462f9a8b51d0fc873c63863672a45cf5a",
+      "src": "https://github.com/ms-jpq/chadtree"
+    },
     "conform.nvim": {
       "rev": "619363c30309d29ffa631e67c8183f2a72caa373",
       "src": "https://github.com/stevearc/conform.nvim"
@@ -39,6 +43,14 @@
     "futhark-vim": {
       "rev": "fd7d053c74f150712eaa73999f44a3f95c8f08ff",
       "src": "https://github.com/BeneCollyridam/futhark-vim"
+    },
+    "fzf-lua": {
+      "rev": "532d463f5c83595192fe740572d8fd6902b2217a",
+      "src": "https://github.com/ibhagwan/fzf-lua"
+    },
+    "fzf-oil.nvim": {
+      "rev": "bc20b4d0d3531c9af93247158f89872bf1cea46b",
+      "src": "https://github.com/ingur/fzf-oil.nvim"
     },
     "git.nvim": {
       "rev": "7cfb3080c68125dbf6b7ee129f3108fdb275c4dd",
@@ -139,6 +151,10 @@
     "nvim-web-devicons": {
       "rev": "dfbfaa967a6f7ec50789bead7ef87e336c1fa63c",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
+    },
+    "oil.nvim": {
+      "rev": "b73018b75affd13fa38e2fc94ef753b465f770d7",
+      "src": "https://github.com/stevearc/oil.nvim"
     },
     "opencode.nvim": {
       "rev": "b2622d6e0f033d9f449ff995362544ca73f3d50d",

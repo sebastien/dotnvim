@@ -19,8 +19,8 @@ endif
 " TEAL          #4ABAAB
 " PURPLE_DK     #221924
 
-" hi normal        guifg=#B8B8B8 guibg=#221924 ctermbg=NONE
-hi normal        guifg=#B8B8B8 guibg=NONE ctermbg=NONE
+" hi normal     guifg=#B8B8B8 guibg=#221924 ctermbg=NONE
+hi normal       guifg=#B8B8B8 guibg=NONE ctermbg=NONE
 
 "Code syntax
 hi link                Value     Identifier
@@ -69,7 +69,7 @@ hi SpecialKey    guifg=#4A4A4A
 hi NonText       guifg=#3E2E42
 
 hi Cursor        guibg=#A890A8 guifg=#042B01
-hi CursorColumn  guibg=#251542
+hi CursorColumn  guibg=#2f2914
 hi CursorLine    guibg=#321C57
 hi CursorLineNr  guifg=#A36FA3 guibg=#641F70
 hi LineNr        guifg=#373766 guibg=#221924

@@ -23,19 +23,27 @@ endfunction
 " @keymap Fuzzy-finder popup with opened buffers
 nmap     <C-P>               <cmd>Telescope buffers<CR>
 nmap     <C-I>               <cmd>Telescope find_files<CR>
-" @keymap Fuzz-finder popup with tags
 nmap     <C-T>               <cmd>Telescope lsp_document_symbols<CR>
-" @keymap Fuzzy-finder popup with live search
 nmap     <C-O>               <cmd>Telescope live_grep<CR>
 nmap     <leader>gg          <cmd>Telescope lsp_definitions<CR>
 nmap     <leader>d           <cmd>Telescope lsp_definitions<CR>
 nmap     <leader>r           <cmd>Telescope lsp_references<CR>
-" Quickfix list
 nmap     <leader>f           <cmd>Telescope diagnostics<CR>
+
+"nmap     <C-P>               <cmd>FzfLua buffers<CR>
+"nmap     <C-I>               <cmd>FzfLua files<CR>
+"nmap     <C-T>               <cmd>FzfLua lsp_document_symbols<CR>
+"nmap     <C-O>               <cmd>FzfLua live_grep<CR>
+"nmap     <leader>gg          <cmd>FzfLua lsp_definitions<CR>
+"nmap     <leader>d           <cmd>FzfLua lsp_definitions<CR>
+"nmap     <leader>r           <cmd>FzfLua lsp_references<CR>
+"nmap     <leader>f           <cmd>FzfLua diagnostics_document<CR>
+
 nmap     <leader>qf          <cmd>:lua vim.diagnostic.setqflist({open=true})<CR>
 nmap     <leader>b           :pop<CR>
 " @keymap Fuzzy-finder popup with project files
 nnoremap <leader>o           <cmd>NvimTreeToggle<CR>
+nnoremap <F1>           <cmd>CHADopen<CR>
 nnoremap <leader>t           <cmd>AerialToggle<CR>
 " @keymap Toggles Formatting
 nnoremap <leader>tf           <cmd>ToggleFormat<CR>
@@ -78,9 +86,19 @@ nnoremap <C-Up>        zC
 nnoremap <C-Down>      zO
 
 " @keymap Increase fold level
-nnoremap <C-Right>     zr
+nnoremap <M-Right>     zr
+nnoremap <S-l>         zr
+vnoremap <S-l>         zr
 " @keymap Decrease fold level
-nnoremap <C-Left>      zm
+nnoremap <M-Left>      zm
+nnoremap <S-h>         zm
+vnoremap <S-h>         zm
+" @keymap Close all folds
+nnoremap <S-j>         zM
+vnoremap <S-j>         zM
+" @keymap Open all folds
+nnoremap <S-k>         zR
+vnoremap <S-k>         zR
 
 " @group Font zoom
 " ================

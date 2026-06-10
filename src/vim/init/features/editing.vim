@@ -69,7 +69,7 @@ set foldlevel=4
 " @feature Editor: Shows the current cursor line
 set cursorline
 " " @feature Editor: Shows the current cursor column
-" set cursorcolumn
+set cursorcolumn
 " @feature Editor: We never want anything concealed on the current line
 set concealcursor=
 " @fix Editor: Command height needs to be 2 for error reporting
