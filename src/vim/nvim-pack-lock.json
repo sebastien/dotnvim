@@ -36,6 +36,10 @@
       "rev": "ab3f9cff31fb3c2871d437dd058b13526ddf66a0",
       "src": "https://github.com/dmix/elvish.vim"
     },
+    "fff.nvim": {
+      "rev": "b6f351d7295d3f89d4f9ecaa94d72089964edc0f",
+      "src": "https://github.com/dmtrKovalenko/fff.nvim"
+    },
     "fidget.nvim": {
       "rev": "82404b196e73a00b1727a91903beef5ddc319d22",
       "src": "https://github.com/j-hui/fidget.nvim"

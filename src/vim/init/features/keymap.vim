@@ -18,17 +18,17 @@ function! ToggleFormatExpr()
 endfunction
 
 " @group Telescope (Fuzzy finder)
-" =========================
+" ===============================
 "
-" @keymap Fuzzy-finder popup with opened buffers
-nmap     <C-P>               <cmd>Telescope buffers<CR>
-nmap     <C-I>               <cmd>Telescope find_files<CR>
-nmap     <C-T>               <cmd>Telescope lsp_document_symbols<CR>
-nmap     <C-O>               <cmd>Telescope live_grep<CR>
-nmap     <leader>gg          <cmd>Telescope lsp_definitions<CR>
-nmap     <leader>d           <cmd>Telescope lsp_definitions<CR>
-nmap     <leader>r           <cmd>Telescope lsp_references<CR>
-nmap     <leader>f           <cmd>Telescope diagnostics<CR>
+" @keymap Fuzzy-finder popup with project files
+nmap     <C-P>               <cmd>lua require('telescope.builtin').find_files()<CR>
+nmap     <C-I>               <cmd>lua require('telescope.builtin').find_files()<CR>
+nmap     <C-O>               <cmd>lua require('telescope.builtin').live_grep()<CR>
+nmap     <C-T>               <cmd>AerialToggle!<CR>
+nmap     <leader>gg          <cmd>lua vim.lsp.buf.definition()<CR>
+nmap     <leader>d           <cmd>lua vim.lsp.buf.definition()<CR>
+nmap     <leader>r           <cmd>lua vim.lsp.buf.references()<CR>
+nmap     <leader>f           <cmd>lua vim.diagnostic.setqflist({open=true})<CR>
 
 "nmap     <C-P>               <cmd>FzfLua buffers<CR>
 "nmap     <C-I>               <cmd>FzfLua files<CR>
@@ -94,8 +94,8 @@ nnoremap <M-Left>      zm
 nnoremap <S-h>         zm
 vnoremap <S-h>         zm
 " @keymap Close all folds
-nnoremap <S-j>         zM
-vnoremap <S-j>         zM
+" nnoremap <S-j>         zM
+" vnoremap <S-j>         zM
 " @keymap Open all folds
 nnoremap <S-k>         zR
 vnoremap <S-k>         zR

@@ -34,6 +34,22 @@ let s:plugins_config_path = g:vim_config_path . '/init/plugins.list'
 let g:plugins_initialized = get(g:, 'plugins_initialized', 0)
 
 lua << EOF
+local function build_fff(ev)
+  local spec = ev.data and ev.data.spec
+  if not spec or spec.name ~= 'fff.nvim' then
+    return
+  end
+  if ev.data.kind ~= 'install' and ev.data.kind ~= 'update' then
+    return
+  end
+
+  if not ev.data.active then
+    vim.cmd.packadd('fff.nvim')
+  end
+
+  require('fff.download').download_or_build_binary()
+end
+
 local function build_blink(ev)
   local spec = ev.data and ev.data.spec
   if not spec or spec.name ~= 'blink.cmp' then
@@ -49,6 +65,10 @@ local function build_blink(ev)
 
   require('blink.cmp').build():pwait()
 end
+
+vim.api.nvim_create_autocmd('PackChanged', {
+  callback = build_fff,
+})
 
 vim.api.nvim_create_autocmd('PackChanged', {
   callback = build_blink,

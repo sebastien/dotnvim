@@ -2,10 +2,11 @@
 # EDITOR
 # =============================================================================
 # @plugin Editor: search in files, buffers and tags
-# NOTE: Telescope seems to create some weird conflicts with insertion
-# @plugin Editor: search in files, buffers and tags  (telescope)
-nvim-telescope/telescope-file-browser.nvim
-nvim-telescope/telescope-symbols.nvim
+# @plugin Editor: fast file and content search (fff)
+dmtrKovalenko/fff.nvim
+# @plugin Editor: search in files, buffers and tags (Telescope, default picker)
+# nvim-telescope/telescope-file-browser.nvim
+# nvim-telescope/telescope-symbols.nvim
 nvim-telescope/telescope.nvim
 # NOTE: FZF lua is slower than Telepcope
 # ingur/fzf-oil.nvim
@@ -92,9 +93,6 @@ godlygeek/tabular
 dinhhuy258/git.nvim
 ms-jpq/chadtree
 stevearc/oil.nvim
-nvim-tree/nvim-web-devicons
-# nvim-tree/nvim-tree.lua
-# stevearc/oil.nvim
 nvim-min/mini.icons
 # @feature Jujutsu Diff
 rafikdraoui/jj-diffconflicts
