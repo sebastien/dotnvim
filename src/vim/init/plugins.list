@@ -12,6 +12,7 @@ nvim-telescope/telescope.nvim
 # ingur/fzf-oil.nvim
 # ibhagwan/fzf-lua
 schickling/vim-bufonly
+# NOTE: Copilot is hungry!
 github/copilot.vim
 NickvanDyke/opencode.nvim
 # folke/snacks.nvim
@@ -145,6 +146,7 @@ elkasztano/nushell-syntax-vim
 # jvirtanen/vim-hocon
 imsnif/kdl.vim
 thalesgelinger/toon.nvim
+sebastien/kame.vim
 # =============================================================================
 # GRAVEYARD (TRIED BUT DOESN'T WORK)
 # =============================================================================

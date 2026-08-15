@@ -122,14 +122,29 @@ endif
 " -----------------------------------------------------------------------------
 
 " Define user commands for updating/cleaning the plugins.
+"
+" NOTE: `vim.pack` intentionally ships no user commands (unlike the old
+" `:packupdate`/`:packdel`, which do not exist), so we drive its Lua API.
+
+function! s:update_plugins() abort
+	lua vim.pack.update(nil, { force = true })
+endfunction
+
+function! s:clean_plugins() abort
+	lua vim.pack.del(vim.iter(vim.pack.get(nil, { info = false })):filter(function(p) return not p.active end):map(function(p) return p.spec.name end):totable(), { force = true })
+endfunction
+
+function! s:list_plugins() abort
+	lua vim.print(vim.pack.get(nil, { info = false }))
+endfunction
 
 " @command Updates all registered packages
-command! PluginsUpdate packupdate!
+command! PluginsUpdate call s:update_plugins()
 
-" @command Cleans all installed packages
-command! PluginsClean  packdel ++all
+" @command Cleans all installed but orphaned (no longer active) packages
+command! PluginsClean  call s:clean_plugins()
 
 " @command Lists the installed packages
-command! PluginsList   lua vim.print(vim.pack.get(nil, { info = false }))
+command! PluginsList   call s:list_plugins()
 
 " EOF

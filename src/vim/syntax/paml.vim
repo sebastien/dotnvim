@@ -70,10 +70,11 @@ hi def link pamlCommentAnn    Todo
 hi def link pamlString        String
 
 " Default text settings for PAML files
-set textwidth=80
-set noet
-set ts=4
-set sw=4
+setlocal textwidth=0
+setlocal wrap
+setlocal noet
+setlocal ts=4
+setlocal sw=4
 "
 
 

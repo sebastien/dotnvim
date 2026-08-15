@@ -22,6 +22,7 @@ if success then
 			html = { "htmlbeautifier" },
 			terraform = { "terraform_fmt" },
 			hcl = { "hcl" },
+			littlemake = { "littlemake_fmt" },
 			nix = { "nixfmt" },
 			sh = { "shellcheck", "shfmt" },
 			yaml = { "prettier" },
@@ -50,13 +51,15 @@ if success then
 				-- Don't ignore parse errors for YAML files
 				require_cwd = false,
 			},
+			littlemake_fmt = {
+				command = "littlemake",
+				args = { "do", "fmt" },
+				stdin = true,
+			},
 		},
 		format_on_save = {
 			-- These options will be passed to conform.format()
 			timeout_ms = 500,
-			lsp_fallback = true,
-		},
-		format_after_save = {
 			lsp_fallback = true,
 		},
 		-- Conform will notify you when a formatter errors
